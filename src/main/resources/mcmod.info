@@ -1,0 +1,16 @@
+
+{
+  "modid": "airplanes",
+  "name": "Airplanes Mod",
+  "description": "Affehund´s Airplane Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Affehund"],
+  "credits": "Made by Affehund",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
