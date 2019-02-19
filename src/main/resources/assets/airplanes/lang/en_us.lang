@@ -1,13 +1,14 @@
 #Creative Tab
-itemGroup.tuttab=Tutorial Tab
+itemGroup.AirplanesTab=Airplanes Tab
 
 
 
 #Items
-item.tutitem.name=Tutorial Item
-
+item.aluminum_ingot.name=Aluminum Ingot
+item.fuel.name=Fuel
 
 
 #Blocks
-tile.tutblock.name=Tutorial Block
+tile.asphalt_block.name=Asphalt Block
+tile.bauxite_ore.name=Bauxite Ore
 

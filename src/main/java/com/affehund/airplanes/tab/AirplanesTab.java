@@ -1,9 +1,7 @@
 package com.affehund.airplanes.tab;
 
 import net.minecraft.creativetab.CreativeTabs;
-
 import net.minecraft.init.Blocks;
-
 import net.minecraft.item.ItemStack;
 
 public class AirplanesTab extends CreativeTabs {

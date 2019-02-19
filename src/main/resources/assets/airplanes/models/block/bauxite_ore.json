@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "airplanes:blocks/asphalt_block"
+		"all": "airplanes:blocks/bauxite_ore"
 	}
 }

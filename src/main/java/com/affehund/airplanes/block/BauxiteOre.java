@@ -11,14 +11,14 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 
-public class AsphaltBlock extends Block {
-	public AsphaltBlock() {
-		super(Material.ROCK);
+public class BauxiteOre extends Block {
+	public BauxiteOre() {
+		super(Material.IRON);
 		setCreativeTab(AirplanesTabs.tab);
-		setHardness(1.5F);
+		setHardness(2.5F);
 		setResistance(100F);
 		setSoundType(SoundType.STONE);
-		setHarvestLevel("pickaxe", 0);
+		setHarvestLevel("pickaxe", 2);
 		setLightLevel(0.0F);
 	}
 }

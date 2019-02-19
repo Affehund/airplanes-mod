@@ -7,7 +7,7 @@
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["Affehund"],
+  "authorList": ["Affehund",...],
   "credits": "Made by Affehund",
   "logoFile": "",
   "screenshots": [],
