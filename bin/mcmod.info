@@ -2,13 +2,13 @@
 {
   "modid": "airplanes",
   "name": "Airplanes Mod",
-  "description": "Affehund´s Airplane Mod",
+  "description": "Affehundï¿½s Airplane Mod",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["Affehund"],
-  "credits": "Made by Affehund",
+  "authorList": ["Affehund, JKL213, tobesfus, airplane, STK11, Y, Kartoffel_Suppe, Flixi2000"],
+  "credits": "Made by the Affehund Dev Team",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
