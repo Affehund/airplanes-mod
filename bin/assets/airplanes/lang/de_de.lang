@@ -13,5 +13,6 @@ item.aluminum_ingot.name=Aluminiumbarren
 tile.asphalt_block.name=Asphaltblock
 tile.bauxite_ore.name=Bauxiterz
 tile.helling_block.name=Helling
+tile.structuredefault_block.name=Debug
 
 
