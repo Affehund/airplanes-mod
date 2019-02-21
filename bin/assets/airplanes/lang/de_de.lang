@@ -10,7 +10,8 @@ item.aluminum_ingot.name=Aluminiumbarren
 
 
 #Blocks
-tile.asphalt_block.name=Asphalt Block
+tile.asphalt_block.name=Asphaltblock
 tile.bauxite_ore.name=Bauxiterz
+tile.helling_block.name=Helling
 
 
