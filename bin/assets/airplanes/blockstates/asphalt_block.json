@@ -1,13 +1,10 @@
 {
-
-	"variants": {
-
-		"normal": {
-
-			"model": "airplanes:asphalt_block"
-
-		}
-
-	}
-
+    "variants": {
+        "normal": [
+            { "model": "airplanes:asphalt_block" },
+            { "model": "airplanes:asphalt_block", "y": 90 },
+            { "model": "airplanes:asphalt_block", "y": 180 },
+            { "model": "airplanes:asphalt_block", "y": 270 }
+        ]
+    }
 }
