@@ -16,6 +16,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class AirplanesItems {
 	public static final AluminumIngot aluminum_ingot = new AluminumIngot();
 	public static final Fuel fuel = new Fuel();
+	
 
 	
 	public static void init() {

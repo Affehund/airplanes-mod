@@ -1,0 +1,7 @@
+{
+	"variants": {
+		"normal": {
+			"model": "airplanes:airplanes_builder"
+		}
+	}
+}

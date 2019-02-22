@@ -16,7 +16,7 @@ public class AirplanesWorldGeneration implements IWorldGenerator {
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
 		BlockPos chunkPos = new BlockPos(chunkX * 16, 0, chunkZ * 16);
 		if (chunkGenerator instanceof ChunkGeneratorOverworld) {
-			genOreMinMax(world, random, chunkPos, 5, bauxitegen, 30, 150);
+			genOreMinMax(world, random, chunkPos, 5, bauxitegen, 30, 100);
 			
 		}
 	}
