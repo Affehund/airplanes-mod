@@ -1,7 +1,7 @@
 {
 	"variants": {
 		"normal": {
-			"model": "airplanes:asphalt_block"
+			"model": "airplanes:airplanes_builder"
 		}
 	}
 }

@@ -10,9 +10,8 @@ item.aluminum_ingot.name=Aluminiumbarren
 
 
 #Blocks
-tile.asphalt_block.name=Asphaltblock
+tile.asphalt_block.name=Asphalt Block
 tile.bauxite_ore.name=Bauxiterz
-tile.helling_block.name=Helling
-tile.structuredefault_block.name=Debug
+tile.airplanes_builder.name=Flugzeug Werkbank
 
 
