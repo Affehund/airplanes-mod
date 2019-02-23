@@ -1,0 +1,13 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "airplanes:copper_ore" },
+            { "model": "airplanes:copper_ore", "y": 90 },
+            { "model": "airplanes:copper_ore", "y": 180 },
+            { "model": "airplanes:copper_ore", "y": 270 },
+            { "model": "airplanes:copper_ore", "z": 90 },
+            { "model": "airplanes:copper_ore", "z": 180 },
+            { "model": "airplanes:copper_ore", "z": 270 }
+        ]
+    }
+}

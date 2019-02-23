@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "I  ",
+        " I ",
+        "  I"
+    ],
+    "key": {
+        "I": {
+            "item": "airplanes:aluminum_ingot"
+        }
+    },
+    "result": {
+        "item": "airplanes:aluminum_rod",
+		"data": 0
+    }
+}

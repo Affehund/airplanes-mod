@@ -1,0 +1,45 @@
+{
+
+	"type": "minecraft:crafting_shaped",
+
+	"pattern": [
+
+		"AAA",
+
+		"NNN",
+
+		"ZZZ"
+
+	],
+
+	"key": {
+
+		"A": {
+
+			"item": "minecraft:iron_block"
+
+		},
+
+		"N": {
+
+			"item": "minecraft:iron_ingot"
+
+		},
+
+		"Z": {
+
+			"item": "minecraft:gold_ingot"
+
+		}
+
+	},
+
+	"result": {
+
+		"item": "minecraft:stone",
+
+		"data": 0
+
+	}
+
+}
