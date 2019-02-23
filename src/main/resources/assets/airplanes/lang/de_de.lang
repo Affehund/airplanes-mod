@@ -6,12 +6,23 @@ itemGroup.AirplanesTab=Airplanes Tab
 #Items
 item.fuel.name=Treibstoff
 item.aluminum_ingot.name=Aluminiumbarren 
+item.aluminum_plate.name=Aluminiumplatte 
+item.aluminum_rod.name=Aluminiumstange 
+item.copper_ingot.name=Kupferbarren 
+item.copper_plate.name=Kupferplatte
+item.copper_rod.name=Kupferstange 
+item.iron_plate.name=Eisenplatte
+item.iron_rod.name=Eisenstange
+item.steel_ingot.name=Stahlbarren
+item.steel_plate.name=Stahlplatte
+item.steel_rod.name=Stahlstange
 
 
 
 #Blocks
 tile.asphalt_block.name=Asphalt Block
 tile.bauxite_ore.name=Bauxiterz
+tile.copper_ore.name=Kupfererz
 tile.airplanes_builder.name=Flugzeug Werkbank
 
 

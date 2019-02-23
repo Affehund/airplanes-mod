@@ -13,11 +13,25 @@ public class AirplanesModels {
 	@SubscribeEvent
 	public static void register(ModelRegistryEvent event) {
 
+		//materials
 		register(AirplanesItems.aluminum_ingot);
+		register(AirplanesItems.aluminum_plate);
+		register(AirplanesItems.aluminum_rod);
+		register(AirplanesItems.copper_ingot);
+		register(AirplanesItems.copper_plate);
+		register(AirplanesItems.copper_rod);
+		register(AirplanesItems.iron_plate);
+		register(AirplanesItems.iron_rod);
+		register(AirplanesItems.steel_ingot);
+		register(AirplanesItems.steel_plate);
+		register(AirplanesItems.steel_rod);
+		
 		register(AirplanesItems.fuel);
 		
+		//blocks
 		register(Item.getItemFromBlock(AirplanesBlocks.asphalt_block));
 		register(Item.getItemFromBlock(AirplanesBlocks.bauxite_ore));
+		register(Item.getItemFromBlock(AirplanesBlocks.copper_ore));
 		register(Item.getItemFromBlock(AirplanesBlocks.airplanes_builder));
 
 	}

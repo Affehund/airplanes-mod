@@ -15,11 +15,13 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class AirplanesBlocks {
 	public static final AsphaltBlock asphalt_block = new AsphaltBlock();
 	public static final BauxiteOre bauxite_ore = new BauxiteOre();
+	public static final CopperOre copper_ore = new CopperOre();
 	public static final AirplanesBuilder airplanes_builder = new AirplanesBuilder(null);
 	
 	public static void init() {
 		setName(asphalt_block, "asphalt_block");
 		setName(bauxite_ore, "bauxite_ore");
+		setName(copper_ore, "copper_ore");
 		setName(airplanes_builder, "airplanes_builder");
 	}
 
@@ -29,6 +31,7 @@ public class AirplanesBlocks {
 		IForgeRegistry<Block> registry = event.getRegistry();
 		registry.register(asphalt_block);
 		registry.register(bauxite_ore);
+		registry.register(copper_ore);
 		registry.register(airplanes_builder);
 	}
 
@@ -37,6 +40,7 @@ public class AirplanesBlocks {
 		IForgeRegistry<Item> registry = event.getRegistry();
 		registry.register(new ItemBlock(asphalt_block).setRegistryName(asphalt_block.getRegistryName()));
 		registry.register(new ItemBlock(bauxite_ore).setRegistryName(bauxite_ore.getRegistryName()));
+		registry.register(new ItemBlock(copper_ore).setRegistryName(copper_ore.getRegistryName()));
 		registry.register(new ItemBlock(airplanes_builder).setRegistryName(airplanes_builder.getRegistryName()));
 	}
 
