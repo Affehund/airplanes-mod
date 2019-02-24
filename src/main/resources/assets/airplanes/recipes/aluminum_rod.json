@@ -1,9 +1,11 @@
+Und damit könnte ich dann noch ne Anzahl angeben, oder?
+```
 {
     "type": "crafting_shaped",
     "pattern": [
-        "I  ",
-        " I ",
-        "  I"
+        "I##",
+        "#I#",
+        "##I"
     ],
     "key": {
         "I": {
@@ -12,6 +14,7 @@
     },
     "result": {
         "item": "airplanes:aluminum_rod",
-		"data": 0
+        "count": 4
     }
 }
+```
