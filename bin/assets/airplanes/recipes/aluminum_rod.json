@@ -1,9 +1,9 @@
 {
-    "type": "crafting_shaped",
+    "type": "minecraft:crafting_shaped",
     "pattern": [
-        "I  ",
-        " I ",
-        "  I"
+        "I##",
+        "#I#",
+        "##I"
     ],
     "key": {
         "I": {
@@ -12,6 +12,6 @@
     },
     "result": {
         "item": "airplanes:aluminum_rod",
-		"data": 0
+        "count": 4
     }
 }

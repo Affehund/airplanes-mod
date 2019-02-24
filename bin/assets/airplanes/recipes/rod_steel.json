@@ -1,3 +1,4 @@
+
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
@@ -7,11 +8,11 @@
     ],
     "key": {
         "I": {
-            "item": "minecraft:iron_ingot"
+            "item": "airplanes:steel_ingot"
         }
     },
     "result": {
-        "item": "airplanes:iron_rod",
+        "item": "airplanes:steel_rod",
         "count": 4
     }
 }
