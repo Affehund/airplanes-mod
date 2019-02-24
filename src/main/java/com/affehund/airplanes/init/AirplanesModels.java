@@ -22,11 +22,13 @@ public class AirplanesModels {
 		register(AirplanesItems.copper_rod);
 		register(AirplanesItems.iron_plate);
 		register(AirplanesItems.iron_rod);
+		register(AirplanesItems.silicon);
 		register(AirplanesItems.steel_ingot);
 		register(AirplanesItems.steel_plate);
 		register(AirplanesItems.steel_rod);
 		
 		register(AirplanesItems.fuel);
+		register(AirplanesItems.airplanes_wrench);
 		
 		//blocks
 		register(Item.getItemFromBlock(AirplanesBlocks.asphalt_block));

@@ -9,6 +9,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
 
 
@@ -49,4 +50,10 @@ public class AirplanesBlocks {
 		block.setRegistryName(new ResourceLocation(AirplanesConstants.MODID, name));
 		block.setUnlocalizedName(name);
 	}
-}
+	
+	public static void registerOreDictionaryEntries() 			
+	{
+		OreDictionary.registerOre("oreCopper", copper_ore);
+		OreDictionary.registerOre("oreBauxite", bauxite_ore);		         
+		    }
+	}
