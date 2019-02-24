@@ -11,7 +11,7 @@ It began by partially implementing an API defined by the client side ModLoader, 
 http://www.minecraftforum.net/topic/75440-
 This support has been dropped as of Minecraft release 1.7, as Risugami no longer maintains ModLoader.
 
-It also contains suggestions and hints and generous helpings of code from LexManos, author of MinecraftForge.
+It also contains suggestions and hints and generous helpings of code from Lex. Manos, author of MinecraftForge.
 http://www.minecraftforge.net/
 
 Additionally, it contains an implementation of topological sort based on that 
