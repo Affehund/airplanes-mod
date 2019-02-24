@@ -1,5 +1,3 @@
-Und damit könnte ich dann noch ne Anzahl angeben, oder?
-```
 {
     "type": "crafting_shaped",
     "pattern": [
@@ -17,4 +15,3 @@ Und damit könnte ich dann noch ne Anzahl angeben, oder?
         "count": 4
     }
 }
-```
