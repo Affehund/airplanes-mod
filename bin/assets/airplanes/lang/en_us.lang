@@ -6,6 +6,7 @@ tile.asphalt_block.name=Asphalt Block
 tile.bauxite_ore.name=Bauxite Ore
 tile.copper_ore.name=Copper Ore
 tile.airplanes_builder.name=Airplanes Parts Builder
+tile.parts_builder.name=Parts Builder
 
 #Creative Tab
 itemGroup.AirplanesTab=Airplanes Tab

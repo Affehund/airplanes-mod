@@ -34,7 +34,7 @@ public class AirplanesModels {
 		register(Item.getItemFromBlock(AirplanesBlocks.asphalt_block));
 		register(Item.getItemFromBlock(AirplanesBlocks.bauxite_ore));
 		register(Item.getItemFromBlock(AirplanesBlocks.copper_ore));
-		register(Item.getItemFromBlock(AirplanesBlocks.airplanes_builder));
+		register(Item.getItemFromBlock(AirplanesBlocks.parts_builder));
 
 	}
 
