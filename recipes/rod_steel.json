@@ -1,0 +1,19 @@
+
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "I  ",
+        " I ",
+        "  I"
+    ],
+    "key": {
+        "I": {
+           "type": "forge:ore_dict",
+            "ore": "ingotSteel"
+        }
+    },
+    "result": {
+        "item": "airplanes:steel_rod",
+        "count": 4
+    }
+}

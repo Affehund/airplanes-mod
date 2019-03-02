@@ -1,0 +1,50 @@
+#translation en_us
+
+
+#Blocks
+tile.aluminum_block.name=Aluminum Block
+tile.aluminum_coil.name=Aluminum Coil
+tile.asphalt_block.name=Asphalt Block
+tile.bauxite_ore.name=Bauxite Ore
+tile.copper_block.name=Copper Block
+tile.copper_coil.name=Copper Coil
+tile.copper_ore.name=Copper Ore
+tile.gold_coil.name=Gold Coil
+tile.machine_block.name=Machine Block
+tile.steel_block.name=Steel Block
+tile.tin_block.name=Tin Block
+tile.tin_ore.name=Tin Ore
+
+tile.airplanes_builder.name=Airplanes Parts Builder
+tile.combustion_engine.name=Combustion Engine
+tile.parts_builder.name=Parts Builder
+
+#Creative Tab
+itemGroup.Airplanes=Airplanes Tab
+
+
+
+#Items
+item.aluminum_ingot.name=Aluminum Ingot
+item.aluminum_plate.name=Aluminum Plate
+item.aluminum_rod.name=Aluminum Rod
+item.copper_ingot.name=Copper Ingot 
+item.copper_nugget.name=Copper Nugget
+item.copper_plate.name=Copper Plate
+item.copper_rod.name=Copper Rod 
+item.iron_plate.name=Iron Plate
+item.iron_rod.name=Iron Rod
+item.silicon.name=Silicon
+item.steel_ingot.name=Steel Ingot
+item.steel_plate.name=Steel Plate
+item.steel_rod.name=Steel Rod
+item.tin_ingot.name=Tin Ingot
+item.tin_nugget.name=Tin Nugget
+
+#Others
+item.airplanes_wrench.name=Airplanes Wrench
+item.airplanes_hammer.name=Airplanes Hammer
+item.fuel.name=Fuel
+
+
+

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "airplanes:tin_block"
+    }
+  },
+  "result": {
+    "item": "airplanes:tin_ingot",
+    "count": 9
+  }
+}
