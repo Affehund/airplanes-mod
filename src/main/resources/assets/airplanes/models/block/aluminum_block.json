@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "airplanes:blocks/aluminum_block"
+	}
+}

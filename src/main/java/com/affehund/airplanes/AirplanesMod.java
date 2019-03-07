@@ -2,6 +2,8 @@ package com.affehund.airplanes;
 
 import static com.affehund.airplanes.AirplanesConstants.*;
 import com.affehund.airplanes.proxy.CommonProxy;
+import com.affehund.airplanes.util.compat.OreDictionaryCompat;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -13,6 +15,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = MODID, name = NAME, version = VERSION)
 public class AirplanesMod {
+
 	
 	@Instance()
 	public 
@@ -38,6 +41,7 @@ public class AirplanesMod {
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
+		OreDictionaryCompat.registerOreDictionary();
 		proxy.init(event);
 		
 	}
@@ -45,6 +49,7 @@ public class AirplanesMod {
 	@EventHandler
 	public void postinit (FMLPostInitializationEvent event) {
 		proxy.postinit(event);
+		
 		
 	}
 }

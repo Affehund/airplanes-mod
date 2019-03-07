@@ -12,14 +12,19 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 public class AirplanesWorldGeneration implements IWorldGenerator {
 	
 	private final WorldGenMinable bauxitegen = new WorldGenMinable(AirplanesBlocks.bauxite_ore.getDefaultState(), 5, (blockstate) -> blockstate.getBlock() == Blocks.STONE);
+	private final WorldGenMinable coppergen = new WorldGenMinable(AirplanesBlocks.copper_ore.getDefaultState(), 5, (blockstate) -> blockstate.getBlock() == Blocks.STONE);
+	private final WorldGenMinable tingen = new WorldGenMinable(AirplanesBlocks.tin_ore.getDefaultState(), 5, (blockstate) -> blockstate.getBlock() == Blocks.STONE);
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
 		BlockPos chunkPos = new BlockPos(chunkX * 16, 0, chunkZ * 16);
 		if (chunkGenerator instanceof ChunkGeneratorOverworld) {
 			genOreMinMax(world, random, chunkPos, 5, bauxitegen, 30, 100);
+			genOreMinMax(world, random, chunkPos, 10, coppergen, 40, 120);
+			genOreMinMax(world, random, chunkPos, 2, tingen, 3, 20);
 			
 		}
 	}
+	
 	
 	protected void genOreMinMax(World worldIn, Random random, BlockPos chunkPos, int blockCount, WorldGenerator generator, int minHeight, int maxHeight) {
 		if (maxHeight < minHeight) {

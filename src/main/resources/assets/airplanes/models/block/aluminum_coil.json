@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "airplanes:blocks/aluminum_coil_side",
+		"down": "airplanes:blocks/aluminum_coil_top",
+		"up": "airplanes:blocks/aluminum_coil_top",
+		"north": "airplanes:blocks/aluminum_coil_side",
+		"east": "airplanes:blocks/aluminum_coil_side",
+		"south": "airplanes:blocks/aluminum_coil_side",
+		"west": "airplanes:blocks/aluminum_coil_side"
+	}
+}

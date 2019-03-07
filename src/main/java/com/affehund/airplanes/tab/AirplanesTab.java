@@ -1,16 +1,17 @@
 package com.affehund.airplanes.tab;
 
+import com.affehund.airplanes.init.AirplanesItems;
+
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
 public class AirplanesTab extends CreativeTabs {
 	public AirplanesTab() {
-		super("AirplanesTab");
+		super("Airplanes");
 	}
 
 	@Override
 	public ItemStack getTabIconItem() {
-		return new ItemStack(Blocks.ANVIL);
+		return new ItemStack(AirplanesItems.fuel);
 	}
 }
