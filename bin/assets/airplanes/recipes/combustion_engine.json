@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " S ",
+        "CFC",
+        "SSS"
+    ],
+    "key": {
+    	"S": {
+            "item": "minecraft:stone",
+        	"data": 0
+        	},
+         "C": [
+      		{
+        	"item": "airplanes:aluminum_coil",
+        	"data": 0
+      		},
+      		{
+         	"item": "airplanes:copper_coil",
+        	"data": 0
+      		},
+      		{
+         	"item": "airplanes:gold_coil",
+        	"data": 0
+      		}
+    	],
+        "F": {
+            "item": "minecraft:furnace",
+        	"data": 0
+        	}	
+    },
+    "result": {
+        "item": "airplanes:combustion_engine",
+        "data": 0
+    }
+}

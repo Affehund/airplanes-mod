@@ -1,0 +1,27 @@
+{
+	"variants": {
+		"facing=north": {
+            "model": "airplanes:combustion_engine"
+        },
+        "facing=south": {
+            "model": "airplanes:combustion_engine",
+            "y": 180
+        },
+        "facing=west": {
+            "model": "airplanes:combustion_engine",
+            "y": 270
+        },
+        "facing=east": {
+            "model": "airplanes:combustion_engine",
+            "y": 90
+        },
+        "facing=up": {
+            "model": "airplanes:combustion_engine",
+            "x": 0
+        },
+        "facing=down": {
+            "model": "airplanes:combustion_engine",
+            "x": 0
+        }
+	}
+}

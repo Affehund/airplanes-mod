@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "airplanes:steel_block"
+    }
+  },
+  "result": {
+    "item": "airplanes:steel_ingot",
+    "count": 9
+  }
+}

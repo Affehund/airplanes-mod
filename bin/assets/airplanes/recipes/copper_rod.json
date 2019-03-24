@@ -1,13 +1,14 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "I##",
-        "#I#",
-        "##I"
+         "I  ",
+        " I ",
+        "  I"
     ],
     "key": {
         "I": {
-            "item": "airplanes:copper_ingot"
+            "type": "forge:ore_dict",
+            "ore": "ingotCopper"
         }
     },
     "result": {
