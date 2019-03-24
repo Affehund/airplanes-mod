@@ -11,9 +11,9 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class AirplanesWorldGeneration implements IWorldGenerator {
 	
-	private final WorldGenMinable bauxitegen = new WorldGenMinable(AirplanesBlocks.bauxite_ore.getDefaultState(), 5, (blockstate) -> blockstate.getBlock() == Blocks.STONE);
-	private final WorldGenMinable coppergen = new WorldGenMinable(AirplanesBlocks.copper_ore.getDefaultState(), 5, (blockstate) -> blockstate.getBlock() == Blocks.STONE);
-	private final WorldGenMinable tingen = new WorldGenMinable(AirplanesBlocks.tin_ore.getDefaultState(), 5, (blockstate) -> blockstate.getBlock() == Blocks.STONE);
+	private final WorldGenMinable bauxitegen = new WorldGenMinable(BlockInit.BAUXITE_ORE.getDefaultState(), 5, (blockstate) -> blockstate.getBlock() == Blocks.STONE);
+	private final WorldGenMinable coppergen = new WorldGenMinable(BlockInit.COPPER_ORE.getDefaultState(), 5, (blockstate) -> blockstate.getBlock() == Blocks.STONE);
+	private final WorldGenMinable tingen = new WorldGenMinable(BlockInit.TIN_ORE.getDefaultState(), 5, (blockstate) -> blockstate.getBlock() == Blocks.STONE);
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
 		BlockPos chunkPos = new BlockPos(chunkX * 16, 0, chunkZ * 16);

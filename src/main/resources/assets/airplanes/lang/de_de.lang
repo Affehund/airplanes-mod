@@ -1,7 +1,7 @@
-#Übersetzung de_de
+//Übersetzung de_de
 
 
-#Blocks
+//Blocks
 tile.aluminum_block.name=Aluminiumblock
 tile.aluminum_coil.name=Aluminiumspule
 tile.asphalt_block.name=Asphaltblock
@@ -19,7 +19,10 @@ tile.airplanes_builder.name=Flugzeug Werkbank
 tile.combustion_engine.name=Verbrennungsmotor
 tile.parts_builder.name=Flugzeugteile Werkbank
 
-#Creative Tab
+//Containers
+container.combustion_engine=Verbrennungsmotor
+
+//Creative Tab
 itemGroup.Airplanes=Airplanes Tab
 
 #Items
@@ -30,19 +33,29 @@ item.copper_ingot.name=Kupferbarren
 item.copper_nugget.name=Kupferklumpen
 item.copper_plate.name=Kupferplatte
 item.copper_rod.name=Kupferstange 
+item.diamond_gear.name=Diamantenzahnrad 
+item.golden_gear.name=Goldenes Zahnrad
+item.iron_gear.name=Eisenzahnrad
 item.iron_plate.name=Eisenplatte
 item.iron_rod.name=Eisenstange
 item.silicon.name=Silikon
 item.steel_ingot.name=Stahlbarren
 item.steel_plate.name=Stahlplatte
 item.steel_rod.name=Stahlstange
+item.stone_gear.name=Steinzahnrad 
 item.tin_ingot.name=Zinnbarren
 item.tin_nugget.name=Zinnklumpen
+item.wooden_gear.name=Hölzernes Zahnrad
 
-#Others
-item.fuel.name=Treibstoff
-item.airplanes_wrench.name=Flugzeug Schraubschlüssel
+//Machines
+tile.combustion_engine.name=Verbrennungsmotor
+
+//Others
+item.airplane_item.name=WIP Flugzeug Gegenstand
 item.airplanes_hammer.name=Flugzeug Hammer
+item.airplanes_wrench.name=Flugzeug Schraubschlüssel
+item.fuel.name=Treibstoff
+
 
 
 

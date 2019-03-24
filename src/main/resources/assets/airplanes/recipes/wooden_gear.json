@@ -1,0 +1,43 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "S S",
+        " L ",
+        "S S"
+    ],
+    "key": {
+        "L": [
+      {
+        "item": "minecraft:log",
+        "data": 0
+      },
+      {
+        "item": "minecraft:log",
+        "data": 1
+      },
+      {
+        "item": "minecraft:log",
+        "data": 2
+      },
+      {
+        "item": "minecraft:log",
+        "data": 3
+      },
+      {
+        "item": "minecraft:log",
+        "data": 4
+      },
+      {
+        "item": "minecraft:log",
+        "data": 5
+      }
+    ],
+          "S": {
+          "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "airplanes:wooden_gear",
+        "count": 4
+    }
+}

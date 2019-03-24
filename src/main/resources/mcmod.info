@@ -1,17 +1,18 @@
 [
-{
+	{
   "modid": "airplanes",
   "name": "Airplanes Mod",
   "description": "Giving the player ways to discover new ways of transport and industrialization in Minecraft!",
-  "version": "pre-alpha 0.2",
+  "version": "alpha 0.5",
   "credits": "Created by Affehund and JKL213",
   "mcversion": "1.12.2",
   "url": "https://minecraft.curseforge.com/projects/airplanes-mod",
-  "authors": [ "Affehund", "JKL213", "tobesefus", "airplane", "Flixi2000" ],
+  "authors": ["Affehund", "JKL213", "tobesefus", "airplane", "Flixi2000", "Jonas"],
   "parent":"",
+  "logoFile": "assets/airplanes/icon.png",
   "screenshots": [],
   "dependencies": [
 	 "mod_MinecraftForge"
-]
-}
+		]
+	}
 ]

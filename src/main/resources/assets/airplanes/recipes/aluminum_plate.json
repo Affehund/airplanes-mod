@@ -5,11 +5,12 @@
   	},
   "ingredients": [
     {
-      "item": "#ingotAluminum"
+      "type": "forge:ore_dict",
+            "ore": "ingotAluminum"
     },
     {
       "item": "airplanes:airplanes_hammer",
-      "data": 0
+      "data": 32767
     }
   ]
 }

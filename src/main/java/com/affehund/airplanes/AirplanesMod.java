@@ -1,9 +1,14 @@
 package com.affehund.airplanes;
 
-import static com.affehund.airplanes.AirplanesConstants.*;
-import com.affehund.airplanes.proxy.CommonProxy;
-import com.affehund.airplanes.util.compat.OreDictionaryCompat;
 
+import java.io.File;
+
+import com.affehund.airplanes.creativetabs.AirplanesTab;
+import com.affehund.airplanes.proxy.CommonProxy;
+import com.affehund.airplanes.util.handlers.RegistryHandler;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -11,45 +16,45 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
+@Mod(modid = AirplanesConstants.MODID, name = AirplanesConstants.NAME, version = AirplanesConstants.VERSION)
 
-@Mod(modid = MODID, name = NAME, version = VERSION)
-public class AirplanesMod {
+public class AirplanesMod 
+{
+	@Instance
+	public static AirplanesMod  instance;
 
+	@SidedProxy(clientSide = AirplanesConstants.CLIENT, serverSide = AirplanesConstants.SERVER)
+	public static CommonProxy proxy;
 	
-	@Instance()
-	public 
-	static AirplanesMod instance;
+	public static final CreativeTabs AIRPLANESTAB = new AirplanesTab();
+
+	public static File config;
 	
-	public static AirplanesMod getInstance() {
-		return instance;
+	static { FluidRegistry.enableUniversalBucket(); }
+
+	@EventHandler
+	public static void preInit(FMLPreInitializationEvent event) 
+	{	
+		RegistryHandler.preInitRegistries(event);
 	}
-	
-	public enum GUI_Register 
+
+	@EventHandler
+	public static void init(FMLInitializationEvent event)
 	{
-		AirplanesBuilder
+		RegistryHandler.initRegistries(event);
 	}
-	
-	
-	@SidedProxy(serverSide = "com.affehund.airplanes.proxy.CommonProxy", clientSide = "com.affehund.airplanes.proxy.ClientProxy")
-    private static CommonProxy proxy;
-	
+
 	@EventHandler
-	public void preinit(FMLPreInitializationEvent event) {
-		proxy.preinit(event);
+	public static void postInit(FMLPostInitializationEvent event) 
+	{
+		RegistryHandler.postInitRegistries(event);
 	}
-	
+
 	@EventHandler
-	public void init(FMLInitializationEvent event) {
-		OreDictionaryCompat.registerOreDictionary();
-		proxy.init(event);
-		
-	}
-	
-	@EventHandler
-	public void postinit (FMLPostInitializationEvent event) {
-		proxy.postinit(event);
-		
-		
+	public static void serverInit(FMLServerStartingEvent event)
+	{
+		RegistryHandler.serverRegistries(event);
 	}
 }

@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "S S",
+        " L ",
+        "S S"
+    ],
+    "key": {
+        "S": 
+      {
+        "item": "minecraft:stone",
+        "data": 0
+       },
+          "L": {
+          "item": "airplanes:wooden_gear"
+        }
+    },
+    "result": {
+        "item": "airplanes:stone_gear",
+        "count": 4
+    }
+}

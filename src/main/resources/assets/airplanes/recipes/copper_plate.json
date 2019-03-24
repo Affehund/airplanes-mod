@@ -2,14 +2,15 @@
   "type": "forge:ore_shapeless",
   "result": {
     "item": "airplanes:copper_plate"
-  	},
+  },
   "ingredients": [
     {
-      "item": "#ingotCopper"
+      "type": "forge:ore_dict",
+            "ore": "ingotCopper"
     },
     {
       "item": "airplanes:airplanes_hammer",
-      "data": 0
+      "data": 32767
     }
   ]
 }
