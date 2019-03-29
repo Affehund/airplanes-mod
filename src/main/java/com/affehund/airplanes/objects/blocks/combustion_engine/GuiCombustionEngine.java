@@ -1,8 +1,7 @@
-package com.affehund.airplanes.objects.blocks.guis;
+package com.affehund.airplanes.objects.blocks.combustion_engine;
 
 import com.affehund.airplanes.AirplanesConstants;
-import com.affehund.airplanes.objects.blocks.containers.ContainerCombustionEngine;
-import com.affehund.airplanes.tileentities.TileEntityCombustionEngine;
+
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -41,6 +40,8 @@ public class GuiCombustionEngine extends GuiContainer
 		this.drawTexturedModalRect(this.guiLeft + 113, this.guiTop + 32, 176, 14, l + 1, 16);
 		int k = this.getEnergyStoredScaled(75);
 		this.drawTexturedModalRect(this.guiLeft + 152, this.guiTop + 7, 176, 32, 16, 76 - k);
+		
+		
 	}
 
 	private int getEnergyStoredScaled(int pixels)

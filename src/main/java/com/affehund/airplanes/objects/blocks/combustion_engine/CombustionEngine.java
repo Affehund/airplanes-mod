@@ -1,12 +1,11 @@
-package com.affehund.airplanes.objects.blocks;
+package com.affehund.airplanes.objects.blocks.combustion_engine;
 
 import javax.annotation.Nullable;
 
 import com.affehund.airplanes.AirplanesConstants;
 import com.affehund.airplanes.AirplanesMod;
-import com.affehund.airplanes.tileentities.TileEntityCombustionEngine;
+import com.affehund.airplanes.objects.BlockBase;
 
-import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.*;
@@ -19,25 +18,27 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.*;
 
 
-public class CombustionEngine extends Block implements ITileEntityProvider {
+public class CombustionEngine extends BlockBase
+{
 	
-
 	public static final PropertyDirection FACING = PropertyDirection.create("facing");
 
-	public CombustionEngine(String string) {
-		super(Material.ROCK);
+	public CombustionEngine(String name) {
+		super(name, Material.ROCK);
 		setDefaultState(getDefaultState().withProperty(FACING, EnumFacing.NORTH));
-		setCreativeTab(AirplanesMod.AIRPLANESTAB);
+		setCreativeTab(AirplanesMod.AIRPLANESTAB1);
 	}
 	
 	
 	
 	@Override
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) 
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn,
+			EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) 
 		{
 			if(!worldIn.isRemote) 
 			{
-				playerIn.openGui(AirplanesMod.instance, AirplanesConstants.GUI_COMBUSTION_ENGINE, worldIn, pos.getX(), pos.getY(), pos.getZ());
+				playerIn.openGui(AirplanesMod.instance, AirplanesConstants.GUI_COMBUSTION_ENGINE, worldIn,
+						pos.getX(), pos.getY(), pos.getZ());
 			}
 		return true;
 	}
@@ -49,7 +50,7 @@ public class CombustionEngine extends Block implements ITileEntityProvider {
 	}
 	
 	@Override
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
+	public TileEntity createTileEntity(World world, IBlockState state) {
 		return new TileEntityCombustionEngine();
 	}
 	

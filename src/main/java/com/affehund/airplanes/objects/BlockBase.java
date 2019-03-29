@@ -17,7 +17,7 @@ public class BlockBase extends Block implements IHasModel
 		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(AirplanesMod.AIRPLANESTAB);
+		setCreativeTab(AirplanesMod.AIRPLANESTAB1);
 		
 		BlockInit.BLOCKS.add(this);
 		ItemInit.ITEMS.add(new ItemBlock(this).setRegistryName(name));

@@ -13,7 +13,7 @@ public class ItemBase extends Item implements IHasModel
 	{
 		setUnlocalizedName(name);
 		setRegistryName(name); 
-		setCreativeTab(AirplanesMod.AIRPLANESTAB);
+		setCreativeTab(AirplanesMod.AIRPLANESTAB1);
 
 		ItemInit.ITEMS.add(this);  
 	}

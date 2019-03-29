@@ -16,7 +16,7 @@ public class AirplanesHammer extends Item implements IHasModel {
 		this.setMaxStackSize(1);
 		this.setMaxDamage(127);
 		this.setNoRepair();
-		setCreativeTab(AirplanesMod.AIRPLANESTAB);
+		setCreativeTab(AirplanesMod.AIRPLANESTAB1);
 
 		ItemInit.ITEMS.add(this);  
 	}

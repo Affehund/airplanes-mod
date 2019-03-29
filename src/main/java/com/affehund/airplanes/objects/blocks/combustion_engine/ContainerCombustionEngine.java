@@ -1,6 +1,5 @@
-package com.affehund.airplanes.objects.blocks.containers;
+package com.affehund.airplanes.objects.blocks.combustion_engine;
 
-import com.affehund.airplanes.tileentities.TileEntityCombustionEngine;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -11,24 +10,17 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
-
-
 public class ContainerCombustionEngine extends Container
-
 {
-
 	private final TileEntityCombustionEngine tileentity;
-
 	private int energy, cookTime;
-
-	
 
 	public ContainerCombustionEngine(InventoryPlayer player, TileEntityCombustionEngine tileentity) 
 	{
 		this.tileentity = tileentity;
 		IItemHandler handler = tileentity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
 
-		this.addSlotToContainer(new SlotItemHandler(handler, 0, 80, 33));
+		this.addSlotToContainer(new SlotItemHandler(handler, 0, 80, 31));
 
 		for(int y = 0; y < 3; y++)
 		{

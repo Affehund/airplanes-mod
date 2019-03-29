@@ -13,7 +13,7 @@ public class AirplanesWrench extends Item implements IHasModel
 		setUnlocalizedName(name);
 		setRegistryName(name); 
 		setMaxStackSize(1);
-		setCreativeTab(AirplanesMod.AIRPLANESTAB);
+		setCreativeTab(AirplanesMod.AIRPLANESTAB2);
 
 		ItemInit.ITEMS.add(this);  
 	}
