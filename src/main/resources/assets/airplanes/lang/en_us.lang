@@ -20,7 +20,8 @@ tile.combustion_engine.name=Combustion Engine
 tile.parts_builder.name=Parts Builder
 
 //Creative Tab
-itemGroup.Airplanes=Airplanes Tab
+itemGroup.AirplanesItems=Airplanes - Items and Blocks
+itemGroup.AirplanesVehicles=Airplanes - Vehicles
 
 //Containers
 container.combustion_engine=Combustion Engine
@@ -55,6 +56,10 @@ item.airplane_item.name=WIP Airplane Item
 item.airplanes_hammer.name=Airplanes Hammer
 item.airplanes_wrench.name=Airplanes Wrench
 item.fuel.name=Fuel
+item.suitcase.name=Suitcase
+container.suitcase=Suitcase
+fluid.oil=Oil
+tile.name.oil=Oil
 
 
 

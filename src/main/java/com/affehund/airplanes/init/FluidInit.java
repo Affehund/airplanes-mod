@@ -17,11 +17,11 @@ public class FluidInit extends BlockFluidClassic
 		super(fluid, material);
 	}
 
-	public static final Fluid Oil = new FluidLiquid("oil", new ResourceLocation("airplanes:blocks/oil_still"), new ResourceLocation("airplanes:blocks/oil_flow")); 
+	public static final Fluid OIL = new FluidLiquid("oil", new ResourceLocation("airplanes:blocks/oil_still"), new ResourceLocation("airplanes:blocks/oil_flow")); 
 	
 	public static void registerFluids()
 	{
-		registerFluid(Oil);
+		registerFluid(OIL);
 	}
 	
 	public static void registerFluid(Fluid fluid)

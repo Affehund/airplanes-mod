@@ -6,6 +6,6 @@ import net.minecraft.block.material.Material;
 public class Oil extends Block{
 
 	public Oil(Material materialIn) {
-		super(Material.WATER);
+		super(Material.LAVA);
 	}
 }

@@ -1,7 +1,8 @@
 package com.affehund.airplanes;
 
 public class AirplanesConstants {
-    public static final String MODID = "airplanes";
+
+	public static final String MODID = "airplanes";
     public static final String NAME = "Airplanes Mod";
     public static final String VERSION = "1.0.0";
     
@@ -9,4 +10,6 @@ public class AirplanesConstants {
 	public static final String SERVER = "com.affehund.airplanes.proxy.CommonProxy";
     
     public static final int GUI_COMBUSTION_ENGINE = 1;
+    public static final int GUI_SUITCASE = 2;
+    public static final int GUI_BOOK = 3;
 }

@@ -23,7 +23,8 @@ tile.parts_builder.name=Flugzeugteile Werkbank
 container.combustion_engine=Verbrennungsmotor
 
 //Creative Tab
-itemGroup.Airplanes=Airplanes Tab
+itemGroup.AirplanesItems=Airplanes - Gegenstände und Blöcke
+itemGroup.AirplanesVehicles=Airplanes - Fahrzeuge
 
 #Items
 item.aluminum_ingot.name=Aluminiumbarren 
@@ -55,7 +56,10 @@ item.airplane_item.name=WIP Flugzeug Gegenstand
 item.airplanes_hammer.name=Flugzeug Hammer
 item.airplanes_wrench.name=Flugzeug Schraubschlüssel
 item.fuel.name=Treibstoff
-
+item.suitcase.name=Koffer
+container.suitcase=Koffer
+fluid.oil=Öl
+tile.name.oil=Öl
 
 
 

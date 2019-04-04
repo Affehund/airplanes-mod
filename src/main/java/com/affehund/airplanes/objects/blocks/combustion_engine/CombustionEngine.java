@@ -6,6 +6,7 @@ import com.affehund.airplanes.AirplanesConstants;
 import com.affehund.airplanes.AirplanesMod;
 import com.affehund.airplanes.objects.BlockBase;
 
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.*;
@@ -27,6 +28,10 @@ public class CombustionEngine extends BlockBase
 		super(name, Material.ROCK);
 		setDefaultState(getDefaultState().withProperty(FACING, EnumFacing.NORTH));
 		setCreativeTab(AirplanesMod.AIRPLANESTAB1);
+		setHardness(2.5F);
+		setResistance(100F);
+		setSoundType(SoundType.STONE);
+		setHarvestLevel("pickaxe", 2);
 	}
 	
 	

@@ -1,7 +1,8 @@
 package com.affehund.airplanes.util.handlers;
 
 import com.affehund.airplanes.AirplanesConstants;
-import com.affehund.airplanes.tileentities.TileEntityCombustionEngine;
+import com.affehund.airplanes.objects.blocks.combustion_engine.TileEntityCombustionEngine;
+
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 

@@ -1,6 +1,8 @@
 package com.affehund.airplanes.util.handlers;
 
 import com.affehund.airplanes.AirplanesMod;
+import com.affehund.airplanes.init.AirplanesSmelting;
+import com.affehund.airplanes.init.AirplanesWorldGeneration;
 import com.affehund.airplanes.init.BlockInit;
 import com.affehund.airplanes.init.FluidInit;
 import com.affehund.airplanes.init.ItemInit;
@@ -19,6 +21,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
 @EventBusSubscriber
@@ -34,6 +37,7 @@ public class RegistryHandler
 	public static void onBlockRegister(RegistryEvent.Register<Block> event) 
 	{
 		event.getRegistry().registerAll(BlockInit.BLOCKS.toArray(new Block[0]));
+		TileEntityHandler.registerTileEntities();
 	}
 
 
@@ -62,13 +66,18 @@ public class RegistryHandler
 	public static void preInitRegistries(FMLPreInitializationEvent event)
 	{
 		FluidInit.registerFluids();
+		
+		
+		GameRegistry.registerWorldGenerator(new AirplanesWorldGeneration(), 0);
 		RenderHandler.registerEntityRenders();
 		RenderHandler.registerCustomMeshesAndStates();
 		AirplanesConfiguration.registerConfig(event);
 	}
+	
 
 	public static void initRegistries(FMLInitializationEvent event)
 	{
+		AirplanesSmelting.init();
 		NetworkRegistry.INSTANCE.registerGuiHandler(AirplanesMod.instance, new GuiHandler());
 		OreDictionaryCompat.registerOres();
 	}

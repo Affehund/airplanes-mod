@@ -21,18 +21,20 @@ import net.minecraftforge.items.ItemStackHandler;
 public class TileEntityCombustionEngine extends TileEntity implements ITickable 
 	{
 		public ItemStackHandler handler = new ItemStackHandler(1);
-		private APEnergyStorage storage = new APEnergyStorage(10000);
+		private APEnergyStorage storage = new APEnergyStorage(100000, 0, 20); 
 		public int energy = storage.getEnergyStored();
 		private String customName;
 		public int cookTime;
 		
+		
 		@Override
 		public void update() 
-		{
+		{	
+
 			if(!handler.getStackInSlot(0).isEmpty() && isItemFuel(handler.getStackInSlot(0)))
 			{
 				cookTime++;
-				if(cookTime == 50)
+				if(cookTime == 25)
 				{
 					energy += getFuelValue(handler.getStackInSlot(0));
 					handler.getStackInSlot(0).shrink(1);
@@ -40,6 +42,7 @@ public class TileEntityCombustionEngine extends TileEntity implements ITickable
 				}
 			}
 		}
+		
 	
 		private boolean isItemFuel(ItemStack stack) 
 		{
@@ -49,7 +52,7 @@ public class TileEntityCombustionEngine extends TileEntity implements ITickable
 		private int getFuelValue(ItemStack stack) 
 		{
 			if(stack.getItem() == Items.COAL) return 1000;
-			if(stack.getItem() == ItemInit.FUEL) return 1000;
+			if(stack.getItem() == ItemInit.FUEL) return 10000;
 			else return 0;
 		}
 

@@ -5,9 +5,9 @@ import com.affehund.airplanes.init.ItemInit;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
-public class AirplanesTab extends CreativeTabs {
-	public AirplanesTab() {
-		super("Airplanes");
+public class AirplanesTab2 extends CreativeTabs {
+	public AirplanesTab2() {
+		super("AirplanesVehicles");
 	}
 
 	@Override

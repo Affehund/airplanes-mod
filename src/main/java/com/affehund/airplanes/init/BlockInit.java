@@ -1,6 +1,8 @@
 package com.affehund.airplanes.init;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +10,7 @@ import com.affehund.airplanes.objects.blocks.AluminumBlock;
 import com.affehund.airplanes.objects.blocks.AluminumCoil;
 import com.affehund.airplanes.objects.blocks.AsphaltBlock;
 import com.affehund.airplanes.objects.blocks.BauxiteOre;
-import com.affehund.airplanes.objects.blocks.CombustionEngine;
+import com.affehund.airplanes.objects.blocks.BlockFluid;
 import com.affehund.airplanes.objects.blocks.CopperBlock;
 import com.affehund.airplanes.objects.blocks.CopperCoil;
 import com.affehund.airplanes.objects.blocks.CopperOre;
@@ -18,6 +20,7 @@ import com.affehund.airplanes.objects.blocks.PartsBuilder;
 import com.affehund.airplanes.objects.blocks.SteelBlock;
 import com.affehund.airplanes.objects.blocks.TinBlock;
 import com.affehund.airplanes.objects.blocks.TinOre;
+import com.affehund.airplanes.objects.blocks.combustion_engine.CombustionEngine;
 
 public class BlockInit 
 {
@@ -42,7 +45,8 @@ public class BlockInit
 
 
 	//Machines
-
 	public static final Block COMBUSTION_ENGINE = new CombustionEngine("combustion_engine");
+	
+	public static final Block OIL = new BlockFluid("oil", FluidInit.OIL, Material.WATER);
 }
 	

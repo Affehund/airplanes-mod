@@ -3,7 +3,8 @@ package com.affehund.airplanes;
 
 import java.io.File;
 
-import com.affehund.airplanes.creativetabs.AirplanesTab;
+import com.affehund.airplanes.creativetabs.AirplanesTab1;
+import com.affehund.airplanes.creativetabs.AirplanesTab2;
 import com.affehund.airplanes.proxy.CommonProxy;
 import com.affehund.airplanes.util.handlers.RegistryHandler;
 
@@ -23,12 +24,17 @@ import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 public class AirplanesMod 
 {
 	@Instance
-	public static AirplanesMod  instance;
+	public static AirplanesMod instance;
+	
+	public static AirplanesMod getInstance() {
+		return instance;
+	}
 
 	@SidedProxy(clientSide = AirplanesConstants.CLIENT, serverSide = AirplanesConstants.SERVER)
 	public static CommonProxy proxy;
 	
-	public static final CreativeTabs AIRPLANESTAB = new AirplanesTab();
+	public static final CreativeTabs AIRPLANESTAB1 = new AirplanesTab1();
+	public static final CreativeTabs AIRPLANESTAB2 = new AirplanesTab2();
 
 	public static File config;
 	
