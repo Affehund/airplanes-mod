@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "airplanes:blocks/heater_block",
+		"up": "airplanes:blocks/side_block",
+		"down": "airplanes:blocks/side_block",
+		"north": "airplanes:blocks/heater_block",
+		"east": "airplanes:blocks/side_block",
+		"south": "airplanes:blocks/heater_block",
+		"west": "airplanes:blocks/side_block"
+	}
+}

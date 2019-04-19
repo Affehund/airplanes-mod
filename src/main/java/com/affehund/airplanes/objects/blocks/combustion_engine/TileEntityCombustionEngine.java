@@ -32,7 +32,7 @@ public class TileEntityCombustionEngine extends TileEntity implements ITickable
 		{	
 
 			if(!handler.getStackInSlot(0).isEmpty() && isItemFuel(handler.getStackInSlot(0)))
-			{
+				{
 				cookTime++;
 				if(cookTime == 25)
 				{

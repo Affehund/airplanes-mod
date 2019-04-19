@@ -1,6 +1,5 @@
 //Übersetzung de_de
 
-
 //Blocks
 tile.aluminum_block.name=Aluminiumblock
 tile.aluminum_coil.name=Aluminiumspule
@@ -15,9 +14,15 @@ tile.steel_block.name=Stahlblock
 tile.tin_block.name=Zinnblock
 tile.tin_ore.name=Zinnerz
 
+tile.computer_t1.name=Tier 1 Computer
+tile.computer_t2.name=Tier 2 Computer
+tile.computer_t3.name=Tier 3 Computer
+
 tile.airplanes_builder.name=Flugzeug Werkbank
 tile.combustion_engine.name=Verbrennungsmotor
 tile.parts_builder.name=Flugzeugteile Werkbank
+
+tile.oil.name=Oel
 
 //Containers
 container.combustion_engine=Verbrennungsmotor
@@ -47,6 +52,14 @@ item.stone_gear.name=Steinzahnrad
 item.tin_ingot.name=Zinnbarren
 item.tin_nugget.name=Zinnklumpen
 item.wooden_gear.name=Hölzernes Zahnrad
+
+item.display.name=Bildschirm
+item.diamond_circuit_board.name=Diamant Platine
+item.golden_circuit_board.name=Goldene Platine
+item.iron_circuit_board.name=Eisen Platine
+item.diamond_cpu.name=Diamant CPU
+item.golden_cpu.name=Goldene CPU
+item.iron_cpu.name=Eisen CPU
 
 //Machines
 tile.combustion_engine.name=Verbrennungsmotor

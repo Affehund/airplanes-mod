@@ -1,5 +1,6 @@
 package com.affehund.airplanes.objects.items.suitcase;
 
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryBasic;
 import net.minecraft.item.ItemStack;
@@ -9,14 +10,17 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraftforge.common.util.Constants;
 
+
 public class InventorySuitcase extends InventoryBasic {
 	 
 	private final ItemStack stack;
+
 	
 	public InventorySuitcase(ItemStack stack) {
 		super("Suitcase", false, 27);
 		this.stack = stack;
 	}
+	
 	
 	@Override
 	public ITextComponent getDisplayName()
@@ -65,7 +69,7 @@ public class InventorySuitcase extends InventoryBasic {
 		tag.setTag("inventory", list);
 		
 	}
-
+	
 	public void readFromNBT() {
 		NBTTagCompound tag = stack.getTagCompound();
 		if(tag == null) {

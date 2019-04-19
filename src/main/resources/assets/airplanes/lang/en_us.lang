@@ -15,9 +15,15 @@ tile.steel_block.name=Steel Block
 tile.tin_block.name=Tin Block
 tile.tin_ore.name=Tin Ore
 
+tile.computer_t1.name=Tier 1 Computer
+tile.computer_t2.name=Tier 2 Computer
+tile.computer_t3.name=Tier 3 Computer
+
 tile.airplanes_builder.name=Airplanes Parts Builder
 tile.combustion_engine.name=Combustion Engine
 tile.parts_builder.name=Parts Builder
+
+tile.oil.name=Oil
 
 //Creative Tab
 itemGroup.AirplanesItems=Airplanes - Items and Blocks
@@ -35,6 +41,7 @@ item.copper_nugget.name=Copper Nugget
 item.copper_plate.name=Copper Plate
 item.copper_rod.name=Copper Rod 
 item.diamond_gear.name=Diamond Gear 
+
 item.golden_gear.name=Golden Gear 
 item.iron_gear.name=Iron Gear 
 item.iron_plate.name=Iron Plate
@@ -47,6 +54,16 @@ item.stone_gear.name=Stone Gear
 item.tin_ingot.name=Tin Ingot
 item.tin_nugget.name=Tin Nugget
 item.wooden_gear.name=Wooden Gear 
+
+item.display.name=Display
+
+item.diamond_circuit_board.name=Diamond Circuit Board
+item.golden_circuit_board.name=Golden Circuit Board
+item.iron_circuit_board.name=Iron Circuit Board
+
+item.diamond_cpu.name=Diamond CPU
+item.golden_cpu.name=Golden CPU
+item.iron_cpu.name=Iron CPU
 
 //Machines
 tile.combustion_engine.name=Combustion Engine

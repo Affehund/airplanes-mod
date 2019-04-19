@@ -3,8 +3,6 @@ package com.affehund.airplanes.init;
 import com.affehund.airplanes.fluids.FluidLiquid;
 
 import net.minecraft.block.material.Material;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
@@ -28,11 +26,5 @@ public class FluidInit extends BlockFluidClassic
 	{
 		FluidRegistry.registerFluid(fluid);
 		FluidRegistry.addBucketForFluid(fluid);
-	}
-	
-	@Override
-	public EnumBlockRenderType getRenderType(IBlockState state)
-	{
-		return EnumBlockRenderType.MODEL;
 	}
 }

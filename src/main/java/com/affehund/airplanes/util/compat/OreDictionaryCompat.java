@@ -39,6 +39,9 @@ public class OreDictionaryCompat {
 		OreDictionary.registerOre("stickAluminum", ItemInit.ALUMINUM_ROD);	
 		OreDictionary.registerOre("stickCopper", ItemInit.COPPER_ROD);
 		OreDictionary.registerOre("stickSteel", ItemInit.STEEL_ROD); 
+		
+		OreDictionary.registerOre("itemSilicon", ItemInit.SILICON); 
+		OreDictionary.registerOre("ingotSilicon", ItemInit.SILICON); 
 	}		
 }
 

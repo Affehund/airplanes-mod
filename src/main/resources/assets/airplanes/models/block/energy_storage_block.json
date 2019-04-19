@@ -1,6 +1,12 @@
 {
-	"parent": "block/cube_all",
+	"parent": "block/cube",
 	"textures": {
-		"all": "airplanes:blocks/energy_storage_block"
+		"particle": "airplanes:blocks/energy_storage_block",
+		"up": "airplanes:blocks/energy_storage_block_top",
+		"down": "airplanes:blocks/energy_storage_block_top",
+		"north": "airplanes:blocks/energy_storage_block",
+		"east": "airplanes:blocks/energy_storage_block",
+		"south": "airplanes:blocks/energy_storage_block",
+		"west": "airplanes:blocks/energy_storage_block"
 	}
 }

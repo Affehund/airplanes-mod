@@ -1,0 +1,27 @@
+{
+	"variants": {
+		"facing=north": {
+            "model": "airplanes:heater_block"
+        },
+        "facing=south": {
+            "model": "airplanes:heater_block",
+            "y": 180
+        },
+        "facing=west": {
+            "model": "airplanes:heater_block",
+            "y": 270
+        },
+        "facing=east": {
+            "model": "airplanes:heater_block",
+            "y": 90
+        },
+        "facing=up": {
+            "model": "airplanes:heater_block",
+            "x": 0
+        },
+        "facing=down": {
+            "model": "airplanes:heater_block",
+            "x": 0
+        }
+	}
+}

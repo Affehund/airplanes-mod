@@ -13,6 +13,6 @@ public class PartsBuilder extends BlockBase
 		setResistance(100F);
 		setSoundType(SoundType.STONE);
 		setHarvestLevel("pickaxe", 0);
-	}
-   
+		setLightOpacity(1);
+	}  
 }

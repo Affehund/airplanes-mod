@@ -20,7 +20,6 @@ public class RenderHandler
 	public static void registerCustomMeshesAndStates()
 	{
 		ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(BlockInit.OIL), new ItemMeshDefinition() {
-			
 			@Override
 			public ModelResourceLocation getModelLocation(ItemStack stack) 
 			{
@@ -29,7 +28,6 @@ public class RenderHandler
 		});
 		
 		ModelLoader.setCustomStateMapper(BlockInit.OIL, new StateMapperBase() 
-
 		{	
 			@Override
 			protected ModelResourceLocation getModelResourceLocation(IBlockState state)
@@ -37,7 +35,6 @@ public class RenderHandler
 				return new ModelResourceLocation("airplanes:oil", "fluid");
 
 			}
-
 		});
 	}
 }

@@ -1,0 +1,27 @@
+{
+	"variants": {
+		"facing=east": {
+            "model": "airplanes:computer_t3"
+        },
+        "facing=west": {
+            "model": "airplanes:computer_t3",
+            "y": 180
+        },
+        "facing=north": {
+            "model": "airplanes:computer_t3",
+            "y": 270
+        },
+        "facing=south": {
+            "model": "airplanes:computer_t3",
+            "y": 90
+        },
+        "facing=up": {
+            "model": "airplanes:computer_t3",
+            "x": 0
+        },
+        "facing=down": {
+            "model": "airplanes:computer_t3",
+            "x": 0
+        }
+	}
+}
