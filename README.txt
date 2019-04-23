@@ -5,7 +5,27 @@ the A320 or the V-22.
 In addition, the Airplanes Mod has a set of tools, crafting benches and new ores. 
 If you miss a plane or want to suggest one, submit it to our Issue Tracker (it will not count as an issue).
 
+Discord:
+https://discord.gg/B5h584D
+
+Curseforge Download:
+https://minecraft.curseforge.com/projects/airplanes-mod
 
 Features:
+- Many Blocks, Items and Ores
+- Backpack
+- Book (W.I.P)
+- Many crafting recipes
+- OreDictionary 
+- Energy Producer (W.I.P.)
+- Advancements 
 
 Future Features:
+- Airplanes
+- Other Vehicles
+- Energy
+- Multi-Block-Machines
+- much other stuff
+
+Suggestions:
+- if you have a suggestion, tell it in our Discord
