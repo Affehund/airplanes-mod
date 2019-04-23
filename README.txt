@@ -27,5 +27,4 @@ Future Features:
 - Multi-Block-Machines
 - much other stuff
 
-Suggestions:
-- if you have a suggestion, tell it in our Discord
+Be free to submit your suggestions and ideas in our Discord or in the Issue Tracker!
