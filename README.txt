@@ -11,7 +11,7 @@ https://discord.gg/B5h584D
 Curseforge Download:
 https://minecraft.curseforge.com/projects/airplanes-mod
 
-Features:
+Features (in upcoming alpha0.8):
 - Many Blocks, Items and Ores
 - Backpack
 - Book (W.I.P)
