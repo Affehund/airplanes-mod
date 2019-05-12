@@ -11,20 +11,28 @@ https://discord.gg/B5h584D
 Curseforge Download:
 https://minecraft.curseforge.com/projects/airplanes-mod
 
-Features (in upcoming alpha0.8):
-- Many Blocks, Items and Ores
-- Backpack
-- Book (W.I.P)
-- Many crafting recipes
-- OreDictionary 
-- Energy Producer (W.I.P.)
+Status (airplanes_alpha0.7.1):
+
+Features:
+- Materials (copper ingot, steel rod, diamond gear ...)
+- Tools (airplanes wrench, airplanes hammer ...)
+- Suitcase
+- Tech items (silicon, display ...)
+- Many blocks (coils, ores, ...)
+- Machines (Combustion Engine, Energy Storage Block, Machine Block ...)
+- Many Crafting Recipes
+- OreDictionary
 - Advancements 
 
-Future Features:
-- Airplanes
-- Other Vehicles
+Planed Features:
+- Working and flyable planes
 - Energy
-- Multi-Block-Machines
-- much other stuff
+- Multiblocks
+- Wiki
+- Structures
+- Villagers
+- Other vehicles
+- Compability between other mods (jei, crafttweaker, buildcraft, ...)
+- And much more
 
-Be free to submit your suggestions and ideas in our Discord or in the Issue Tracker!
+Be free to submit your suggestions and ideas in our Discord or on the Issue Tracker!
