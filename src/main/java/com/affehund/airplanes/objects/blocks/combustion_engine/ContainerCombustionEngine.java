@@ -19,7 +19,6 @@ public class ContainerCombustionEngine extends Container
 	{
 		this.tileentity = tileentity;
 		IItemHandler handler = tileentity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
-
 		this.addSlotToContainer(new SlotItemHandler(handler, 0, 80, 31));
 
 		for(int y = 0; y < 3; y++)
@@ -52,9 +51,10 @@ public class ContainerCombustionEngine extends Container
 	public void detectAndSendChanges() 
 	{
 		super.detectAndSendChanges();
+		
 		for(int i = 0; i < this.listeners.size(); ++i) 
 		{
-			IContainerListener listener = (IContainerListener)this.listeners.get(i);
+			IContainerListener listener = this.listeners.get(i);
 			if(this.energy != this.tileentity.getField(0)) listener.sendWindowProperty(this, 0, this.tileentity.getField(0));
 			if(this.cookTime != this.tileentity.getField(1)) listener.sendWindowProperty(this, 1, this.tileentity.getField(1));
 		}
@@ -67,11 +67,13 @@ public class ContainerCombustionEngine extends Container
 	public ItemStack transferStackInSlot(EntityPlayer playerIn, int index)
 	{
 		ItemStack stack = ItemStack.EMPTY;
-		Slot slot = (Slot)this.inventorySlots.get(index);
+		Slot slot = this.inventorySlots.get(index);
+
 		if(slot != null && slot.getHasStack())
 		{
 			ItemStack stack1 = slot.getStack();
 			stack = stack1.copy();
+
 			if(index >= 0 && index < 27)
 			{
 				if(!this.mergeItemStack(stack1, 27, 36, false)) return ItemStack.EMPTY;
@@ -80,12 +82,11 @@ public class ContainerCombustionEngine extends Container
 			{
 				if(!this.mergeItemStack(stack1, 0, 27, false)) return ItemStack.EMPTY;
 			}
-
 			else if(!this.mergeItemStack(stack1, 0, 36, false))
 			{
 				return ItemStack.EMPTY;
 			}
-
+			
 			if(stack1.isEmpty()) slot.putStack(ItemStack.EMPTY);
 			else slot.onSlotChanged();
 

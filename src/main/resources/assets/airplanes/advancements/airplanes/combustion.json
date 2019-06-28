@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "airplanes:combustion_engine"
+        },
+        "title": {
+            "translate": "advancements.combustion.title"
+        },
+        "description": {
+            "translate": "advancements.combustion.description"
+        	}
+        },
+        "parent": "airplanes:airplanes/machines",
+   		"criteria":{
+   		 	"inv_changed:combustion":{
+   		 		"trigger":"minecraft:inventory_changed",
+   		 		"conditions":{
+   		 			"items":[
+   		 				{
+   		 				"item":"airplanes:combustion_engine"
+   		 				}	
+   		 		]
+   		 	}
+   		}
+   	}
+}
+  
+ 

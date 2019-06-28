@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "airplanes:steel_ingot"
+        },
+        "title": {
+            "translate": "advancements.steel.title"
+        },
+        "description": {
+            "translate": "advancements.steel.description"
+        	}
+        },
+        "parent": "airplanes:airplanes/root",
+   		 "criteria":{
+   		 	"inv_changed:wrench":{
+   		 		"trigger":"minecraft:inventory_changed",
+   		 		"conditions":{
+   		 			"items":[
+   		 				{
+   		 				"item":"airplanes:steel_ingot"
+   		 			}
+   		 		]
+   		 	}
+   		}
+   	}
+}
+  
+ 

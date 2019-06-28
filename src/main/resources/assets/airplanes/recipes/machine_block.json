@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ABA",
+        "CPC",
+        "ABA"
+    ],
+    "key": {
+    	"A": {
+            "item": "minecraft:stone_slab",
+        	"data": 0
+        	},
+         "B":
+      		{
+        	"item": "minecraft:stone",
+        	"data": 0
+      		},	
+         "C":
+      		{
+        	"item": "minecraft:stonebrick",
+        	"data": 0
+      		},
+        "P": 
+        	{
+            "type": "forge:ore_dict",
+            "ore": "plateSteel"
+        }
+    },
+    "result": {
+        "item": "airplanes:machine_block",
+        "data": 0
+    }
+}

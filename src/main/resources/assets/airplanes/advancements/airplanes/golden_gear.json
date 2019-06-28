@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "airplanes:golden_gear"
+        },
+        "title": {
+            "translate": "advancements.golden_gear.title"
+        },
+        "description": {
+            "translate": "advancements.golden_gear.description"
+        	}
+        },
+        "parent": "airplanes:airplanes/iron_gear",
+   		 "criteria":{
+   		 	"inv_changed:golden_gear":{
+   		 		"trigger":"minecraft:inventory_changed",
+   		 		"conditions":{
+   		 			"items":[
+   		 				{
+   		 				"item":"airplanes:golden_gear"
+   		 			}
+   		 		]
+   		 	}
+   		}
+   	}
+}
+  
+ 

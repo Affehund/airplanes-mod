@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "airplanes:fuel"
+        },
+        "title": {
+            "translate": "advancements.fuel.title"
+        },
+        "description": {
+            "translate": "advancements.fuel.description"
+        	}
+        },
+        "parent": "airplanes:airplanes/silicon",
+   		"criteria":{
+   		 	"inv_changed:fuel":{
+   		 		"trigger":"minecraft:inventory_changed",
+   		 		"conditions":{
+   		 			"items":[
+   		 				{
+   		 				"item":"airplanes:fuel"
+   		 				}	
+   		 		]
+   		 	}
+   		}
+   	}
+}
+  
+ 

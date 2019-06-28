@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+        "type": "forge:ore_dict",
+            "ore": "sand"
+        },
+        {
+        "type": "forge:ore_dict",
+            "ore": "sand"
+        },
+        {
+        "type": "forge:ore_dict",
+            "ore": "sand"
+        },
+        {
+            "item": "minecraft:quartz"
+        }
+     ],
+    "result": {
+        "item": "airplanes:raw_silicon",
+        "count": 6
+    }
+}

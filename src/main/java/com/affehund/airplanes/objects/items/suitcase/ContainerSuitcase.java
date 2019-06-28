@@ -17,7 +17,7 @@ public class ContainerSuitcase extends ContainerChest {
 	public ItemStack slotClick(int slotId, int dragType, ClickType clickTypeIn, EntityPlayer player) {
 		Slot tmpSlot;
 		if (slotId >= 0 && slotId < inventorySlots.size()) {
-			tmpSlot = (Slot) inventorySlots.get(slotId);
+			tmpSlot = inventorySlots.get(slotId);
 
 		} else {
 			tmpSlot = null;

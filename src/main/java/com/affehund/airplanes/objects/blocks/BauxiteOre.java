@@ -8,10 +8,9 @@ import net.minecraft.block.material.Material;
 public class BauxiteOre extends BlockBase {
 	public BauxiteOre(String name) {
 		super(name, Material.IRON);
-		setHardness(2.5F);
-		setResistance(100F);
+		setHardness(2.0F);
+		setResistance(150F);
 		setSoundType(SoundType.STONE);
 		setHarvestLevel("pickaxe", 2);
-		setLightLevel(0.0F);
 	}
 }

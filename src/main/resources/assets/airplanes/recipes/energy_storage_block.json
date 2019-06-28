@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ICI",
+        "CRC",
+        "MCM"
+    ],
+    "key": {
+    	"I": {
+            "item": "minecraft:iron_ingot",
+        	"data": 0
+        	},
+         "C": {
+        	"type": "forge:ore_dict",
+            "ore": "ingotCopper"
+    		},
+        "R": {
+            "item": "minecraft:redstone_block",
+        	"data": 0
+        	},
+        "M": {
+            "item": "airplanes:machine_block",
+        	"data": 0
+        	}		
+    },
+    "result": {
+        "item": "airplanes:energy_storage_block",
+        "data": 0
+    }
+}

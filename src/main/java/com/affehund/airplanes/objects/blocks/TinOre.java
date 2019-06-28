@@ -11,6 +11,6 @@ public class TinOre extends BlockBase {
 		setHardness(2.5F);
 		setResistance(100F);
 		setSoundType(SoundType.STONE);
-		setHarvestLevel("pickaxe", 2);
+		setHarvestLevel("pickaxe", 3);
 	}
 }

@@ -1,6 +1,12 @@
 {
-	"parent": "block/cube_all",
+	"parent": "block/cube",
 	"textures": {
-		"all": "airplanes:blocks/airplanes_builder"
+		"particle": "airplanes:blocks/airplanes_builder_front",
+		"up": "airplanes:blocks/side_block",
+		"down": "airplanes:blocks/side_block",
+		"north": "airplanes:blocks/airplanes_builder_front",
+		"east": "airplanes:blocks/side_block",
+		"south": "airplanes:blocks/side_block",
+		"west": "airplanes:blocks/side_block"
 	}
 }

@@ -20,10 +20,9 @@ public class Computer extends BlockBase {
 	public Computer(String name) {
 		super(name, Material.ROCK);
 		setHardness(1.5F);
-		setResistance(100F);
+		setResistance(75);
 		setSoundType(SoundType.STONE);
 		setHarvestLevel("pickaxe", 1);
-		setLightLevel(0.0F);
 	}
 	
 	@Nullable

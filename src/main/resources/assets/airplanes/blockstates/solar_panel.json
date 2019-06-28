@@ -1,0 +1,9 @@
+{
+    "variants":
+    {
+        "normal":
+        {
+            "model": "airplanes:solar_panel"
+        }
+    }
+}

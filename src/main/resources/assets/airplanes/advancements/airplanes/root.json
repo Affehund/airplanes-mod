@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "airplanes:airplane_item"
+        },
+        "title": {
+            "translate": "advancements.root.title"
+            
+        },
+        "description": {
+            "translate": "advancements.root.description"
+        },
+         "background":"airplanes:textures/blocks/asphalt_block.png"
+    },
+   	"criteria": {
+        "inv_changede": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:crafting_table"
+                    }
+                ]
+            }
+        }
+    }
+}
+  
+ 

@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "airplanes:diamond_gear"
+        },
+        "title": {
+            "translate": "advancements.diamond_gear.title"
+        },
+        "description": {
+            "translate": "advancements.diamond_gear.description"
+        	}
+        },
+        "parent": "airplanes:airplanes/golden_gear",
+   		 "criteria":{
+   		 	"inv_changed:diamond_gear":{
+   		 		"trigger":"minecraft:inventory_changed",
+   		 		"conditions":{
+   		 			"items":[
+   		 				{
+   		 				"item":"airplanes:diamond_gear"
+   		 			}
+   		 		]
+   		 	}
+   		}
+   	}
+}
+  
+ 

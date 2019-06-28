@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "airplanes:energy_storage_block"
+        },
+        "title": {
+            "translate": "advancements.energy_storage.title"
+        },
+        "description": {
+            "translate": "advancements.energy_storage.description"
+        	}
+        },
+        "parent": "airplanes:airplanes/solar_panel",
+   		"criteria":{
+   		 	"inv_changed:energy_storage":{
+   		 		"trigger":"minecraft:inventory_changed",
+   		 		"conditions":{
+   		 			"items":[
+   		 				{
+   		 				"item":"airplanes:energy_storage_block"
+   		 				}	
+   		 		]
+   		 	}
+   		}
+   	}
+}
+  
+ 

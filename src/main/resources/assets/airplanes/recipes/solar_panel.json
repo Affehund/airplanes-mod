@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "LDG",
+        "MRM"
+    ],
+    "key": {
+    	"D": {
+            "item": "minecraft:daylight_detector",
+        	"data": 0
+        	},
+        "R": {
+            "item": "minecraft:redstone_block",
+        	"data": 0
+        	},
+        "L": {
+            "item": "minecraft:dye",
+        	"data": 4
+        	},	
+        "G": {
+           "type": "forge:ore_dict",
+            "ore": "blockGlass"
+        },
+        "M": {
+            "item": "airplanes:machine_block",
+        	"data": 0
+        	}		
+    },
+    "result": {
+        "item": "airplanes:solar_panel",
+        "data": 0
+    }
+}

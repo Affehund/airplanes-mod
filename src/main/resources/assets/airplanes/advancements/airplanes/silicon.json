@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "airplanes:silicon"
+        },
+        "title": {
+            "translate": "advancements.silicon.title"
+        },
+        "description": {
+            "translate": "advancements.silicon.description"
+        	}
+        },
+        "parent": "airplanes:airplanes/rod",
+   		"criteria":{
+   		 	"inv_changed:rod":{
+   		 		"trigger":"minecraft:inventory_changed",
+   		 		"conditions":{
+   		 			"items":[
+   		 				{
+   		 				"item":"airplanes:silicon"
+   		 				}	
+   		 		]
+   		 	}
+   		}
+   	}
+}
+  
+ 

@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "airplanes:machine_block"
+        },
+        "title": {
+            "translate": "advancements.machines.title"
+        },
+        "description": {
+            "translate": "advancements.machines.description"
+        	}
+        },
+        "parent": "airplanes:airplanes/root",
+   		"criteria":{
+   		 	"inv_changed:machines":{
+   		 		"trigger":"minecraft:inventory_changed",
+   		 		"conditions":{
+   		 			"items":[
+   		 				{
+   		 				"item":"airplanes:machine_block"
+   		 				}	
+   		 		]
+   		 	}
+   		}
+   	}
+}
+  
+ 

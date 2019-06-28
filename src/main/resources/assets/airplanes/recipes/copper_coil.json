@@ -3,13 +3,16 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         "III",
-        "I I",
+        "IBI",
         "III"
     ],
     "key": {
         "I": {
             "type": "forge:ore_dict",
             "ore": "ingotCopper"
+        },
+        "B": {
+          "item": "minecraft:iron_bars"
         }
     },
     "result": {

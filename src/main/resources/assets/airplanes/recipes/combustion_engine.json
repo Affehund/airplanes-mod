@@ -3,7 +3,7 @@
     "pattern": [
         " S ",
         "CFC",
-        "SSS"
+        "SMS"
     ],
     "key": {
     	"S": {
@@ -27,7 +27,11 @@
         "F": {
             "item": "minecraft:furnace",
         	"data": 0
-        	}	
+        	},
+        "M": {
+            "item": "airplanes:machine_block",
+        	"data": 0
+        	}		
     },
     "result": {
         "item": "airplanes:combustion_engine",

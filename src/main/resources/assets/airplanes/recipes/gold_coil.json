@@ -3,12 +3,15 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         "III",
-        "I I",
+        "IBI",
         "III"
     ],
     "key": {
         "I": {
             "item": "minecraft:gold_ingot"
+        },
+        "B": {
+          "item": "minecraft:iron_bars"
         }
     },
     "result": {

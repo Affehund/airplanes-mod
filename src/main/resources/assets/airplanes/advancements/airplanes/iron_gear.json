@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "airplanes:iron_gear"
+        },
+        "title": {
+            "translate": "advancements.iron_gear.title"
+        },
+        "description": {
+            "translate": "advancements.iron_gear.description"
+        	}
+        },
+        "parent": "airplanes:airplanes/stone_gear",
+   		 "criteria":{
+   		 	"inv_changed:iron_gear":{
+   		 		"trigger":"minecraft:inventory_changed",
+   		 		"conditions":{
+   		 			"items":[
+   		 				{
+   		 				"item":"airplanes:iron_gear"
+   		 			}
+   		 		]
+   		 	}
+   		}
+   	}
+}
+  
+ 

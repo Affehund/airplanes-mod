@@ -1,7 +1,27 @@
 {
 	"variants": {
-		"normal": {
-			"model": "airplanes:airplanes_builder"
-		}
+		"facing=north": {
+            "model": "airplanes:airplanes_builder"
+        },
+        "facing=south": {
+            "model": "airplanes:airplanes_builder",
+            "y": 180
+        },
+        "facing=west": {
+            "model": "airplanes:airplanes_builder",
+            "y": 270
+        },
+        "facing=east": {
+            "model": "airplanes:airplanes_builder",
+            "y": 90
+        },
+        "facing=up": {
+            "model": "airplanes:airplanes_builder",
+            "x": 0
+        },
+        "facing=down": {
+            "model": "airplanes:airplanes_builder",
+            "x": 0
+        }
 	}
 }

@@ -1,8 +1,6 @@
 package com.affehund.airplanes;
 
-
-import java.io.File;
-
+import com.affehund.airplanes.config.AirplanesConfig;
 import com.affehund.airplanes.creativetabs.AirplanesTab1;
 import com.affehund.airplanes.creativetabs.AirplanesTab2;
 import com.affehund.airplanes.proxy.CommonProxy;
@@ -19,33 +17,35 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
-@Mod(modid = AirplanesConstants.MODID, name = AirplanesConstants.NAME, version = AirplanesConstants.VERSION)
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 
 public class AirplanesMod 
 {
 	@Instance
 	public static AirplanesMod instance;
 	
-	public static AirplanesMod getInstance() {
-		return instance;
-	}
-
-	@SidedProxy(clientSide = AirplanesConstants.CLIENT, serverSide = AirplanesConstants.SERVER)
+	@SidedProxy(clientSide = Reference.CLIENT, serverSide = Reference.COMMON)
 	public static CommonProxy proxy;
+
+	public static AirplanesConfig config;
 	
 	public static final CreativeTabs AIRPLANESTAB1 = new AirplanesTab1();
 	public static final CreativeTabs AIRPLANESTAB2 = new AirplanesTab2();
 
-	public static File config;
 	
-	static { FluidRegistry.enableUniversalBucket(); }
+	static 
+	{ 
+		FluidRegistry.enableUniversalBucket();
+	}
+	
+	
 
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent event) 
 	{	
 		RegistryHandler.preInitRegistries(event);
 	}
-
+	
 	@EventHandler
 	public static void init(FMLInitializationEvent event)
 	{

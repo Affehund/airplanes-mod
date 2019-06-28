@@ -1,13 +1,21 @@
 package com.affehund.airplanes.objects.items;
 
+import java.util.List;
+
+import org.lwjgl.input.Keyboard;
+
 import com.affehund.airplanes.AirplanesMod;
 import com.affehund.airplanes.init.ItemInit;
-import com.affehund.airplanes.util.interfaces.IHasModel;
 
+import net.minecraft.client.resources.I18n;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
-public class AirplanesHammer extends Item implements IHasModel {
+
+public class AirplanesHammer extends Item 
+{
 	
 	public AirplanesHammer(String name) 
 	{
@@ -20,12 +28,21 @@ public class AirplanesHammer extends Item implements IHasModel {
 
 		ItemInit.ITEMS.add(this);  
 	}
-
+	
 	@Override
-	public void registerModels() 
-	{
-		AirplanesMod.proxy.registerItemRenderer(this, 0, "inventory");
-	}
+    public void addInformation(ItemStack stack, World worldIn, List<String> list, ITooltipFlag flags)
+    {
+        if(Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
+        {
+        	list.add(I18n.format("airplanes.tooltips_hammer1"));
+        	list.add(I18n.format("airplanes.tooltips_hammer2"));
+        }
+        else
+        {
+        	list.add(I18n.format("airplanes.tooltips_hammer_normal"));
+        }
+    }
+	
 	
 	@Override
 	public boolean hasContainerItem(ItemStack stack) {
@@ -37,6 +54,6 @@ public class AirplanesHammer extends Item implements IHasModel {
         ItemStack stack = itemstack.copy();
         stack.attemptDamageItem(1, itemRand, null);
         return stack;
-    } 
+    }
 }
 

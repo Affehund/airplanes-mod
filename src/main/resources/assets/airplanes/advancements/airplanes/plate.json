@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "airplanes:airplanes_hammer"
+        },
+        "title": {
+            "translate": "advancements.plate.title"
+        },
+        "description": {
+            "translate": "advancements.plate.description"
+        	}
+        },
+        "parent": "airplanes:airplanes/steel",
+   		"criteria":{
+   		 	"inv_changed:wrench":{
+   		 		"trigger":"minecraft:inventory_changed",
+   		 		"conditions":{
+   		 			"items":[
+   		 				{
+   		 				"item":"airplanes:airplanes_hammer"
+   		 			}
+   		 		]
+   		 	}
+   		}
+   	}
+}
+  
+ 

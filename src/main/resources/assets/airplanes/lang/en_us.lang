@@ -1,5 +1,41 @@
 //translation en_us
 
+//Advancements
+advancements.combustion.title=ENERGY PLS!1!!!!1!
+advancements.combustion.description=Get a combustion engine
+
+advancements.diamond_gear.title=Finally! All good things are 5
+advancements.diamond_gear.description=Make a diamond gear
+
+advancements.energy_storage.title=To where with the energy?
+advancements.energy_storage.description=Craft a energy storage cell
+
+advancements.fuel.title=Fuel? Check!
+advancements.fuel.description=Make some fuel
+
+advancements.golden_gear.title=Gear Upgrade 3
+advancements.golden_gear.description=Craft a golden gear
+
+advancements.iron_gear.title=All good things are 3
+advancements.iron_gear.description=Craft a iron gear
+advancements.machines.title=Starting with engineering
+advancements.machines.description=Craft a machine block
+advancements.plate.title=That is the hammer!
+advancements.plate.description=Craft a hammer to get plates
+advancements.rod.title=I've got no rods...
+advancements.rod.description=Craft one rod, no matter which
+advancements.root.title=Welcome to the AIRPLANES MOD
+advancements.root.description=Make a crafting table
+advancements.silicon.title=What do computers need?
+advancements.silicon.description=Smelt raw silicon to get silicon
+advancements.solar_panel.title=Renewable resources
+advancements.solar_panel.description=Craft a solar panel
+advancements.steel.title=How has stolen that steel?
+advancements.steel.description=Smelt some iron to get steel
+advancements.stone_gear.title=Upgrade 1
+advancements.stone_gear.description=Upgrade the wooden gear and craft a stone gear
+advancements.wooden_gear.title=The first gear
+advancements.wooden_gear.description=Craft a wooden gear and use it for other gears
 
 //Blocks
 tile.aluminum_block.name=Aluminum Block
@@ -19,18 +55,24 @@ tile.computer_t1.name=Tier 1 Computer
 tile.computer_t2.name=Tier 2 Computer
 tile.computer_t3.name=Tier 3 Computer
 
-tile.airplanes_builder.name=Airplanes Parts Builder
+tile.electronics_assembler_block.name=Electronics Assembler Block
+tile.energy_storage_block.name=Energy Storage Block
+tile.machine_block.name=Machine Block
 tile.combustion_engine.name=Combustion Engine
-tile.parts_builder.name=Parts Builder
+tile.solar_panel.name=Solar Panel
+
+tile.airplanes_builder.name=Airplanes Builder
+tile.combustion_engine.name=Combustion Engine
 
 tile.oil.name=Oil
+
+//Containers
+container.combustion_engine=Combustion Engine
+container.energy_storage_block=Energy Storage
 
 //Creative Tab
 itemGroup.AirplanesItems=Airplanes - Items and Blocks
 itemGroup.AirplanesVehicles=Airplanes - Vehicles
-
-//Containers
-container.combustion_engine=Combustion Engine
 
 //Items
 item.aluminum_ingot.name=Aluminum Ingot
@@ -46,7 +88,6 @@ item.golden_gear.name=Golden Gear
 item.iron_gear.name=Iron Gear 
 item.iron_plate.name=Iron Plate
 item.iron_rod.name=Iron Rod
-item.silicon.name=Silicon
 item.steel_ingot.name=Steel Ingot
 item.steel_plate.name=Steel Plate
 item.steel_rod.name=Steel Rod
@@ -65,9 +106,6 @@ item.diamond_cpu.name=Diamond CPU
 item.golden_cpu.name=Golden CPU
 item.iron_cpu.name=Iron CPU
 
-//Machines
-tile.combustion_engine.name=Combustion Engine
-
 //Others
 item.airplane_item.name=WIP Airplane Item
 item.airplanes_hammer.name=Airplanes Hammer
@@ -78,5 +116,17 @@ container.suitcase=Suitcase
 fluid.oil=Oil
 tile.name.oil=Oil
 
+item.silicon.name=Silicon
+item.raw_silicon.name=Raw Silicon
 
+//Tooltips
+airplanes.tooltips_hammer1=With the hammer you can make plates
+airplanes.tooltips_hammer2=Recipe for plates: hammer + ingot (aluminum, copper, iron or steel)
+airplanes.tooltips_hammer_normal=Hold Shift for more information
+airplanes.tooltips_suitcase1=With the suitcase you can store your items on a long journey
+airplanes.tooltips_suitcase2=The inventory is a big as a normal chest
+airplanes.tooltips_suitcase_normal=Hold Shift for more information
+airplanes.tooltips_wrench1=With the wrench you will be able to destroy airplanes easily
+airplanes.tooltips_wrench2=!WIP!
+airplanes.tooltips_wrench_normal=Hold Shift for more information
 

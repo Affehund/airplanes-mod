@@ -1,0 +1,16 @@
+{
+  "type": "forge:ore_shapeless",
+  "result": {
+    "item": "airplanes:iron_plate"
+  	},
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+            "ore": "ingotIron"
+    },
+    {
+      "item": "airplanes:airplanes_hammer",
+      "data": 32767
+    }
+  ]
+}

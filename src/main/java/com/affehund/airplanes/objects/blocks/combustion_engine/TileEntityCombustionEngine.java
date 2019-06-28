@@ -1,7 +1,7 @@
 package com.affehund.airplanes.objects.blocks.combustion_engine;
 
+import com.affehund.airplanes.energy.AirplanesEnergyStorage;
 import com.affehund.airplanes.init.ItemInit;
-import com.affehund.airplanes.objects.blocks.energy.APEnergyStorage;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -17,22 +17,24 @@ import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
+public class TileEntityCombustionEngine extends TileEntity implements ITickable
+{
+	public ItemStackHandler handler = new ItemStackHandler(1);
+	private AirplanesEnergyStorage storage = new AirplanesEnergyStorage(100000, 0, 200);
+	//public int energy;
+	public int energy = storage.getEnergyStored();
+	private String customName;
+	public int cookTime;
+	
 
-public class TileEntityCombustionEngine extends TileEntity implements ITickable 
-	{
-		public ItemStackHandler handler = new ItemStackHandler(1);
-		private APEnergyStorage storage = new APEnergyStorage(100000, 0, 20); 
-		public int energy = storage.getEnergyStored();
-		private String customName;
-		public int cookTime;
-		
-		
-		@Override
-		public void update() 
-		{	
-
-			if(!handler.getStackInSlot(0).isEmpty() && isItemFuel(handler.getStackInSlot(0)))
-				{
+	@Override
+	public void update() 
+	{	
+		this.storage.extractEnergy(200, false);
+		if(!handler.getStackInSlot(0).isEmpty() && isItemFuel(handler.getStackInSlot(0)))
+		{
+			if(energy < 100000) 
+			{
 				cookTime++;
 				if(cookTime == 25)
 				{
@@ -41,111 +43,172 @@ public class TileEntityCombustionEngine extends TileEntity implements ITickable
 					cookTime = 0;
 				}
 			}
-		}
-		
-	
-		private boolean isItemFuel(ItemStack stack) 
-		{
-			return getFuelValue(stack) > 0;
-		}
-
-		private int getFuelValue(ItemStack stack) 
-		{
-			if(stack.getItem() == Items.COAL) return 1000;
-			if(stack.getItem() == ItemInit.FUEL) return 10000;
-			else return 0;
-		}
-
-		@Override
-		public <T> T getCapability(Capability<T> capability, EnumFacing facing) 
-		{
-			if(capability == CapabilityEnergy.ENERGY) return (T)this.storage;
-			if(capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) return (T)this.handler;
-			return super.getCapability(capability, facing);
-		}
-		
-		@Override
-		public boolean hasCapability(Capability<?> capability, EnumFacing facing) 
-		{
-			if(capability == CapabilityEnergy.ENERGY) return true;
-			if(capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) return true;
-			return super.hasCapability(capability, facing);
-		}
-		
-		@Override
-		public NBTTagCompound writeToNBT(NBTTagCompound compound) 
-		{
-			super.writeToNBT(compound);
-			compound.setTag("Inventory", this.handler.serializeNBT());
-			compound.setInteger("CookTime", this.cookTime);
-			compound.setInteger("GuiEnergy", this.energy);
-			compound.setString("Name", getDisplayName().toString());
-			this.storage.writeToNBT(compound);
-			return compound;
-
-		}
-		
-		@Override
-		public void readFromNBT(NBTTagCompound compound) 
-		{
-			super.readFromNBT(compound);
-			this.handler.deserializeNBT(compound.getCompoundTag("Inventory"));
-			this.cookTime = compound.getInteger("CookTime");
-			this.energy = compound.getInteger("GuiEnergy");
-			this.setCustomName(compound.getString("Name"));
-			this.storage.readFromNBT(compound);
-		}
-
-		@Override
-		public ITextComponent getDisplayName()
-		{
-			return new TextComponentTranslation("container.combustion_engine");
-		}
-
-		public int getEnergyStored()
-		{
-			return this.energy;
-		}
-
-		public int getMaxEnergyStored()
-		{
-			return this.storage.getMaxEnergyStored();
-		}
-
-		public int getField(int id)
-		{
-			switch(id)
-			{
-			case 0:
-				return this.energy;
-			case 1:
-				return this.cookTime;
-			default:
-				return 0;
-			}
-		}
-
-		public void setField(int id, int value)
-		{
-			switch(id)
-			{
-			case 0:
-				this.energy = value;
-			case 1:
-				this.cookTime = value;
-			}
-		}
-
-		public boolean isUsableByPlayer(EntityPlayer player) 
-		{
-			return this.world.getTileEntity(this.pos) != this ? false : player.getDistanceSq((double)this.pos.getX() + 0.5D, (double)this.pos.getY() + 0.5D, (double)this.pos.getZ() + 0.5D) <= 64.0D;
-		}
-
-		public String getCustomName() {
-			return customName;
-		}
-
-		public void setCustomName(String customName) {
-			this.customName = customName;
 		}	
 	}
+
+	private boolean isItemFuel(ItemStack stack) 
+	{
+		return getFuelValue(stack) > 0;
+	}
+
+	private int getFuelValue(ItemStack stack) 
+	{
+		if(stack.getItem() == Items.COAL) return 1000;	
+		if(stack.getItem() == ItemInit.FUEL) return 2000;
+		else return 0;
+	}
+	
+	
+		 
+	/*@Override
+	public NBTTagCompound writeToNBT(NBTTagCompound compound) 
+	{
+		super.writeToNBT(compound);
+		compound.setInteger("Energy", getStorage().getEnergyStored());
+		getStorage().writeToNBT(compound);
+		compound.setTag("Inventory", this.handler.serializeNBT());
+		compound.setInteger("CookTime", this.cookTime);
+		compound.setString("Name", this.getDisplayName().toString());
+		return compound;
+	}
+
+	@Override
+	public void readFromNBT(NBTTagCompound compound) 
+	{
+		super.readFromNBT(compound);
+		getStorage().readFromNBT(compound);
+		this.handler.deserializeNBT(compound.getCompoundTag("Inventory"));
+		this.cookTime = compound.getInteger("CookTime");
+		this.energy = compound.getInteger("Energy");
+		this.customName = compound.getString("Name");
+	}*/
+	
+	@Override
+
+	public NBTTagCompound writeToNBT(NBTTagCompound compound) 
+	{
+		super.writeToNBT(compound);
+		compound.setTag("Inventory", this.handler.serializeNBT());
+		compound.setInteger("CookTime", this.cookTime);
+		compound.setInteger("Energy", this.energy);
+		compound.setString("Name", getDisplayName().toString());
+		this.storage.writeToNBT(compound);
+		return compound;
+	}
+
+	@Override
+	public void readFromNBT(NBTTagCompound compound) 
+	{
+		super.readFromNBT(compound);
+		this.handler.deserializeNBT(compound.getCompoundTag("Inventory"));
+		this.cookTime = compound.getInteger("CookTime");
+		this.energy = compound.getInteger("Energy");
+		this.customName = compound.getString("Name");
+		this.storage.readFromNBT(compound);
+	}
+	
+	/*@Override
+	public boolean hasCapability(Capability<?> capability, EnumFacing facing) 
+	{
+		if (capability == CapabilityEnergy.ENERGY || capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY || super.hasCapability(capability, facing)) 
+		{
+            return true;
+        }
+		if(capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) return true;
+		return false;
+	}
+	
+	@Override
+	public <T> T getCapability(Capability<T> capability, EnumFacing facing) 
+	{
+		if (facing == null || capability != CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+            if (capability == CapabilityEnergy.ENERGY) {
+                return (T) getStorage();
+            	}
+        	} 
+		if(capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) return (T) this.handler;
+		return super.getCapability(capability, facing);
+	}*/
+	
+	@Override
+	public <T> T getCapability(Capability<T> capability, EnumFacing facing) 
+	{
+		if(capability == CapabilityEnergy.ENERGY) return (T)this.storage;
+		if(capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) return (T)this.handler;
+		return super.getCapability(capability, facing);
+	}
+
+	@Override
+	public boolean hasCapability(Capability<?> capability, EnumFacing facing) 
+	{
+		if(capability == CapabilityEnergy.ENERGY) return true;
+		if(capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) return true;
+		return super.hasCapability(capability, facing);
+	}
+
+
+	@Override
+	public ITextComponent getDisplayName()
+	{
+
+		return new TextComponentTranslation("container.combustion_engine");
+
+	}
+
+	/*public AirplanesEnergyStorage getStorage() {
+        return this.storage;
+    }
+
+    public void setStorage(AirplanesEnergyStorage storage) {
+        this.storage = storage;
+    }
+
+
+	public int getEnergyStored() {
+        return this.storage.getEnergyStored();
+    }
+
+    public int getMaxEnergyStored() {
+        return getStorage().getMaxEnergyStored();
+    }*/
+	
+	public int getEnergyStored()
+	{
+		return this.energy;
+	}
+
+	public int getMaxEnergyStored()
+	{
+		return this.storage.getMaxEnergyStored();
+	}
+
+	public int getField(int id)
+	{
+		switch(id)
+		{
+		case 0:
+			return this.energy;
+		case 1:
+			return this.cookTime;
+		default:
+			return 0;
+		}
+	}
+
+	public void setField(int id, int value)
+	{
+		switch(id)
+		{
+		case 0:
+			this.energy = value;
+		case 1:
+			this.cookTime = value;
+		}
+	}
+
+	public boolean isUsableByPlayer(EntityPlayer player) 
+	{
+		return this.world.getTileEntity(this.pos) != this ? false : player.getDistanceSq(this.pos.getX() + 0.5D, this.pos.getY() + 0.5D, this.pos.getZ() + 0.5D) <= 64.0D;
+	}	
+}
+

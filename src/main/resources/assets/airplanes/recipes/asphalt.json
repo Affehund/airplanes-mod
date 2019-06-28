@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "SGS",
+        "CSC",
+        "SGS"
+    ],
+    "key": {
+    	"S": {
+            "item": "minecraft:cobblestone",
+        	"data": 0
+        	},
+        "C": {
+            "item": "minecraft:clay_ball",
+        	"data": 0
+        	},
+        "G": {
+            "item": "minecraft:gravel",
+        	"data": 0
+        	}		
+    },
+    "result": {
+        "item": "airplanes:asphalt_block",
+    	"count": 8
+    }
+}

@@ -10,8 +10,8 @@ public class AluminumBlock extends BlockBase
 	public AluminumBlock(String name) 
 	{
 		super(name, Material.IRON);
-		setHardness(2.5F);
-		setResistance(100F);
+		setHardness(2.0F);
+		setResistance(125F);
 		setSoundType(SoundType.METAL);
 		setHarvestLevel("pickaxe", 2);
 	}

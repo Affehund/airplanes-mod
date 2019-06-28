@@ -1,14 +1,15 @@
 package com.affehund.airplanes.util.handlers;
 
 import com.affehund.airplanes.AirplanesMod;
-import com.affehund.airplanes.init.AirplanesSmelting;
-import com.affehund.airplanes.init.AirplanesWorldGeneration;
+import com.affehund.airplanes.commands.CommandAirplanesInfo;
+import com.affehund.airplanes.config.AirplanesConfig;
 import com.affehund.airplanes.init.BlockInit;
+import com.affehund.airplanes.init.EntityInit;
 import com.affehund.airplanes.init.FluidInit;
 import com.affehund.airplanes.init.ItemInit;
-import com.affehund.airplanes.util.compat.AirplanesConfiguration;
-import com.affehund.airplanes.util.compat.OreDictionaryCompat;
-import com.affehund.airplanes.util.interfaces.IHasModel;
+import com.affehund.airplanes.init.OreDictionaryInit;
+import com.affehund.airplanes.init.SmeltingInit;
+import com.affehund.airplanes.init.WorldGenerationInit;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -23,63 +24,56 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-
 @EventBusSubscriber
 public class RegistryHandler 
 {
 	@SubscribeEvent
-	public static void onItemRegister(RegistryEvent.Register<Item> event) 
+	public static void onItemRegister(RegistryEvent.Register<Item> event)
 	{
 		event.getRegistry().registerAll(ItemInit.ITEMS.toArray(new Item[0]));
 	}
-	
+
 	@SubscribeEvent
-	public static void onBlockRegister(RegistryEvent.Register<Block> event) 
+	public static void onModelRegister(ModelRegistryEvent event)
+	{
+		for(Item item : ItemInit.ITEMS)
+		{
+			AirplanesMod.proxy.registerItemRenderer(item, 0, "inventory");
+		}
+
+		for(Block block : BlockInit.BLOCKS)
+		{
+			AirplanesMod.proxy.registerItemRenderer(Item.getItemFromBlock(block), 0, "inventory");
+		}
+	}
+
+	@SubscribeEvent
+	public static void onBlockRegister(RegistryEvent.Register<Block> event)
 	{
 		event.getRegistry().registerAll(BlockInit.BLOCKS.toArray(new Block[0]));
 		TileEntityHandler.registerTileEntities();
 	}
-
-
-	@SubscribeEvent
-	public static void onModelRegister(ModelRegistryEvent event) 
-	{
-		for(Item item : ItemInit.ITEMS)
-		{
-			if(item instanceof IHasModel)
-			{
-				((IHasModel) item).registerModels();
-				
-			}
-		}
-		
-		for(Block block : BlockInit.BLOCKS)
-		{
-			if(block instanceof IHasModel)
-			{
-				((IHasModel) block).registerModels();
-				
-			}
-		}
-	}
-
+	
+	
+	
 	public static void preInitRegistries(FMLPreInitializationEvent event)
 	{
 		FluidInit.registerFluids();
 		
 		
-		GameRegistry.registerWorldGenerator(new AirplanesWorldGeneration(), 0);
+		GameRegistry.registerWorldGenerator(new WorldGenerationInit(), 0);
 		RenderHandler.registerEntityRenders();
 		RenderHandler.registerCustomMeshesAndStates();
-		AirplanesConfiguration.registerConfig(event);
+		AirplanesConfig.registerConfig(event);
+		EntityInit.registerEntities();	
 	}
 	
 
 	public static void initRegistries(FMLInitializationEvent event)
 	{
-		AirplanesSmelting.init();
+		SmeltingInit.init();
 		NetworkRegistry.INSTANCE.registerGuiHandler(AirplanesMod.instance, new GuiHandler());
-		OreDictionaryCompat.registerOres();
+		OreDictionaryInit.registerOres();
 	}
 	
 
@@ -90,6 +84,6 @@ public class RegistryHandler
 
 	public static void serverRegistries(FMLServerStartingEvent event)
 	{
-		
+		event.registerServerCommand(new CommandAirplanesInfo());
 	}
 }

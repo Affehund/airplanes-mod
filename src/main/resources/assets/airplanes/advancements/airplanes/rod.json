@@ -1,0 +1,69 @@
+{
+    "display": {
+        "icon": {
+            "item": "airplanes:copper_rod"
+        },
+        "title": {
+            "translate": "advancements.rod.title"
+        },
+        "description": {
+            "translate": "advancements.rod.description"
+        	}
+        },
+        "parent": "airplanes:airplanes/plate",
+        
+    	"requirements":
+   			[
+        		[
+            		"inv_changed:aluminum_rod",
+            		"inv_changed:copper_rod",
+            		"inv_changed:iron_rod",
+            		"inv_changed:steel_rod"
+        		]
+    		],
+
+   		"criteria":{
+   		 	"inv_changed:aluminum_rod":{
+   		 		"trigger":"minecraft:inventory_changed",
+   		 			"conditions":{
+   		 				"items":[
+   		 				{
+   		 				"item":"airplanes:aluminum_rod"
+   		 				}
+   		 			]
+   		 		}
+   			},
+   			"inv_changed:copper_rod":{
+   		 		"trigger":"minecraft:inventory_changed",
+   		 			"conditions":{
+   		 				"items":[
+   		 				{
+   		 				"item":"airplanes:copper_rod"
+   		 				}
+   		 			]
+   		 		}
+   			},
+   			"inv_changed:iron_rod":{
+   		 		"trigger":"minecraft:inventory_changed",
+   		 			"conditions":{
+   		 				"items":[
+   		 				{
+   		 				"item":"airplanes:iron_rod"
+   		 				}
+   		 			]
+   		 		}
+   			},
+   			"inv_changed:steel_rod":{
+   		 		"trigger":"minecraft:inventory_changed",
+   		 			"conditions":{
+   		 				"items":[
+   		 				{
+   		 				"item":"airplanes:steel_rod"
+   		 				}
+   		 			]
+   		 		}
+   			}
+   	}
+}
+  
+ 

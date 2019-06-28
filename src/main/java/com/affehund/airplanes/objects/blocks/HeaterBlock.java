@@ -20,11 +20,10 @@ public class HeaterBlock extends BlockBase {
 	
 	public HeaterBlock(String name) {
 		super(name, Material.IRON);
-		setHardness(2.5F);
+		setHardness(1.5F);
 		setResistance(100F);
 		setSoundType(SoundType.STONE);
-		setHarvestLevel("pickaxe", 2);
-		setLightLevel(0.0F);
+		setHarvestLevel("pickaxe", 1);
 	}
 	
 	@Nullable

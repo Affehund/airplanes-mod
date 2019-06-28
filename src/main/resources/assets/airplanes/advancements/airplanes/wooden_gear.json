@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "airplanes:wooden_gear"
+        },
+        "title": {
+            "translate": "advancements.wooden_gear.title"
+        },
+        "description": {
+            "translate": "advancements.wooden_gear.description"
+        	}
+        },
+        "parent": "airplanes:airplanes/root",
+   		 "criteria":{
+   		 	"inv_changed:wooden_gear":{
+   		 		"trigger":"minecraft:inventory_changed",
+   		 		"conditions":{
+   		 			"items":[
+   		 				{
+   		 				"item":"airplanes:wooden_gear"
+   		 			}
+   		 		]
+   		 	}
+   		}
+   	}
+}
+  
+ 
