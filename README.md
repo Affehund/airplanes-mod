@@ -11,7 +11,7 @@ https://discord.gg/B5h584D
 Curseforge Download:
 https://minecraft.curseforge.com/projects/airplanes-mod
 
-Status (airplanes_alpha0.7.1):
+Status (airplanes_alpha0.8.jar):
 
 Features:
 - Materials (copper ingot, steel rod, diamond gear ...)
