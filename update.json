@@ -4,7 +4,6 @@
     "1.12.2-latest"      : "airplanes_a0.8.jar",
     "1.12.2-recommended" : "airplanes_a0.8.jar",",
   },
-
   "1.12.2" : {
 	"airplanes_a0.8.jar" : "New items, new stuff, new textures, start of energy",
 	"airplanes_a0.7.1.jar" : "Some bugfixes and new blocks",
@@ -15,6 +14,5 @@
 	"airplanes_a0.3.jar" : "Block expansions and basic crafting elements",
 	"airplanes_a0.0.2.jar" : "This pre-alpha build includes an updated Airplanes Part Builder and the first blocks and items. In addition, we now have enhanced language support.",
 	"airplanes_a0.0.1.jar" : "First version, only for ALPHA testing."
-    
   }
 }
