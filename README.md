@@ -13,7 +13,7 @@ You can download the mod [here](https://minecraft.curseforge.com/projects/airpla
 A Documention for the Airplanes Mod is available on our [Wiki](https://github.com/Affehund/airplanes-mod/wiki)
 
 ## Discord
-There is the [Invite-Link](https://discord.gg/B5h584D)
+Here is the Link to our [Discord Server](https://discord.gg/B5h584D)
 
 ## Status airplanes_a0.8.jar
 Features:
