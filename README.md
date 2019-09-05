@@ -6,13 +6,13 @@ In addition, the Airplanes Mod has a set of tools, crafting benches and new ores
 If you miss a plane or want to suggest one, submit it to our Issue Tracker (it will not count as an issue).
 
 ## Discord
-https://discord.gg/B5h584D
+[Link](https://discord.gg/B5h584D)
 
 ## Documention
-Docs for the Airplanes Mod is available on our (Wiki)[https://github.com/Affehund/airplanes-mod/wiki]
+Docs for the Airplanes Mod is available on our [Wiki](https://github.com/Affehund/airplanes-mod/wiki)
 
 ## Curseforge Download
-(Download)[https://minecraft.curseforge.com/projects/airplanes-mod]
+[Download](https://minecraft.curseforge.com/projects/airplanes-mod)
 
 ## Status airplanes_a0.8.jar
 Features:
