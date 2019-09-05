@@ -1,0 +1,9 @@
+Attention!
+
+The rendering of all the airplanes isn't programmed by us.
+We took the rendering of Malisis Core/Door with a bit of help by Ben. Thanks a lot!
+We refer to the MIT license of them.
+
+https://github.com/ben-mkiv/
+https://github.com/Ordinastie/
+

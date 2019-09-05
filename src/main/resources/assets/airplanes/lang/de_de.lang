@@ -99,9 +99,10 @@ item.iron_cpu.name=Eiserne CPU
 
 
 //Others
-item.airplane_item.name=WIP Flugzeug Gegenstand
+item.airplane_item.name=Flugzeug Icn
 item.airplanes_hammer.name=Flugzeug Hammer
 item.airplanes_wrench.name=Flugzeug Schraubschlüssel
+item.book_of_airplanes=Buch der Flugzeuge
 item.fuel.name=Treibstoff
 item.suitcase.name=Koffer
 container.suitcase=Koffer
@@ -110,6 +111,10 @@ item.silicon.name=Silikon
 item.raw_silicon.name=Unverarbeitetes Silikon
 
 //Tooltips
+airplanes.tooltips_book1=Schaue Sachen, die du nicht verstehst in diesem Buch nach
+airplanes.tooltips_book2=Oder schau in unser Wiki
+airplanes.tooltips_book_normal1=Autor: Affehund
+airplanes.tooltips_book_normal2=Umschalttaste gedrückt halten für mehr Informationen
 airplanes.tooltips_hammer1=Mit dem Hammer kann man Platten machen
 airplanes.tooltips_hammer2=Rezept für Platten: Hammer + Barren (Aluminium, Kupfer, Eisen oder Stahl)
 airplanes.tooltips_hammer_normal=Umschalttaste gedrückt halten für mehr Informationen
@@ -119,6 +124,8 @@ airplanes.tooltips_suitcase_normal=Umschalttaste gedrückt halten für mehr Inform
 airplanes.tooltips_wrench1=Mit dem Schraubschlüssel wird man einfach Flugzeuge zerstören können
 airplanes.tooltips_wrench2=!Noch nicht funktionstüchtig!
 airplanes.tooltips_wrench_normal=Umschalttaste gedrückt halten für mehr Informationen
+
+
 
 
 

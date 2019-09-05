@@ -107,9 +107,10 @@ item.golden_cpu.name=Golden CPU
 item.iron_cpu.name=Iron CPU
 
 //Others
-item.airplane_item.name=WIP Airplane Item
+item.airplane_item.name=Airplanes Item
 item.airplanes_hammer.name=Airplanes Hammer
 item.airplanes_wrench.name=Airplanes Wrench
+item.book_of_airplanes=Book of Airplanes
 item.fuel.name=Fuel
 item.suitcase.name=Suitcase
 container.suitcase=Suitcase
@@ -120,6 +121,10 @@ item.silicon.name=Silicon
 item.raw_silicon.name=Raw Silicon
 
 //Tooltips
+airplanes.tooltips_book1=Look up things you don't understand
+airplanes.tooltips_book2=Or just look in our wiki
+airplanes.tooltips_book_normal1=Author: Affehund
+airplanes.tooltips_book_normal2=Hold Shift for more information
 airplanes.tooltips_hammer1=With the hammer you can make plates
 airplanes.tooltips_hammer2=Recipe for plates: hammer + ingot (aluminum, copper, iron or steel)
 airplanes.tooltips_hammer_normal=Hold Shift for more information
@@ -129,4 +134,5 @@ airplanes.tooltips_suitcase_normal=Hold Shift for more information
 airplanes.tooltips_wrench1=With the wrench you will be able to destroy airplanes easily
 airplanes.tooltips_wrench2=!WIP!
 airplanes.tooltips_wrench_normal=Hold Shift for more information
+
 
