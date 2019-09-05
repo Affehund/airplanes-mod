@@ -5,14 +5,15 @@ the A320 or the V-22.
 In addition, the Airplanes Mod has a set of tools, crafting benches and new ores. 
 If you miss a plane or want to suggest one, submit it to our Issue Tracker (it will not count as an issue).
 
-## Discord
-[Link](https://discord.gg/B5h584D)
-
-## Documention
-Docs for the Airplanes Mod is available on our [Wiki](https://github.com/Affehund/airplanes-mod/wiki)
 
 ## Curseforge Download
-[Download](https://minecraft.curseforge.com/projects/airplanes-mod)
+You can downlaod the mod [here](https://minecraft.curseforge.com/projects/airplanes-mod)
+
+## Documention
+A Documention for the Airplanes Mod is available on our [Wiki](https://github.com/Affehund/airplanes-mod/wiki)
+
+## Discord
+There is the [Invite-Link](https://discord.gg/B5h584D)
 
 ## Status airplanes_a0.8.jar
 Features:
