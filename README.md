@@ -7,7 +7,7 @@ If you miss a plane or want to suggest one, submit it to our Issue Tracker (it w
 
 
 ## Curseforge Download
-You can downlaod the mod [here](https://minecraft.curseforge.com/projects/airplanes-mod)
+You can download the mod [here](https://minecraft.curseforge.com/projects/airplanes-mod)
 
 ## Documention
 A Documention for the Airplanes Mod is available on our [Wiki](https://github.com/Affehund/airplanes-mod/wiki)
