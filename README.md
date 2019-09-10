@@ -21,7 +21,7 @@ Features:
 - Tools (airplanes wrench, airplanes hammer ...)
 - Suitcase
 - Tech items (silicon, display ...)
-- Many blocks (coils, ores, ...)
+- Many blocks (coils, ores ...)
 - Machines (Combustion Engine, Energy Storage Block, Machine Block ...)
 - Many Crafting Recipes
 - OreDictionary
@@ -29,7 +29,6 @@ Features:
 
 Planed Features:
 - Working and flyable planes
-- Energy
 - Multiblocks
 - Wiki
 - Structures
