@@ -18,6 +18,6 @@ public class Reference
     public static final int GUI_BOOK = 3;
     public static final int GUI_ENERGY_STORAGE = 4;
     
-    public static final int AIRPLANE_CESSNA172 = 1;
-    public static final int AIRPLANE_BOEING737 = 2;
+//    public static final int AIRPLANE_CESSNA172 = 1;
+    public static final int AIRPLANE_BOEING737 = 1;
 }

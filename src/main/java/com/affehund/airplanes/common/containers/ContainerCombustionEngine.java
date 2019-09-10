@@ -4,6 +4,7 @@ import com.affehund.airplanes.common.tileentities.TileEntityCombustionEngine;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.ClickType;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IContainerListener;
 import net.minecraft.inventory.Slot;
@@ -16,6 +17,7 @@ public class ContainerCombustionEngine extends Container
 {
 	private final TileEntityCombustionEngine tileentity;
 	private int energy, cookTime;
+	public boolean updateNotification;
 
 	public ContainerCombustionEngine(InventoryPlayer player, TileEntityCombustionEngine tileentity) 
 	{
@@ -68,7 +70,7 @@ public class ContainerCombustionEngine extends Container
 	public ItemStack transferStackInSlot(EntityPlayer playerIn, int index)
 	{
 		ItemStack stack = ItemStack.EMPTY;
-		Slot slot = this.inventorySlots.get(index);
+		Slot slot = (Slot)this.inventorySlots.get(index);
 
 		if(slot != null && slot.getHasStack())
 		{
@@ -87,7 +89,7 @@ public class ContainerCombustionEngine extends Container
 			{
 				return ItemStack.EMPTY;
 			}
-			
+
 			if(stack1.isEmpty()) slot.putStack(ItemStack.EMPTY);
 			else slot.onSlotChanged();
 

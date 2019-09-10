@@ -1,13 +1,7 @@
 {
     "variants": {
-        "normal": [
-            { "model": "airplanes:tin_ore" },
-            { "model": "airplanes:tin_ore", "y": 90 },
-            { "model": "airplanes:tin_ore", "y": 180 },
-            { "model": "airplanes:tin_ore", "y": 270 },
-            { "model": "airplanes:tin_ore", "z": 90 },
-            { "model": "airplanes:tin_ore", "z": 180 },
-            { "model": "airplanes:tin_ore", "z": 270 }
-        ]
-    }
+		"normal": {
+			"model": "airplanes:tin_ore"
+		}
+	}
 }

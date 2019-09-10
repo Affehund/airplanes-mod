@@ -9,10 +9,12 @@ import com.affehund.airplanes.core.init.ItemInit;
 import com.affehund.airplanes.core.init.OreDictionaryInit;
 import com.affehund.airplanes.core.init.SmeltingInit;
 import com.affehund.airplanes.core.init.WorldGenerationInit;
+import com.affehund.airplanes.core.utils.ChatItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -59,8 +61,7 @@ public class RegistryHandler
 		FluidInit.registerFluids();
 		
 		GameRegistry.registerWorldGenerator(new WorldGenerationInit(), 0);
-		RenderHandler.registerEntityRenders();
-		RenderHandler.registerCustomMeshesAndStates();
+
 		EntityInit.registerEntities();
 	}
 	
@@ -73,7 +74,7 @@ public class RegistryHandler
 		NetworkRegistry.INSTANCE.registerGuiHandler(AirplanesMod.instance, new GuiHandler());
 		OreDictionaryInit.registerOres();
 		
-	
+		MinecraftForge.EVENT_BUS.register(new ChatItems());
 	}
 	
 
@@ -86,12 +87,6 @@ public class RegistryHandler
 	{
 		event.registerServerCommand(new CommandAirplanesInfo());
 	}
-	
-	
-    protected void registerRenderers() 
-    {
-    	
-    }
 
 	public void registerModels() 
 	{

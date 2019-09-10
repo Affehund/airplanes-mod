@@ -1,13 +1,13 @@
 package com.affehund.airplanes.client.discord;
 
-import com.affehund.airplanes.AirplanesMod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.network.FMLNetworkEvent;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-
-import club.minnced.discord.rpc.DiscordRPC;
-import club.minnced.discord.rpc.DiscordRichPresence;
+import net.arikia.dev.drpc.DiscordRPC;
+import net.arikia.dev.drpc.DiscordRichPresence;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiMainMenu;
+import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
@@ -17,55 +17,55 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class DiscordEventHandler 
 {
-	
-	AirplanesMod main;
-
-    public DiscordEventHandler (AirplanesMod main) 
-    {
-        this.main = main;
-    }
+	private Logger logger = LogManager.getLogger("Airplanes Mod");
+    private boolean firstInfoSent = false;
     
-  
-
-//    @SubscribeEvent
-//    public void onPlayerSwitchDim(PlayerEvent.PlayerChangedDimensionEvent event) 
-//    {
-//    	
-//    	if(event.toDim  == -1) 
-//    	{
-//    		final String dimension = "in the Nether";
-//    		return;
-//		}
-//		
-//    	if(event.toDim  == 0) 
-//		{
-//    		final String dimension = "in the Overworld";
-//    		return;
-//		}
-//		
-//    	if(event.toDim  == 1) 
-//		{
-//    		final String dimension = "in the End";
-//    		return;
-//		}
-//    	else {
-//    		final String dimension = "";
-//    		return;
-//    	}
-//    }
-    
+    @SideOnly(Side.CLIENT)
     @SubscribeEvent
-    public void onClientConnectedToServerEvent(FMLNetworkEvent.ClientConnectedToServerEvent event) 
-    {
-    	
-        
-		if (event.isLocal())
-			main.proxy.rpcupdate(main, "Flying in Singleplayer" );
-        else
-            main.proxy.rpcupdate(main, "Flying in LAN-World");
-		if (!event.isLocal())
-			main.proxy.rpcupdate(main, "Flying in Multiplayer");
-			
+    public void guiScreenDetect(GuiScreenEvent.InitGuiEvent.Pre event) {
+        if (event.getGui() instanceof GuiMainMenu) {
+            logger.info("Detected main menu, updating presence");
+            DiscordRPC.discordUpdatePresence(new DiscordRichPresence.Builder("Flying the Main Menu")
+                    .setBigImage("airplanes_rpc", "Airplanes Mod")
+                    .setSmallImage("diamond", "Download Airplanes Mod: https://www.curseforge.com/minecraft/mc-mods/airplanes-mod")
+                    .build()
+            );
+        }
     }
- 
+    
+    @SideOnly(Side.CLIENT)
+    @SubscribeEvent
+    public void onClientTick(TickEvent.ClientTickEvent event) {
+        try {
+            if(!firstInfoSent) {
+                DiscordDimSwitcher.switchDim(Minecraft.getMinecraft().player.world.provider.getDimension());
+                firstInfoSent = true;
+            }
+        } catch (NoSuchMethodError | NoSuchFieldError  | NullPointerException error) {
+            firstInfoSent = false;
+        }
+    }
+
+    @SideOnly(Side.CLIENT)
+    @SubscribeEvent
+    public void onPlayerLoggedout(PlayerEvent.PlayerLoggedOutEvent e) {
+        firstInfoSent = false;
+    }
+
+    @SideOnly(Side.CLIENT)
+    @SubscribeEvent()
+    public void onServerJoin(FMLNetworkEvent.ClientConnectedToServerEvent event) {
+        if (!event.isLocal()) {
+            DiscordDimSwitcher.switchDim(1);
+        } else {
+            DiscordDimSwitcher.switchServer(0);
+        }
+    }
+
+    @SideOnly(Side.CLIENT)
+    @SubscribeEvent
+    public void onPlayerSwitchDim(PlayerEvent.PlayerChangedDimensionEvent event) {
+        DiscordDimSwitcher.switchDim(event.toDim);
+    }
 }
+

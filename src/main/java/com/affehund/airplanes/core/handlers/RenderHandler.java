@@ -1,6 +1,7 @@
 package com.affehund.airplanes.core.handlers;
 
 import com.affehund.airplanes.client.render.Boeing737Renderer;
+//import com.affehund.airplanes.client.render.Boeing737Renderer;
 import com.affehund.airplanes.common.entities.EntityBoeing737;
 import com.affehund.airplanes.core.init.BlockInit;
 
@@ -13,6 +14,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class RenderHandler 
 {
@@ -33,7 +36,8 @@ public class RenderHandler
 			}
 		});
 	}*/
-
+	
+    @SideOnly(Side.CLIENT)
 	public static void registerCustomMeshesAndStates()
 	{
 		ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(BlockInit.OIL), new ItemMeshDefinition() {

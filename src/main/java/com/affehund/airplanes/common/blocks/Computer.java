@@ -44,4 +44,20 @@ public class Computer extends BlockBase {
 	protected BlockStateContainer createBlockState() {
 		return new BlockStateContainer(this, FACING);
 	}
+	
+	
+	@Override
+	public boolean isFullCube(IBlockState state) {
+		return false;
+	}
+
+	@Override
+	public boolean isOpaqueCube(IBlockState state) {
+		return false;
+	}
+
+	@Override
+	public boolean isFullBlock(IBlockState state) {
+		return false;
+	}
 }

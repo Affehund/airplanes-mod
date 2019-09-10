@@ -17,8 +17,8 @@ import net.minecraftforge.energy.IEnergyStorage;
 public class TileEntityEnergyStorageBlock extends TileEntity implements ITickable
 {
 	public int capacity = 1000000;
-	public int maxInput = 40;
-	public int maxOutput = 40;
+	public int maxInput = 1000;
+	public int maxOutput = 1000;
 	public AirplanesForgeEnergyStorage energyStorage = new AirplanesForgeEnergyStorage(capacity, maxInput);
 	public int energy = energyStorage.getEnergyStored();
 	private String customName;
@@ -28,11 +28,10 @@ public class TileEntityEnergyStorageBlock extends TileEntity implements ITickabl
 	{
 		if(!world.isRemote)
 		{
-			outputEnergy();
-			inputEnergy();
+			
 		}
 	}
-
+	
 	public void inputEnergy()
 	{
 		
@@ -121,6 +120,17 @@ public class TileEntityEnergyStorageBlock extends TileEntity implements ITickabl
 		return this.energyStorage.getMaxEnergyStored();
 	}
 
+	public int getField(int id)
+	{
+		switch(id)
+		{
+		case 0:
+			return this.energy;
+		default:
+			return 0;
+		}
+	}
+
 	public void setField(int id, int value)
 	{
 		switch(id)
@@ -128,16 +138,6 @@ public class TileEntityEnergyStorageBlock extends TileEntity implements ITickabl
 		case 0:
 			this.energy = value;
 		}
-	}
-	
-	public int getField(int id)
-	{
-		switch(id)
-		{
-		case 0:
-			this.energyStorage.getEnergyStored();
-		}
-		return id;
 	}
 
 	public boolean isUsableByPlayer(EntityPlayer player)

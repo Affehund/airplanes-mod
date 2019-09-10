@@ -3,7 +3,6 @@ package com.affehund.airplanes.client.gui;
 import java.util.Collections;
 
 import com.affehund.airplanes.Reference;
-import com.affehund.airplanes.client.gui.ProgressBar.ProgressBarDirection;
 import com.affehund.airplanes.common.containers.ContainerCombustionEngine;
 import com.affehund.airplanes.common.tileentities.TileEntityCombustionEngine;
 
@@ -34,26 +33,30 @@ public class GuiCombustionEngine extends GuiContainer
 		this.renderHoveredToolTip(mouseX, mouseY);
 		if(mouseX > guiLeft + 150 && mouseX < guiLeft + 169 && mouseY > guiTop + 5 && mouseY < guiTop + 82)
 		{
-			drawHoveringText(Collections.singletonList(tileentity.energy + " FE" + " / " + tileentity.capacity + " FE " ), mouseX, mouseY, fontRenderer);
+			drawHoveringText(Collections.singletonList(tileentity.energy + " FE" + " / " + tileentity.capacity + " FE"), mouseX, mouseY, fontRenderer);
+			if(this.tileentity.isBurning()) 
+			{
+				drawHoveringText(Collections.singletonList("+ 40 FE/t"), mouseX, mouseY+15, fontRenderer);
+			}
 		}
 	}
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) 
-	{
-		float depletedPercent = this.tileentity.burnTime * 0.008333F;
-		
+	{		
 		String tileName = this.tileentity.getDisplayName().getUnformattedText();
 
 		this.fontRenderer.drawString(tileName, (this.xSize / 2 - this.fontRenderer.getStringWidth(tileName) / 2) -5, 6, 8421504);
-		this.fontRenderer.drawString(this.player.getDisplayName().getUnformattedText(), 7, this.ySize - 96 + 2, 8421504);
+		this.fontRenderer.drawString(this.player.getDisplayName().getUnformattedText(), 7, this.ySize - 96 + 2, 8421504);	
 
-		this.fontRenderer.drawString(String.format("%.1f", depletedPercent) + "%", 67, 35, 2686720);
-
-
-		if(this.tileentity.energy < 1000000)
+		if(this.tileentity.energy <  10000)
 		{
-			this.fontRenderer.drawString(this.tileentity.energy + " FE", 100, 56, 8965023);
+			this.fontRenderer.drawString(this.tileentity.energy + " FE", 95, 70, 8421504);
+		}
+		
+		if(this.tileentity.energy >=  10000)
+		{
+			this.fontRenderer.drawString(String.format("%.1f", this.tileentity.energy / 1_000F ) + " kFE", 95, 70, 8421504);
 		}
 	}
 

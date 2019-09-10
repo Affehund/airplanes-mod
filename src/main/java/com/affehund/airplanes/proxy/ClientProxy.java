@@ -1,6 +1,8 @@
 package com.affehund.airplanes.proxy;
 
-import com.affehund.airplanes.AirplanesMod;
+import com.affehund.airplanes.client.discord.DiscordConnectionHandler;
+import com.affehund.airplanes.client.discord.DiscordEventHandler;
+import com.affehund.airplanes.core.handlers.RenderHandler;
 import com.google.common.util.concurrent.ListenableFuture;
 
 import net.minecraft.client.Minecraft;
@@ -8,6 +10,8 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 
 public class ClientProxy extends CommonProxy
@@ -30,13 +34,13 @@ public class ClientProxy extends CommonProxy
         return Minecraft.getMinecraft().player;
     }
     
-    public void rpcinit(AirplanesMod main) 
-    { 
-        main.rpcClient.init(); 
-    } 
-    
-    public void rpcupdate(AirplanesMod main, String details) 
-    { 
-    	main.rpcClient.updatePresence(details); 
-    } 
+    @Override
+    public void preInit(FMLPreInitializationEvent event) {
+    	
+		RenderHandler.registerEntityRenders();
+		RenderHandler.registerCustomMeshesAndStates();
+		
+        DiscordConnectionHandler connectionHandler = new DiscordConnectionHandler();
+        MinecraftForge.EVENT_BUS.register(new DiscordEventHandler());
+    }
 }

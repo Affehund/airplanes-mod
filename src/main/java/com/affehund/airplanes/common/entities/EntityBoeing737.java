@@ -12,7 +12,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class EntityBoeing737 extends Entity {
+public class EntityBoeing737 extends Entity 
+{
 	
 	private float momentum;
 	private float deltaRotation;
@@ -48,30 +49,30 @@ public class EntityBoeing737 extends Entity {
 		return getEntityBoundingBox().grow(2D);
 	}
 
-//	@Override
-//	public void onCollideWithPlayer(EntityPlayer player)
-//	{
-//		super.onCollideWithPlayer(player);
-//		if(getControllingPassenger() == null) player.startRiding(this);
-//	}
+	@Override
+	public void onCollideWithPlayer(EntityPlayer player)
+	{
+		super.onCollideWithPlayer(player);
+		if(getControllingPassenger() == null) player.startRiding(this);
+	}
 
-//	@Override
-//	public boolean processInitialInteract(EntityPlayer player, EnumHand hand)
-//	{
-//		if(player.isSneaking())
-//		{
-//			return false;
-//		}
-//		else
-//		{
-//			if(!world.isRemote && !isBeingRidden())
-//			{
-//				player.startRiding(this);
-//			}
-//
-//			return true;
-//		}
-//	}
+	@Override
+	public boolean processInitialInteract(EntityPlayer player, EnumHand hand)
+	{
+		if(player.isSneaking())
+		{
+			return false;
+		}
+		else
+		{
+			if(!world.isRemote && !isBeingRidden())
+			{
+				player.startRiding(this);
+			}
+
+			return true;
+		}
+	}
 
 	@Override
 	public double getMountedYOffset()
@@ -113,7 +114,7 @@ public class EntityBoeing737 extends Entity {
 	@SideOnly(Side.CLIENT)
 	public void applyOrientationToEntity(Entity entityToUpdate)
 	{
-		//applyYawToEntity(entityToUpdate);
+		applyYawToEntity(entityToUpdate);
 	}
 
 	@Override

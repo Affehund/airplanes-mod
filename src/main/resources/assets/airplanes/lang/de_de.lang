@@ -99,7 +99,7 @@ item.iron_cpu.name=Eiserne CPU
 
 
 //Others
-item.airplane_item.name=Flugzeug Icn
+item.airplane_item.name=Flugzeug Item
 item.airplanes_hammer.name=Flugzeug Hammer
 item.airplanes_wrench.name=Flugzeug Schraubschlüssel
 item.book_of_airplanes=Buch der Flugzeuge
@@ -112,7 +112,7 @@ item.raw_silicon.name=Unverarbeitetes Silikon
 
 //Tooltips
 airplanes.tooltips_book1=Schaue Sachen, die du nicht verstehst in diesem Buch nach
-airplanes.tooltips_book2=Oder schau in unser Wiki
+airplanes.tooltips_book2=Oder schaue in unser Wiki
 airplanes.tooltips_book_normal1=Autor: Affehund
 airplanes.tooltips_book_normal2=Umschalttaste gedrückt halten für mehr Informationen
 airplanes.tooltips_hammer1=Mit dem Hammer kann man Platten machen

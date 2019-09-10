@@ -1,27 +1,18 @@
 {
-	"variants": {
-		"facing=north": {
-            "model": "airplanes:combustion_engine"
-        },
-        "facing=south": {
-            "model": "airplanes:combustion_engine",
-            "y": 180
-        },
-        "facing=west": {
-            "model": "airplanes:combustion_engine",
-            "y": 270
-        },
-        "facing=east": {
-            "model": "airplanes:combustion_engine",
-            "y": 90
-        },
-        "facing=up": {
-            "model": "airplanes:combustion_engine",
-            "x": 0
-        },
-        "facing=down": {
-            "model": "airplanes:combustion_engine",
-            "x": 0
-        }
+	 "variants": 
+    {
+        "burning=false,facing=north": { "model": "airplanes:combustion_engine" },
+        "burning=false,facing=east": { "model": "airplanes:combustion_engine", "y": 90 },
+        "burning=false,facing=south": { "model": "airplanes:combustion_engine", "y": 180 },
+        "burning=false,facing=west": { "model": "airplanes:combustion_engine", "y": 270 },
+        "burning=true,facing=north": { "model": "airplanes:combustion_engine_lit" },
+        "burning=true,facing=east": { "model": "airplanes:combustion_engine_lit", "y": 90 },
+        "burning=true,facing=south": { "model": "airplanes:combustion_engine_lit", "y": 180 },
+        "burning=true,facing=west": { "model": "airplanes:combustion_engine_lit", "y":270  },
+        
+		"burning=false,facing=up": { "model": "airplanes:combustion_engine" },
+       	"burning=true,facing=up": { "model": "airplanes:combustion_engine" },
+       	"burning=false,facing=down": { "model": "airplanes:combustion_engine" },
+       	"burning=true,facing=down": { "model": "airplanes:combustion_engine" }
 	}
 }

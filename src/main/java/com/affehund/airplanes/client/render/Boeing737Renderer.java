@@ -1,11 +1,9 @@
 package com.affehund.airplanes.client.render;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.affehund.airplanes.Reference;
 import com.affehund.airplanes.client.rendering.Face;
-import com.affehund.airplanes.client.rendering.objParser;
 import com.affehund.airplanes.common.entities.EntityBoeing737;
 
 import net.minecraft.client.renderer.BufferBuilder;
@@ -30,7 +28,6 @@ public class Boeing737Renderer extends Render<EntityBoeing737>
 	
 	private static final ResourceLocation textureLoc = new ResourceLocation(Reference.MODID, "textures/entity/boeing737.png");
 
-	private List<String> objData = new ArrayList<String>();
 	
 //	objParser objFile = new objParser( (String) objData );
 	Tessellator TESR = Tessellator.getInstance();
@@ -62,11 +59,6 @@ public class Boeing737Renderer extends Render<EntityBoeing737>
 	protected ResourceLocation getEntityTexture(EntityBoeing737 parEntityLiving) {
 		return textureLoc;
 	}
-	
-//	protected ResourceLocation getEntityTexture(EntityBoeing737 par1EntityLiving) {
-//        return textureLoc;
-//    }
-//	
 
     public static class Factory implements IRenderFactory<EntityBoeing737> {
         @Override

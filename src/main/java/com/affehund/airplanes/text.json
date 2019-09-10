@@ -1,0 +1,1 @@
+{\"text\":\"" + "You are running on version" + Reference.VERSION + "\n" + "You need help? Check out the wiki: " + linkName + "\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"" + link + "\"}}"

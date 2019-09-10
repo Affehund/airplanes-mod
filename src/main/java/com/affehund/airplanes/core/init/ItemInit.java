@@ -63,5 +63,4 @@ public class ItemInit
 	public static final Item WOODEN_GEAR = new ItemBase("wooden_gear");
 
 	public static final Item BOOK_OF_AIRPLANES = new BookOfAirplanes("book_of_airplanes");
-	
 }

@@ -1,13 +1,7 @@
 {
     "variants": {
-        "normal": [
-            { "model": "airplanes:bauxite_ore" },
-            { "model": "airplanes:bauxite_ore", "y": 90 },
-            { "model": "airplanes:bauxite_ore", "y": 180 },
-            { "model": "airplanes:bauxite_ore", "y": 270 },
-            { "model": "airplanes:bauxite_ore", "z": 90 },
-            { "model": "airplanes:bauxite_ore", "z": 180 },
-            { "model": "airplanes:bauxite_ore", "z": 270 }
-        ]
-    }
+		"normal": {
+			"model": "airplanes:bauxite_ore"
+		}
+	}
 }

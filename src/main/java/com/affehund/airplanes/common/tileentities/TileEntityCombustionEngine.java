@@ -1,5 +1,6 @@
 package com.affehund.airplanes.common.tileentities;
 
+import com.affehund.airplanes.common.blocks.machines.CombustionEngineBlock;
 import com.affehund.airplanes.core.energy.AirplanesForgeEnergyStorage;
 import com.affehund.airplanes.core.init.ItemInit;
 
@@ -41,11 +42,20 @@ public class TileEntityCombustionEngine extends TileEntity implements ITickable
 		{
 			generateEnergy(40);
 			outputEnergy(40);
+			
+			
+		if(this.isBurning()) {
+			CombustionEngineBlock.setState(true, world, pos);
+			}
+		if(!this.isBurning()) {
+			CombustionEngineBlock.setState(false, world, pos);
+			}
 		}
 	}
 
 	public void generateEnergy(int maxGeneration)
 	{
+		if(this.energy <= this.capacity)
 		if(burnTime <= 0 && isItemFuel(handler.getStackInSlot(0)))
 		{
 			if(handler.getStackInSlot(0).getItem() == Items.COAL)
@@ -92,6 +102,8 @@ public class TileEntityCombustionEngine extends TileEntity implements ITickable
             markDirty();
 		}
 	}
+	
+	
 
 	@Override
     public boolean shouldRefresh(World world, BlockPos pos, IBlockState oldState, IBlockState newState)
@@ -102,6 +114,7 @@ public class TileEntityCombustionEngine extends TileEntity implements ITickable
 	public boolean isBurning()
 	{
 		return this.burnTime > 0;
+		
 	}
 
 	private boolean isItemFuel(ItemStack stack)

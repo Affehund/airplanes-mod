@@ -9,7 +9,7 @@ public class AirplanesForgeEnergyStorage extends EnergyStorage
         super(capacity, maxRecieve, 0);
     }
 
-    public void setEnergy(int energy)
+	public void setEnergy(int energy)
     {
         this.energy = energy;
     }

@@ -46,7 +46,15 @@ public class GuiEnergyStorageBlock extends GuiContainer
 		this.fontRenderer.drawString(tileName, (this.xSize / 2 - this.fontRenderer.getStringWidth(tileName) / 2) -5, 6, 8421504);
 		this.fontRenderer.drawString(this.player.getDisplayName().getUnformattedText(), 7, this.ySize - 96 + 2, 8421504);
 		
-		this.fontRenderer.drawString(this.tileentity.energy + " FE", 100, 56, 8965023);
+		if(this.tileentity.energy <  10000)
+		{
+			this.fontRenderer.drawString(this.tileentity.energy + " FE", 95, 70, 8421504);
+		}
+		
+		if(this.tileentity.energy >=  10000)
+		{
+			this.fontRenderer.drawString(String.format("%.2f", this.tileentity.energy / 1_000F ) + " kFE", 95, 70, 8421504);
+		}
 	}
 
 	@Override

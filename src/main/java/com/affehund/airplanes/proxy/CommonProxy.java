@@ -1,16 +1,17 @@
 package com.affehund.airplanes.proxy;
 
-import com.affehund.airplanes.AirplanesMod;
 import com.google.common.util.concurrent.ListenableFuture;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class CommonProxy 
 {
 	
 	public void registerItemRenderer(Item item, int meta, String id) 
 	{
+		
 	}
 
 	
@@ -24,12 +25,10 @@ public class CommonProxy
         throw new IllegalStateException("This should only be called from client side");
     }
     
-    public void rpcinit(AirplanesMod main) 
-    { 
-    } 
-    
-    public void rpcupdate(AirplanesMod main, String details) 
-    { 
-    } 
+
+    public void preInit(FMLPreInitializationEvent event) 
+    {
+    	
+    }
 }
 

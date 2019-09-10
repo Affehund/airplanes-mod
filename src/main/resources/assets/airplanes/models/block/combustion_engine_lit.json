@@ -4,7 +4,7 @@
         "particle": "airplanes:blocks/combustion_engine_front",
 		"up": "airplanes:blocks/combustion_engine_top",
 		"down": "airplanes:blocks/combustion_engine_top",
-		"north": "airplanes:blocks/combustion_engine_front",
+		"north": "airplanes:blocks/combustion_engine_front_on",
 		"east": "airplanes:blocks/combustion_engine_side",
 		"south": "airplanes:blocks/combustion_engine_side",
 		"west": "airplanes:blocks/combustion_engine_side"
