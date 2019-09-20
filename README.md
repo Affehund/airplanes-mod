@@ -1,7 +1,8 @@
-[![Curse Forge Project](http://cf.way2muchnoise.eu/versions/airplanes-mod_latest.svg)](https://minecraft.curseforge.com/projects/airplanes-mod)
+[![Curse Forge Project](http://cf.way2muchnoise.eu/versions/315652.svg)](https://minecraft.curseforge.com/projects/airplanes-mod)
 [![Download](http://cf.way2muchnoise.eu/full_315652_downloads.svg)](https://minecraft.curseforge.com/projects/airplanes-mod/files)
-[![Discord](https://img.shields.io/discord/371298569354739716.svg?label=discord&style=popout)](https://discord.gg/B5h584D)
-[![Wiki](http://img.shields.io/badge/wiki--blue.svg)](https://github.com/Affehund/airplanes-mod/wiki)
+[![Discord](https://img.shields.io/discord/371298569354739716?label=Discord)](https://discord.gg/B5h584D)
+[![Wiki](http://img.shields.io/badge/Wiki--success.svg)](https://github.com/Affehund/airplanes-mod/wiki)
+
 
 # Airplanes Mod
 The Airplanes Mod provides you with a rich set of planes that you know from your life - such as the A380, 
