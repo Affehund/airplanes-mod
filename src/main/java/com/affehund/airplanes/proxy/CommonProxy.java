@@ -4,6 +4,7 @@ import com.google.common.util.concurrent.ListenableFuture;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class CommonProxy 
@@ -29,6 +30,11 @@ public class CommonProxy
     public void preInit(FMLPreInitializationEvent event) 
     {
     	
+    }
+    
+    protected void registerRenderers() 
+    {
+
     }
 }
 

@@ -14,7 +14,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class EntityBoeing737 extends Entity 
 {
-	
 	private float momentum;
 	private float deltaRotation;
 	private boolean leftInputDown;
@@ -48,13 +47,15 @@ public class EntityBoeing737 extends Entity
 	{
 		return getEntityBoundingBox().grow(2D);
 	}
+	
 
-	@Override
-	public void onCollideWithPlayer(EntityPlayer player)
-	{
-		super.onCollideWithPlayer(player);
-		if(getControllingPassenger() == null) player.startRiding(this);
-	}
+
+//	@Override
+//	public void onCollideWithPlayer(EntityPlayer player)
+//	{
+//		super.onCollideWithPlayer(player);
+//		if(getControllingPassenger() == null) player.startRiding(this);
+//	}
 
 	@Override
 	public boolean processInitialInteract(EntityPlayer player, EnumHand hand)

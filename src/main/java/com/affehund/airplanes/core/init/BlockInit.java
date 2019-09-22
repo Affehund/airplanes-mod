@@ -3,6 +3,7 @@ package com.affehund.airplanes.core.init;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.affehund.airplanes.AirplanesMod;
 import com.affehund.airplanes.common.blocks.AirplanesBuilder;
 import com.affehund.airplanes.common.blocks.AluminumBlock;
 import com.affehund.airplanes.common.blocks.AluminumCoil;
@@ -64,7 +65,7 @@ public class BlockInit
 	public static final Block SOLAR_PANEL = new SolarPanelBlock("solar_panel");
 	
 	//Oil
-	public static final Block OIL = new BlockFluid("oil", FluidInit.OIL, Material.WATER);
+	public static final Block OIL = new BlockFluid("oil", FluidInit.OIL, Material.WATER, AirplanesMod.AIRPLANESTAB1);
 	
 	public static final Block ASPHALT_BLOCK = new AsphaltBlock("asphalt_block");
 

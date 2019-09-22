@@ -9,5 +9,6 @@ public class FluidLiquid extends Fluid
 	{
 		super(name, still, flow);
 		this.setUnlocalizedName(name);	
+		setViscosity(100);
 	}
 }

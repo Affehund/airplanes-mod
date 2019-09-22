@@ -74,6 +74,10 @@ container.energy_storage_block=Energy Storage
 itemGroup.AirplanesItems=Airplanes - Items and Blocks
 itemGroup.AirplanesVehicles=Airplanes - Vehicles
 
+//Entities
+entity.boeing737.name=Boeing 737
+entity.Villager.pilot=Pilot
+
 //Items
 item.aluminum_ingot.name=Aluminum Ingot
 item.aluminum_plate.name=Aluminum Plate

@@ -11,5 +11,6 @@ public class EntityInit {
 	public static void registerEntities() {
 		int id = 0;
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MODID, "boeing737"), EntityBoeing737.class, "boeing737", id++, AirplanesMod.instance, 64, 20, false);
+		AirplanesMod.log.debug("Next entity id: " + id);
 	}
 }

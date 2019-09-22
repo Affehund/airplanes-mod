@@ -9,20 +9,21 @@ import com.affehund.airplanes.client.discord.AirplanesDiscord;
 import com.affehund.airplanes.common.creativetabs.AirplanesTab1;
 import com.affehund.airplanes.common.creativetabs.AirplanesTab2;
 import com.affehund.airplanes.core.handlers.RegistryHandler;
+import com.affehund.airplanes.core.init.ProfessionsInit;
 import com.affehund.airplanes.proxy.CommonProxy;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLServerStartingEvent; 
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.arikia.dev.drpc.DiscordRichPresence;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
+@Mod.EventBusSubscriber
 @Mod(modid = Reference.MODID, name = Reference.NAME, updateJSON = Reference.UPDATEJSON, version = Reference.VERSION)
 
 public class AirplanesMod 
@@ -38,29 +39,28 @@ public class AirplanesMod
 	
 	public static Logger log = LogManager.getLogger(Reference.MODID);
 
-    public AirplanesDiscord discord;
 
+    public AirplanesDiscord discord;
 
 	static { FluidRegistry.enableUniversalBucket(); }
 	
-	 
+
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event) 
+	public static void preInit(FMLPreInitializationEvent event) 
 	{	
 		RegistryHandler.preInitRegistries(event);
-		discord = new AirplanesDiscord(new DiscordRichPresence());
-		
-
+//		discord = new AirplanesDiscord(new DiscordRichPresence());
 	}
 
 	@EventHandler
-	public void init(FMLInitializationEvent event)
+	public static void init(FMLInitializationEvent event)
 	{
 		RegistryHandler.initRegistries(event);
+		ProfessionsInit.associateCareersAndTrades();
 	}
 
 	@EventHandler
-	public void postInit(FMLPostInitializationEvent event) 
+	public static void postInit(FMLPostInitializationEvent event) 
 	{
 		RegistryHandler.postInitRegistries(event);
     } 

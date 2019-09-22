@@ -1,4 +1,4 @@
-//Übersetzung de_de
+//Ãœbersetzung de_de
 
 //Advancements
 advancements.combustion.title=Bitte Energie!!1!!!111!
@@ -19,18 +19,18 @@ advancements.plate.title=Das ist der HAMMER!
 advancements.plate.description=Mache einen Hammer um Platten herzustellen
 advancements.rod.title=I've got no rods, I've got no rods!
 advancements.rod.description=Bastle eine Stange, egal welche
-advancements.root.title=Willkommen beim Airplanes Mod
+advancements.root.title=Willkommen bei der Airplanes Mod
 advancements.root.description=Baue eine Werkbank
 advancements.silicon.title=Was brauchen Computer?
-advancements.silicon.description=Schmelze Rohes Siliok um Silikon zu erhalten
+advancements.silicon.description=Schmelze Rohes Silikon um Silikon zu erhalten
 advancements.solar_panel.title=Erneuerbare Ressourcen
 advancements.solar_panel.description=Baue dir einen Sonnenkollektor
 advancements.steel.title=Wer hat das Stahl geklaut?
 advancements.steel.description=Schmelze Eisen um Stahl zuerhalten
 advancements.stone_gear.title=Zahnrad Verbesserung 1
-advancements.stone_gear.description=Verbessere das hölzerne Zahnrad um ein steineres zu erhalten
+advancements.stone_gear.description=Verbessere das hÃ¶lzerne Zahnrad um ein steineres zu erhalten
 advancements.wooden_gear.title=Das erste Zahnrad
-advancements.wooden_gear.description=Stelle ein hölzernes Zahnrad her
+advancements.wooden_gear.description=Stelle ein hÃ¶lzernes Zahnrad her
 
 //Blocks
 tile.aluminum_block.name=Aluminiumblock
@@ -58,17 +58,21 @@ tile.energy_storage_block.name=Akku Block
 tile.machine_block.name=Maschinenblock
 tile.solar_panel.name=Sonnenkollektor
 
-tile.oil.name=Öl
+tile.oil.name=Ã–l
 
 //Containers
 container.combustion_engine=Verbrennungsmotor
 container.energy_storage_block=Forge Energie Akku
 
 //Creative Tab
-itemGroup.AirplanesItems=Airplanes - Gegenstände und Blöcke
+itemGroup.AirplanesItems=Airplanes - GegenstÃ¤nde und BlÃ¶cke
 itemGroup.AirplanesVehicles=Airplanes - Fahrzeuge
 
-#Items
+//Entities
+entity.boeing737.name=Boeing 737
+entity.Villager.pilot=Pilot
+
+//Items
 item.aluminum_ingot.name=Aluminiumbarren 
 item.aluminum_plate.name=Aluminiumplatte 
 item.aluminum_rod.name=Aluminiumstange 
@@ -87,7 +91,7 @@ item.steel_rod.name=Stahlstange
 item.stone_gear.name=Steinzahnrad 
 item.tin_ingot.name=Zinnbarren
 item.tin_nugget.name=Zinnklumpen
-item.wooden_gear.name=Hölzernes Zahnrad
+item.wooden_gear.name=HÃ¶lzernes Zahnrad
 
 item.display.name=Bildschirm
 item.diamond_circuit_board.name=Diamant Platine
@@ -101,12 +105,12 @@ item.iron_cpu.name=Eiserne CPU
 //Others
 item.airplane_item.name=Flugzeug Item
 item.airplanes_hammer.name=Flugzeug Hammer
-item.airplanes_wrench.name=Flugzeug Schraubschlüssel
+item.airplanes_wrench.name=Flugzeug SchraubschlÃ¼ssel
 item.book_of_airplanes=Buch der Flugzeuge
 item.fuel.name=Treibstoff
 item.suitcase.name=Koffer
 container.suitcase=Koffer
-fluid.oil=Öl
+fluid.oil=Ã–l
 item.silicon.name=Silikon
 item.raw_silicon.name=Unverarbeitetes Silikon
 
@@ -114,16 +118,16 @@ item.raw_silicon.name=Unverarbeitetes Silikon
 airplanes.tooltips_book1=Schaue Sachen, die du nicht verstehst in diesem Buch nach
 airplanes.tooltips_book2=Oder schaue in unser Wiki
 airplanes.tooltips_book_normal1=Autor: Affehund
-airplanes.tooltips_book_normal2=Umschalttaste gedrückt halten für mehr Informationen
+airplanes.tooltips_book_normal2=Umschalttaste gedrÃ¼ckt halten fÃ¼r mehr Informationen
 airplanes.tooltips_hammer1=Mit dem Hammer kann man Platten machen
-airplanes.tooltips_hammer2=Rezept für Platten: Hammer + Barren (Aluminium, Kupfer, Eisen oder Stahl)
-airplanes.tooltips_hammer_normal=Umschalttaste gedrückt halten für mehr Informationen
+airplanes.tooltips_hammer2=Rezept fÃ¼r Platten: Hammer + Barren (Aluminium, Kupfer, Eisen oder Stahl)
+airplanes.tooltips_hammer_normal=Umschalttaste gedrÃ¼ckt halten fÃ¼r mehr Informationen
 airplanes.tooltips_suitcase1=Mit dem Koffer kannst du deine Items unterwegs lagern
-airplanes.tooltips_suitcase2=Das Inventar ist so groß wie eine Kiste
-airplanes.tooltips_suitcase_normal=Umschalttaste gedrückt halten für mehr Informationen
-airplanes.tooltips_wrench1=Mit dem Schraubschlüssel wird man einfach Flugzeuge zerstören können
-airplanes.tooltips_wrench2=!Noch nicht funktionstüchtig!
-airplanes.tooltips_wrench_normal=Umschalttaste gedrückt halten für mehr Informationen
+airplanes.tooltips_suitcase2=Das Inventar ist so groÃŸ wie eine Kiste
+airplanes.tooltips_suitcase_normal=Umschalttaste gedrÃ¼ckt halten fÃ¼r mehr Informationen
+airplanes.tooltips_wrench1=Mit dem SchraubschlÃ¼ssel wird man einfach Flugzeuge zerstÃ¶ren kÃ¶nnen
+airplanes.tooltips_wrench2=!Noch nicht funktionstÃ¼chtig!
+airplanes.tooltips_wrench_normal=Umschalttaste gedrÃ¼ckt halten fÃ¼r mehr Informationen
 
 
 
