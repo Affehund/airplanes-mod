@@ -1,4 +1,9 @@
-[![Curse Forge](http://cf.way2muchnoise.eu/short_315652_downloads.svg) ![Versions](https://img.shields.io/badge/For%201.12.2-red.svg?style=flat-square)](https://minecraft.curseforge.com/projects/airplanes-mod) [![Discord](https://img.shields.io/discord/544584596092616713.svg?colorB=7289DA&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHYAAABWAgMAAABnZYq0AAAACVBMVEUAAB38%2FPz%2F%2F%2F%2Bm8P%2F9AAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfhBxwQJhxy2iqrAAABoElEQVRIx7WWzdGEIAyGgcMeKMESrMJ6rILZCiiBg4eYKr%2Fd1ZAfgXFm98sJfAyGNwno3G9sLucgYGpQ4OGVRxQTREMDZjF7ILSWjoiHo1n%2BE03Aw8p7CNY5IhkYd%2F%2F6MtO3f8BNhR1QWnarCH4tr6myl0cWgUVNcfMcXACP1hKrGMt8wcAyxide7Ymcgqale7hN6846uJCkQxw6GG7h2MH4Czz3cLqD1zHu0VOXMfZjHLoYvsdd0Q7ZvsOkafJ1P4QXxrWFd14wMc60h8JKCbyQvImzlFjyGoZTKzohwWR2UzSONHhYXBQOaKKsySsahwGGDnb%2FiYPJw22sCqzirSULYy1qtHhXGbtgrM0oagBV4XiTJok3GoLoDNH8ooTmBm7ZMsbpFzi2bgPGoXWXME6XT%2BRJ4GLddxJ4PpQy7tmfoU2HPN6cKg%2BledKHBKlF8oNSt5w5g5o8eXhu1IOlpl5kGerDxIVT%2BztzKepulD8utXqpChamkzzuo7xYGk%2FkpSYuviLXun5bzdRf0Krejzqyz7Z3p0I1v2d6HmA07dofmS48njAiuMgAAAAASUVORK5CYII%3D)](https://discord.gg/B5h584D)
+[![Curse Forge Project](http://cf.way2muchnoise.eu/versions/315652.svg)](https://minecraft.curseforge.com/projects/airplanes-mod)
+[![Download](http://cf.way2muchnoise.eu/full_315652_downloads.svg)](https://minecraft.curseforge.com/projects/airplanes-mod/files)
+[![Discord](https://img.shields.io/discord/371298569354739716?label=Discord)](https://discord.gg/B5h584D)
+[![Wiki](http://img.shields.io/badge/Wiki--success.svg)](https://github.com/Affehund/airplanes-mod/wiki)
+
+
 # Airplanes Mod
 The Airplanes Mod provides you with a rich set of planes that you know from your life - such as the A380, 
 the A320 or the V-22. 
@@ -21,7 +26,7 @@ Features:
 - Tools (airplanes wrench, airplanes hammer ...)
 - Suitcase
 - Tech items (silicon, display ...)
-- Many blocks (coils, ores, ...)
+- Many blocks (coils, ores ...)
 - Machines (Combustion Engine, Energy Storage Block, Machine Block ...)
 - Many Crafting Recipes
 - OreDictionary
@@ -29,7 +34,6 @@ Features:
 
 Planed Features:
 - Working and flyable planes
-- Energy
 - Multiblocks
 - Wiki
 - Structures
