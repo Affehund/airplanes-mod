@@ -46,15 +46,15 @@ public class ClientProxy extends CommonProxy
 //        //DiscordConnectionHandler connectionHandler = new DiscordConnectionHandler();
 //        //MinecraftForge.EVENT_BUS.register(new DiscordEventHandler());
     	
-    	System.out.println("Before Entity Registering/Rendering");
-    	RenderingRegistry.registerEntityRenderingHandler(EntityBoeing737.class, RenderBoeing737::new);
-    	System.out.println("After Entity Registering/Rendering");
+//    	System.out.println("Before Entity Registering/Rendering");
+//    	RenderingRegistry.registerEntityRenderingHandler(EntityBoeing737.class, RenderBoeing737::new);
+//    	System.out.println("After Entity Registering/Rendering");
     }
     
     @Override
     public void init(FMLPreInitializationEvent event) 
     {   
-//    	RenderingRegistry.registerEntityRenderingHandler(EntityBoeing737.class, RendererBoeing737::new);
+    	RenderingRegistry.registerEntityRenderingHandler(EntityBoeing737.class, RenderBoeing737::new);
     	
     }
     
