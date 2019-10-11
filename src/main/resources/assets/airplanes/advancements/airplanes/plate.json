@@ -1,7 +1,7 @@
 {
     "display": {
         "icon": {
-            "item": "airplanes:airplanes_hammer"
+            "item": "airplanes:hammer"
         },
         "title": {
             "translate": "advancements.plate.title"
@@ -17,7 +17,7 @@
    		 		"conditions":{
    		 			"items":[
    		 				{
-   		 				"item":"airplanes:airplanes_hammer"
+   		 				"item":"airplanes:hammer"
    		 			}
    		 		]
    		 	}

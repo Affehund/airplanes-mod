@@ -17,8 +17,8 @@ public class ItemInit
 
 	//Items and co.
 	public static final Item AIRPLANE_ITEM = new AirplaneItem("airplane_item");	
-	public static final Item AIRPLANES_HAMMER = new AirplanesHammer("airplanes_hammer");	
-	public static final Item AIRPLANES_WRENCH = new AirplanesWrench("airplanes_wrench");
+	public static final Item AIRPLANES_HAMMER = new AirplanesHammer("hammer");	
+	public static final Item AIRPLANES_WRENCH = new AirplanesWrench("wrench");
 	
 	public static final Item SUITCASE = new Suitcase("suitcase");
 	

@@ -3,7 +3,7 @@ package com.affehund.airplanes;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.affehund.airplanes.client.discord.AirplanesDiscord;
+//import com.affehund.airplanes.client.discord.AirplanesDiscord;
 //import com.affehund.airplanes.client.discord.AirplanesRPCClient;
 //import com.affehund.airplanes.client.discord.DiscordEventHandler;
 import com.affehund.airplanes.common.creativetabs.AirplanesTab1;
@@ -38,9 +38,11 @@ public class AirplanesMod
 	public static final CreativeTabs AIRPLANESTAB2 = new AirplanesTab2();
 	
 	public static Logger log = LogManager.getLogger(Reference.MODID);
+	
+	String domain = "airplanes";
+	String path = "models/entity/boeing_737_800.obj";
 
-
-    public AirplanesDiscord discord;
+    //public AirplanesDiscord discord;
 
 	static { FluidRegistry.enableUniversalBucket(); }
 	
@@ -49,6 +51,7 @@ public class AirplanesMod
 	public static void preInit(FMLPreInitializationEvent event) 
 	{	
 		RegistryHandler.preInitRegistries(event);
+		AirplanesMod.proxy.preInit(event);
 //		discord = new AirplanesDiscord(new DiscordRichPresence());
 	}
 

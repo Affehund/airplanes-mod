@@ -17,30 +17,17 @@ import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.ModContainer;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
 
-public class FMLEventHandler {
-//	private static final String NBT_KEY = "airplanes.firstjoin";
-//	
-//	public void onPlayerJoin(PlayerEvent.PlayerLoggedInEvent event) {
-//
-//        NBTTagCompound data = event.player.getEntityData();
-//        NBTTagCompound persistent;
-//        if (!data.hasKey(EntityPlayer.PERSISTED_NBT_TAG)) {
-//            data.setTag(EntityPlayer.PERSISTED_NBT_TAG, (persistent = new NBTTagCompound()));
-//        } else {
-//            persistent = data.getCompoundTag(EntityPlayer.PERSISTED_NBT_TAG);
-//        }
-//
-//        if (!persistent.hasKey(NBT_KEY)) {
-//            persistent.setBoolean(NBT_KEY, true);
-//            event.player.inventory.addItemStackToInventory(new ItemStack(ItemInit.BOOK_OF_AIRPLANES));
-//        }
-//    }
+public enum FMLEventHandler {
 	
-	@SubscribeEvent
-    public void onPlayerJoin(PlayerEvent.PlayerLoggedInEvent event)
-    {
+	INSTANCE;
+	
+	
+	private static final String NBT_KEY = "airplanes.first_join";
+
+    @SubscribeEvent
+    public void onPlayerJoin(PlayerEvent.PlayerLoggedInEvent event) {
+    	
         if (event.player.world.isRemote && event.player == FMLClientHandler.instance().getClientPlayerEntity())
         {
             MinecraftForge.EVENT_BUS.unregister(this);
@@ -51,12 +38,29 @@ public class FMLEventHandler {
             	ITextComponent mess = getOutdatedMessage(result, "Airplanes Mod");
                 (event.player).sendMessage(mess);
             }
-            Minecraft.getMinecraft().player.sendChatMessage("Test");
-
         }
+        
+        
+
+        NBTTagCompound data = event.player.getEntityData();
+        NBTTagCompound persistent;
+        if (!data.hasKey(EntityPlayer.PERSISTED_NBT_TAG)) {
+            data.setTag(EntityPlayer.PERSISTED_NBT_TAG, (persistent = new NBTTagCompound()));
+        } else {
+            persistent = data.getCompoundTag(EntityPlayer.PERSISTED_NBT_TAG);
+        }
+
+        if (!persistent.hasKey(NBT_KEY)) 
+        {
+            persistent.setBoolean(NBT_KEY, true);
+            event.player.inventory.addItemStackToInventory(new ItemStack(ItemInit.BOOK_OF_AIRPLANES));
+            
+//            String message = "Welcome to the Airplanes Mod";
+//            (event.player).sendMessage(new TextComponentString(message));     
+            }
     }
-
-
+	
+	
 	public static ITextComponent getOutdatedMessage(net.minecraftforge.common.ForgeVersion.CheckResult result, String name)
 	{
 		String linkName = "[" + TextFormatting.GREEN + name + " " + result.target + TextFormatting.WHITE;

@@ -9,7 +9,7 @@
             "ore": "ingotIron"
     },
     {
-      "item": "airplanes:airplanes_hammer",
+      "item": "airplanes:hammer",
       "data": 32767
     }
   ]

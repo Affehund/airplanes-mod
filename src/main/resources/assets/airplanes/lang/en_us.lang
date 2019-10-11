@@ -111,18 +111,19 @@ item.golden_cpu.name=Golden CPU
 item.iron_cpu.name=Iron CPU
 
 //Others
-item.airplane_item.name=Airplanes Item
-item.airplanes_hammer.name=Airplanes Hammer
-item.airplanes_wrench.name=Airplanes Wrench
-item.book_of_airplanes=Book of Airplanes
-item.fuel.name=Fuel
-item.suitcase.name=Suitcase
 container.suitcase=Suitcase
 fluid.oil=Oil
-tile.name.oil=Oil
 
+item.airplane_item.name=Airplanes Item
+item.book_of_airplanes=Book of Airplanes
+item.fuel.name=Fuel
+item.hammer.name=Airplanes Hammer
+item.suitcase.name=Suitcase
+item.wrench.name=Airplanes Wrench
 item.silicon.name=Silicon
 item.raw_silicon.name=Raw Silicon
+
+tile.name.oil=Oil
 
 //Tooltips
 airplanes.tooltips_book1=Look up things you don't understand

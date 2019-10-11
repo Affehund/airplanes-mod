@@ -2,6 +2,9 @@ package com.affehund.airplanes.core.handlers;
 
 import com.affehund.airplanes.AirplanesMod;
 import com.affehund.airplanes.core.commands.CommandAirplanesInfo;
+import com.affehund.airplanes.core.events.EventHandler;
+import com.affehund.airplanes.core.events.FMLEventHandler;
+import com.affehund.airplanes.core.events.RecipeRemover;
 import com.affehund.airplanes.core.init.BlockInit;
 import com.affehund.airplanes.core.init.EntityInit;
 import com.affehund.airplanes.core.init.FluidInit;
@@ -17,6 +20,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -25,7 +29,6 @@ import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.common.registry.VillagerRegistry;
 
 @EventBusSubscriber
 public class RegistryHandler 
@@ -78,21 +81,19 @@ public class RegistryHandler
 	public static void preInitRegistries(FMLPreInitializationEvent event)
 	{
 		FluidInit.registerFluids();
-		
 		GameRegistry.registerWorldGenerator(new WorldGenerationInit(), 0);
-
 		EntityInit.registerEntities();
-		
 		RenderHandler.registerEntityRenders();
 		ClientProxy.registerCustomMeshesAndStates();
+		EventHandler.registerEvents();
 	}
 	
 	public static void initRegistries(FMLInitializationEvent event)
 	{
-		SmeltingInit.init();
 		NetworkRegistry.INSTANCE.registerGuiHandler(AirplanesMod.instance, new GuiHandler());
+		SmeltingInit.init();
 		OreDictionaryInit.registerOres();
-		
+		FMLCommonHandler.instance().bus().register(FMLEventHandler.INSTANCE);
 		MinecraftForge.EVENT_BUS.register(new ChatItems());
 	}
 	

@@ -1,8 +1,8 @@
 package com.affehund.airplanes.proxy;
 
-import com.affehund.airplanes.client.discord.DiscordConnectionHandler;
-import com.affehund.airplanes.client.discord.DiscordEventHandler;
-import com.affehund.airplanes.client.render.RenderBoeing737;
+//import com.affehund.airplanes.client.discord.DiscordConnectionHandler;
+//import com.affehund.airplanes.client.discord.DiscordEventHandler;
+//import com.affehund.airplanes.client.render.RenderBoeing737;
 import com.affehund.airplanes.common.entities.EntityBoeing737;
 import com.affehund.airplanes.core.init.BlockInit;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -16,7 +16,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
@@ -43,11 +42,24 @@ public class ClientProxy extends CommonProxy
     
     @Override
     public void preInit(FMLPreInitializationEvent event) {
+//    	
+//        //DiscordConnectionHandler connectionHandler = new DiscordConnectionHandler();
+//        //MinecraftForge.EVENT_BUS.register(new DiscordEventHandler());
+//        
+//        System.out.println("Before Entity Registering/Rendering");
+//        RenderingRegistry.registerEntityRenderingHandler(EntityBoeing737.class, RenderBoeing737::new);
+//        System.out.println("After Entity Registering/Rendering");
     	
-        DiscordConnectionHandler connectionHandler = new DiscordConnectionHandler();
-        MinecraftForge.EVENT_BUS.register(new DiscordEventHandler());
-        
-        RenderingRegistry.registerEntityRenderingHandler(EntityBoeing737.class, RenderBoeing737.FACTORY);
+    	System.out.println("Before Entity Registering/Rendering");
+    	//RenderingRegistry.registerEntityRenderingHandler(EntityBoeing737.class, RenderBoeing737::new);
+    	System.out.println("After Entity Registering/Rendering");
+    }
+    
+    @Override
+    public void init(FMLPreInitializationEvent event) 
+    {   
+//    	RenderingRegistry.registerEntityRenderingHandler(EntityBoeing737.class, RendererBoeing737::new);
+    	
     }
     
     public static void registerCustomMeshesAndStates()
@@ -69,6 +81,4 @@ public class ClientProxy extends CommonProxy
 			}
 		});
 	}
-	
-
 }
