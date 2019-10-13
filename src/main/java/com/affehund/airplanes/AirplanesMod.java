@@ -39,8 +39,8 @@ public class AirplanesMod
 	
 	public static Logger log = LogManager.getLogger(Reference.MODID);
 	
-	String domain = "airplanes";
-	String path = "models/entity/boeing_737_800.obj";
+//	String domain = "airplanes";
+//	String path = "models/entity/boeing_737_800.obj";
 
     //public AirplanesDiscord discord;
 
@@ -50,14 +50,17 @@ public class AirplanesMod
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent event) 
 	{	
+		System.out.println("Main PreInit");
 		RegistryHandler.preInitRegistries(event);
 		AirplanesMod.proxy.preInit(event);
+		AirplanesMod.proxy.init(event);
 //		discord = new AirplanesDiscord(new DiscordRichPresence());
 	}
 
 	@EventHandler
 	public static void init(FMLInitializationEvent event)
 	{
+		System.out.println("Main Init");
 		RegistryHandler.initRegistries(event);
 		ProfessionsInit.associateCareersAndTrades();
 	}
@@ -65,12 +68,14 @@ public class AirplanesMod
 	@EventHandler
 	public static void postInit(FMLPostInitializationEvent event) 
 	{
+		System.out.println("Main PostInit");
 		RegistryHandler.postInitRegistries(event);
     } 
 
 	@EventHandler
 	public static void serverInit(FMLServerStartingEvent event)
 	{
+		System.out.println("Main ServerInit");
 		RegistryHandler.serverRegistries(event);
 	}
 }

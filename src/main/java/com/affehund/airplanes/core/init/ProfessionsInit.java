@@ -38,7 +38,6 @@ public class ProfessionsInit
 			}
 		} 
 
-
 	    public static void associateCareersAndTrades()
 	    {
 	        // DEBUG
