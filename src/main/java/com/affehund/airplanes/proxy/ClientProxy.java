@@ -3,7 +3,7 @@ package com.affehund.airplanes.proxy;
 import com.affehund.airplanes.client.render.RenderBoeing737;
 //import com.affehund.airplanes.client.discord.DiscordConnectionHandler;
 //import com.affehund.airplanes.client.discord.DiscordEventHandler;
-//import com.affehund.airplanes.client.render.RenderBoeing737;
+import com.affehund.airplanes.client.render.RenderBoeing737;
 import com.affehund.airplanes.common.entities.EntityBoeing737;
 import com.affehund.airplanes.core.init.BlockInit;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -45,14 +45,25 @@ public class ClientProxy extends CommonProxy
 //        //DiscordConnectionHandler connectionHandler = new DiscordConnectionHandler();
 //        //MinecraftForge.EVENT_BUS.register(new DiscordEventHandler());
     	
+<<<<<<< HEAD
+=======
+//    	System.out.println("Before Entity Registering/Rendering");
+//    	RenderingRegistry.registerEntityRenderingHandler(EntityBoeing737.class, RenderBoeing737::new);
+//    	System.out.println("After Entity Registering/Rendering");
+>>>>>>> a8107495806fe0899a1f98183b4521995a3989ab
     }
     
     @Override
     public void init(FMLPreInitializationEvent event) 
     {   
+<<<<<<< HEAD
     	System.out.println("Before Entity Registering/Rendering");
     	RenderingRegistry.registerEntityRenderingHandler(EntityBoeing737.class, RenderBoeing737::new);
     	System.out.println("After Entity Registering/Rendering");
+=======
+    	RenderingRegistry.registerEntityRenderingHandler(EntityBoeing737.class, RenderBoeing737::new);
+    	
+>>>>>>> a8107495806fe0899a1f98183b4521995a3989ab
     }
     
     public static void registerCustomMeshesAndStates()
