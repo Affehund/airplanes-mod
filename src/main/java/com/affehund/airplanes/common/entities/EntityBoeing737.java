@@ -1,5 +1,6 @@
 package com.affehund.airplanes.common.entities;
 
+import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.MoverType;
@@ -12,7 +13,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class EntityBoeing737 extends Entity 
+public class EntityBoeing737 extends EntityPlane 
 {
 	private float momentum;
 	private float deltaRotation;
@@ -48,8 +49,6 @@ public class EntityBoeing737 extends Entity
 		return getEntityBoundingBox().grow(2D);
 	}
 	
-
-
 //	@Override
 //	public void onCollideWithPlayer(EntityPlayer player)
 //	{
@@ -213,5 +212,18 @@ public class EntityBoeing737 extends Entity
 	protected void writeEntityToNBT(NBTTagCompound nbt)
 	{
 		
+	}
+
+	@Override
+	public void writeSpawnData(ByteBuf buffer) 
+	{
+		
+	}
+
+	@Override
+	public void readSpawnData(ByteBuf additionalData) 
+	{
+
+
 	}
 }

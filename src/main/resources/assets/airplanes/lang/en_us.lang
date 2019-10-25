@@ -115,7 +115,7 @@ container.suitcase=Suitcase
 fluid.oil=Oil
 
 item.airplane_item.name=Airplanes Item
-item.book_of_airplanes=Book of Airplanes
+item.book_of_airplanes.name=Book of Airplanes
 item.fuel.name=Fuel
 item.hammer.name=Airplanes Hammer
 item.suitcase.name=Suitcase

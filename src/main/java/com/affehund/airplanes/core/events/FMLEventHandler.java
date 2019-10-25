@@ -3,7 +3,6 @@ package com.affehund.airplanes.core.events;
 import com.affehund.airplanes.Reference;
 import com.affehund.airplanes.core.init.ItemInit;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -22,7 +21,6 @@ public enum FMLEventHandler {
 	
 	INSTANCE;
 	
-	
 	private static final String NBT_KEY = "airplanes.first_join";
 
     @SubscribeEvent
@@ -40,8 +38,6 @@ public enum FMLEventHandler {
             }
         }
         
-        
-
         NBTTagCompound data = event.player.getEntityData();
         NBTTagCompound persistent;
         if (!data.hasKey(EntityPlayer.PERSISTED_NBT_TAG)) {

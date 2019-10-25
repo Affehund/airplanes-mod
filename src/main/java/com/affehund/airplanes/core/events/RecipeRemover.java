@@ -1,7 +1,7 @@
 package com.affehund.airplanes.core.events;
 
 import com.affehund.airplanes.Reference;
-import com.affehund.airplanes.core.utils.TestRecipe;
+import com.affehund.airplanes.core.utils.NullRecipe;
 
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
@@ -16,7 +16,7 @@ public class RecipeRemover
 	public void registerRecipes(RegistryEvent.Register<IRecipe> event)
 	{
 		IForgeRegistryModifiable modRegistry = (IForgeRegistryModifiable)event.getRegistry();
-		//removeRecipe(modRegistry, new ResourceLocation("airplanes:hammer"), Reference.MODID);
+		//removeRecipe(modRegistry, new ResourceLocation("minecraft:bread"), Reference.MODID);
 	}
 	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -24,7 +24,7 @@ public class RecipeRemover
 	{
 		IRecipe p = (IRecipe)modRegistry.getValue(recipe);
 		modRegistry.remove(recipe);
-		modRegistry.register(TestRecipe.from(p));
+		modRegistry.register(NullRecipe.from(p));
 		System.out.println("Removing recipe for '" + recipe + "'");
 	}
 }

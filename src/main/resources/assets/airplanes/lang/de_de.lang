@@ -106,7 +106,7 @@ container.suitcase=Koffer
 fluid.oil=Öl
 
 item.airplane_item.name=Flugzeug Item
-item.book_of_airplanes=Buch der Flugzeuge
+item.book_of_airplanes.name=Buch der Flugzeuge
 item.fuel.name=Treibstoff
 item.hammer.name=Flugzeug Hammer
 item.silicon.name=Silikon

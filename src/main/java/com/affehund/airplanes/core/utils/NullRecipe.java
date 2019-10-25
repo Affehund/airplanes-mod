@@ -6,18 +6,18 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 
-public class TestRecipe extends IForgeRegistryEntry.Impl<IRecipe> implements IRecipe
+public class NullRecipe extends IForgeRegistryEntry.Impl<IRecipe> implements IRecipe
 {
 	private final ItemStack output;
 
-	public TestRecipe(ItemStack output) 
+	public NullRecipe(ItemStack output) 
 	{
 		this.output = output;
 	}
 
 	public static IRecipe from(IRecipe other)
 	{
-		return new TestRecipe(other.getRecipeOutput()).setRegistryName(other.getRegistryName());
+		return new NullRecipe(other.getRecipeOutput()).setRegistryName(other.getRegistryName());
 	}
 
 	@Override

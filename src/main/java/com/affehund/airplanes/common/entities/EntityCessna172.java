@@ -14,11 +14,6 @@ public class EntityCessna172 extends EntityPlane
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public void onInventoryChanged(IInventory invBasic) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public void writeSpawnData(ByteBuf buffer) {
