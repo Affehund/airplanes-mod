@@ -29,12 +29,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderBoeing737 extends Render<EntityBoeing737>
 {	
-<<<<<<< HEAD
 	
 	public static final Factory FACTORY = new Factory();
 	
-=======
->>>>>>> a24f6ff2c2d12416992678210f83aeb010fd8229
 	public RenderBoeing737(RenderManager renderManager)
     {
         super(renderManager);
@@ -60,10 +57,7 @@ public class RenderBoeing737 extends Render<EntityBoeing737>
 	Tessellator TESR = Tessellator.getInstance();
 	BufferBuilder buffer = TESR.getBuffer();
 	
-<<<<<<< HEAD
 	
-=======
->>>>>>> a24f6ff2c2d12416992678210f83aeb010fd8229
 	public void renderList(List<Face> faces, int color) 
 	{
         for (Face f : faces) for (int i = 0; i < f.getVertexes().length; i++) 
@@ -72,10 +66,7 @@ public class RenderBoeing737 extends Render<EntityBoeing737>
         }
     }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> a24f6ff2c2d12416992678210f83aeb010fd8229
 	public VertexFormat malisisVertexFormat = new VertexFormat() 
 	{
         {
@@ -109,10 +100,7 @@ public class RenderBoeing737 extends Render<EntityBoeing737>
 	    
 	    GlStateManager.popMatrix();
 		buffer.endVertex();
-<<<<<<< HEAD
 	    super.doRender(entity, x, y, z, entityYaw, partialTicks);
-=======
->>>>>>> a24f6ff2c2d12416992678210f83aeb010fd8229
 	}
 
 	public void setupRotation(EntityBoeing737 p_188311_1_, float p_188311_2_)
@@ -130,7 +118,6 @@ public class RenderBoeing737 extends Render<EntityBoeing737>
 	{
 		return new ResourceLocation(Reference.MODID, "textures/entity/boeing_737_800.png");
 	}
-<<<<<<< HEAD
 	
 	public static class Factory implements IRenderFactory<EntityBoeing737> 
 	{
@@ -141,6 +128,3 @@ public class RenderBoeing737 extends Render<EntityBoeing737>
 		}
     }
 }
-=======
-}
->>>>>>> a24f6ff2c2d12416992678210f83aeb010fd8229
