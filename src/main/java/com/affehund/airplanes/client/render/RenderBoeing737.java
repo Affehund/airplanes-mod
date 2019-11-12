@@ -22,36 +22,32 @@ import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.vertex.VertexFormat;
 import net.minecraft.client.renderer.vertex.VertexFormatElement;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class RenderBoeing737 extends Render<EntityBoeing737>
 {	
-	
-	public static final Factory FACTORY = new Factory();
-	
 	public RenderBoeing737(RenderManager renderManager)
-    {
-        super(renderManager);
-    }
+    	{
+        	super(renderManager);
+    	}
 	
-    public static InputStream getResourceAsStream(ResourceLocation resource) 
-    {
-        return getResourceAsStream(resource.getResourceDomain(), resource.getResourcePath());
-    }
+    	public static InputStream getResourceAsStream(ResourceLocation resource) 
+    	{
+        	return getResourceAsStream(resource.getResourceDomain(), resource.getResourcePath());
+    	}
 
-    public static InputStream getResourceAsStream(String domain, String path) 
-    {
-        return AirplanesMod.class.getResourceAsStream("/assets/"+Reference.MODID+"/models/entity/boeing_737_800.obj");
-    }
+    	public static InputStream getResourceAsStream(String domain, String path) 
+    	{
+        	return AirplanesMod.class.getResourceAsStream("/assets/"+Reference.MODID+"/models/entity/boeing_737_800.obj");
+    	}
 
-    public static String readStream(InputStream stream) 
-    {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
-        return reader.lines().collect(Collectors.joining());
-    }
+    	public static String readStream(InputStream stream) 
+    	{
+        	BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+        	return reader.lines().collect(Collectors.joining());
+    	}
 	
 	objParser objFile = new objParser(readStream(getResourceAsStream("airplanes", "models/entity/boeing_737_800.obj")));
 	Tessellator TESR = Tessellator.getInstance();
@@ -60,71 +56,63 @@ public class RenderBoeing737 extends Render<EntityBoeing737>
 	
 	public void renderList(List<Face> faces, int color) 
 	{
-        for (Face f : faces) for (int i = 0; i < f.getVertexes().length; i++) 
-        {
-            buffer.addVertexData(f.getVertexes()[i].setColor((color)).setAlpha((color >> 24)).getVertexData(malisisVertexFormat, null));
-        }
+        	for (Face f : faces) for (int i = 0; i < f.getVertexes().length; i++) 
+        	{
+            		buffer.addVertexData(f.getVertexes()[i].setColor((color)).setAlpha((color >> 24)).getVertexData(malisisVertexFormat, null));
+        	}
     }
 
 
 	public VertexFormat malisisVertexFormat = new VertexFormat() 
 	{
-        {
-            addElement(new VertexFormatElement(0, VertexFormatElement.EnumType.FLOAT, VertexFormatElement.EnumUsage.POSITION, 3));
-            addElement(new VertexFormatElement(0, VertexFormatElement.EnumType.UBYTE, VertexFormatElement.EnumUsage.COLOR, 4));
-            addElement(new VertexFormatElement(0, VertexFormatElement.EnumType.FLOAT, VertexFormatElement.EnumUsage.UV, 2));
-            addElement(new VertexFormatElement(1, VertexFormatElement.EnumType.SHORT, VertexFormatElement.EnumUsage.UV, 2));
-            addElement(new VertexFormatElement(0, VertexFormatElement.EnumType.BYTE, VertexFormatElement.EnumUsage.NORMAL, 3));
-            addElement(new VertexFormatElement(0, VertexFormatElement.EnumType.BYTE, VertexFormatElement.EnumUsage.PADDING, 1));
-        }
+        	{
+            		addElement(new VertexFormatElement(0, VertexFormatElement.EnumType.FLOAT, VertexFormatElement.EnumUsage.POSITION, 3));
+            		addElement(new VertexFormatElement(0, VertexFormatElement.EnumType.UBYTE, VertexFormatElement.EnumUsage.COLOR, 4));
+            		addElement(new VertexFormatElement(0, VertexFormatElement.EnumType.FLOAT, VertexFormatElement.EnumUsage.UV, 2));
+            		addElement(new VertexFormatElement(1, VertexFormatElement.EnumType.SHORT, VertexFormatElement.EnumUsage.UV, 2));
+            		addElement(new VertexFormatElement(0, VertexFormatElement.EnumType.BYTE, VertexFormatElement.EnumUsage.NORMAL, 3));
+            		addElement(new VertexFormatElement(0, VertexFormatElement.EnumType.BYTE, VertexFormatElement.EnumUsage.PADDING, 1));
+        	}
 	};
 	
 	@Override
 	public void doRender(EntityBoeing737 entity, double x, double y, double z, float entityYaw, float partialTicks) 
 	{
 		System.out.println("Starting doRender method");
+		Tessellator.getInstance();
 
 		buffer.begin(GL11.GL_QUADS, malisisVertexFormat);
 		TESR.draw();
 		renderList(objFile.facesQuad, 0);
 		GlStateManager.translate(x, y, z);
 
-		
 		GlStateManager.pushMatrix();
-	    float yaw  = entity.prevRotationYaw + (entity.rotationYaw - entity.prevRotationYaw) * partialTicks;
+	    	float yaw  = entity.prevRotationYaw + (entity.rotationYaw - entity.prevRotationYaw) * partialTicks;
 
-	    this.setupTranslation(x, y, z);
-	    this.setupRotation(entity, yaw);
-	    this.bindEntityTexture(entity);
+	    	this.setupTranslation(x, y, z);
+	    	this.setupRotation(entity, yaw);
+	    	this.bindEntityTexture(entity);
 
-	    
-	    GlStateManager.popMatrix();
+	    	GlStateManager.popMatrix();
 		buffer.endVertex();
-	    super.doRender(entity, x, y, z, entityYaw, partialTicks);
+	    	super.doRender(entity, x, y, z, entityYaw, partialTicks);
 	}
 
 	public void setupRotation(EntityBoeing737 p_188311_1_, float p_188311_2_)
-    {
-        GlStateManager.rotate(180 - p_188311_2_, 0.0F, 1.0F, 0.0F);
-    }
+    	{
+        	GlStateManager.rotate(180 - p_188311_2_, 0.0F, 1.0F, 0.0F);
+    	}
 
-    public void setupTranslation(double p_188309_1_, double p_188309_3_, double p_188309_5_)
-    {
-        GlStateManager.translate((float)p_188309_1_, (float)p_188309_3_ + 0.375F, (float)p_188309_5_);
-    }
+    	public void setupTranslation(double p_188309_1_, double p_188309_3_, double p_188309_5_)
+    	{
+        	GlStateManager.translate((float)p_188309_1_, (float)p_188309_3_ + 0.375F, (float)p_188309_5_);
+    	}
+	
+
 	
 	@Override
 	protected ResourceLocation getEntityTexture(EntityBoeing737 entity) 
 	{
 		return new ResourceLocation(Reference.MODID, "textures/entity/boeing_737_800.png");
 	}
-	
-	public static class Factory implements IRenderFactory<EntityBoeing737> 
-	{
-		@Override
-		public Render<? super EntityBoeing737> createRenderFor(RenderManager manager) 
-		{
-			return new RenderBoeing737(manager);
-		}
-    }
 }
