@@ -28,6 +28,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderBoeing737 extends Render<EntityBoeing737>
 {	
+	int i = 0;
 	public RenderBoeing737(RenderManager renderManager)
     	{
         	super(renderManager);
@@ -52,7 +53,27 @@ public class RenderBoeing737 extends Render<EntityBoeing737>
 	objParser objFile = new objParser(readStream(getResourceAsStream("airplanes", "models/entity/boeing_737_800.obj")));
 	Tessellator TESR = Tessellator.getInstance();
 	BufferBuilder buffer = TESR.getBuffer();
-	
+
+	@Override
+	public void doRender(EntityBoeing737 entity, double x, double y, double z, float entityYaw, float partialTicks) 
+	{
+		Tessellator TESR = Tessellator.getInstance();
+		BufferBuilder buffer = TESR.getBuffer();
+		
+		buffer.begin(GL11.GL_QUADS, malisisVertexFormat);
+		renderList(objFile.facesQuad, 0);
+		GlStateManager.translate(x, y, z);
+		
+		GlStateManager.pushMatrix();
+	    	float yaw  = entity.prevRotationYaw + (entity.rotationYaw - entity.prevRotationYaw) * partialTicks;
+
+	    	this.setupTranslation(x, y, z);
+	    	this.setupRotation(entity, yaw);
+	    	this.bindEntityTexture(entity);
+
+	    	GlStateManager.popMatrix();
+	    	super.doRender(entity, x, y, z, entityYaw, partialTicks);
+	}
 	
 	public void renderList(List<Face> faces, int color) 
 	{
@@ -60,7 +81,7 @@ public class RenderBoeing737 extends Render<EntityBoeing737>
         	{
             		buffer.addVertexData(f.getVertexes()[i].setColor((color)).setAlpha((color >> 24)).getVertexData(malisisVertexFormat, null));
         	}
-    }
+    	}
 
 
 	public VertexFormat malisisVertexFormat = new VertexFormat() 
@@ -75,28 +96,6 @@ public class RenderBoeing737 extends Render<EntityBoeing737>
         	}
 	};
 	
-	@Override
-	public void doRender(EntityBoeing737 entity, double x, double y, double z, float entityYaw, float partialTicks) 
-	{
-		System.out.println("Starting doRender method");
-		Tessellator.getInstance();
-
-		buffer.begin(GL11.GL_QUADS, malisisVertexFormat);
-		TESR.draw();
-		renderList(objFile.facesQuad, 0);
-		GlStateManager.translate(x, y, z);
-
-		GlStateManager.pushMatrix();
-	    	float yaw  = entity.prevRotationYaw + (entity.rotationYaw - entity.prevRotationYaw) * partialTicks;
-
-	    	this.setupTranslation(x, y, z);
-	    	this.setupRotation(entity, yaw);
-	    	this.bindEntityTexture(entity);
-
-	    	GlStateManager.popMatrix();
-		buffer.endVertex();
-	    	super.doRender(entity, x, y, z, entityYaw, partialTicks);
-	}
 
 	public void setupRotation(EntityBoeing737 p_188311_1_, float p_188311_2_)
     	{
@@ -107,8 +106,6 @@ public class RenderBoeing737 extends Render<EntityBoeing737>
     	{
         	GlStateManager.translate((float)p_188309_1_, (float)p_188309_3_ + 0.375F, (float)p_188309_5_);
     	}
-	
-
 	
 	@Override
 	protected ResourceLocation getEntityTexture(EntityBoeing737 entity) 
