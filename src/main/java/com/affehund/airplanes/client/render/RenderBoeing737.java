@@ -28,7 +28,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderBoeing737 extends Render<EntityBoeing737>
 {	
-	int i = 0;
 	public RenderBoeing737(RenderManager renderManager)
     	{
         	super(renderManager);
