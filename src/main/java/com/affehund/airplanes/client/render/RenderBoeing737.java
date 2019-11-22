@@ -28,6 +28,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderBoeing737 extends Render<EntityBoeing737>
 {	
+	private final ResourceLocation TEXTURE = new ResourceLocation(Reference.MODID, "textures/entity/boeing_737_800.png");
+	
+	objParser objFile = new objParser(readStream(getResourceAsStream("airplanes", "models/entity/boeing_737_800.obj")));
+	Tessellator TESR = Tessellator.getInstance();
+	BufferBuilder buffer = TESR.getBuffer();
+	
 	public RenderBoeing737(RenderManager renderManager)
     	{
         	super(renderManager);
@@ -40,27 +46,22 @@ public class RenderBoeing737 extends Render<EntityBoeing737>
 
     	public static InputStream getResourceAsStream(String domain, String path) 
     	{
-        	return AirplanesMod.class.getResourceAsStream("/assets/"+Reference.MODID+"/models/entity/boeing_737_800.obj");
+		return AirplanesMod.class.getResourceAsStream("/assets/"+Reference.MODID+"/models/entity/boeing_737_800.obj");
     	}
 
     	public static String readStream(InputStream stream) 
-    	{
-        	BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+	{
+       		BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
         	return reader.lines().collect(Collectors.joining());
     	}
-	
-	objParser objFile = new objParser(readStream(getResourceAsStream("airplanes", "models/entity/boeing_737_800.obj")));
-	Tessellator TESR = Tessellator.getInstance();
-	BufferBuilder buffer = TESR.getBuffer();
 
-	@Override
-	public void doRender(EntityBoeing737 entity, double x, double y, double z, float entityYaw, float partialTicks) 
+	public void doRender(EntityBoeing737 entity, double x, double y, double z, float entityYaw, float partialTicks, int color) 
 	{
+		objParser objFile = new objParser(readStream(getResourceAsStream("airplanes", "models/entity/boeing_737_800.obj")));
 		Tessellator TESR = Tessellator.getInstance();
 		BufferBuilder buffer = TESR.getBuffer();
 		
-		buffer.begin(GL11.GL_QUADS, malisisVertexFormat);
-		renderList(objFile.facesQuad, 0);
+		renderList(objFile.facesQuad, color);
 		GlStateManager.translate(x, y, z);
 		
 		GlStateManager.pushMatrix();
@@ -70,17 +71,34 @@ public class RenderBoeing737 extends Render<EntityBoeing737>
 	    	this.setupRotation(entity, yaw);
 	    	this.bindEntityTexture(entity);
 
-	    	GlStateManager.popMatrix();
-	    	super.doRender(entity, x, y, z, entityYaw, partialTicks);
+		
+	    	if(objFile.facesTri.size() > 0) 
+	    	{
+	        	buffer.begin(GL11.GL_TRIANGLES, malisisVertexFormat);
+	        	renderList(objFile.facesTri, color);
+	        	TESR.draw();
+	    	}
+
+	    	if(objFile.facesQuad.size() > 0) 
+	    	{
+	        	buffer.begin(GL11.GL_QUADS, malisisVertexFormat);
+	        	renderList(objFile.facesQuad, color);
+	        	TESR.draw();
+	    	}
+	    
+	    GlStateManager.popMatrix();
+
+	    super.doRender(entity, x, y, z, entityYaw, partialTicks);
 	}
 	
 	public void renderList(List<Face> faces, int color) 
 	{
         	for (Face f : faces) for (int i = 0; i < f.getVertexes().length; i++) 
-        	{
+		{
             		buffer.addVertexData(f.getVertexes()[i].setColor((color)).setAlpha((color >> 24)).getVertexData(malisisVertexFormat, null));
         	}
-    	}
+    	}	
+
 
 
 	public VertexFormat malisisVertexFormat = new VertexFormat() 
@@ -99,16 +117,18 @@ public class RenderBoeing737 extends Render<EntityBoeing737>
 	public void setupRotation(EntityBoeing737 p_188311_1_, float p_188311_2_)
     	{
         	GlStateManager.rotate(180 - p_188311_2_, 0.0F, 1.0F, 0.0F);
-    	}
+	}
+
 
     	public void setupTranslation(double p_188309_1_, double p_188309_3_, double p_188309_5_)
     	{
         	GlStateManager.translate((float)p_188309_1_, (float)p_188309_3_ + 0.375F, (float)p_188309_5_);
     	}
 	
+	
 	@Override
 	protected ResourceLocation getEntityTexture(EntityBoeing737 entity) 
 	{
-		return new ResourceLocation(Reference.MODID, "textures/entity/boeing_737_800.png");
+		return this.TEXTURE;
 	}
 }
