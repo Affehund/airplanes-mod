@@ -1,19 +1,19 @@
 {
   "homepage": "https://www.curseforge.com/minecraft/mc-mods/airplanes-mod",
   "promos": {
-    "1.12.2-latest"      : "0.9",
-    "1.12.2-recommended" : "0.9",
+    "1.12.2-latest"      : "airplanes_a0.9.jar",
+    "1.12.2-recommended" : "airplanes_a0.9.jar",
   },
   "1.12.2" : {
-	"0.9" : "Added full functionality for combustion engine and solar panel, some new item textures",
-	"0.8" : "New items, new stuff, new textures, start of energy",
-	"0.7.1" : "Some bugfixes and new blocks",
-	"0.7" : "New items (suitcase, cpus, a display and circuit boards) and blocks",
-	"0.6" : "Added gears: wooden, stone, iron, golden and diamond gear",
-	"0.5" : "Added Combustion Engine, a new Block to produce energy.",
-	"0.4" : "First processing blocks. Also includes a new crafting item / block, the Coil.",
-	"0.3" : "Block expansions and basic crafting elements",
-	"0.0.2" : "This pre-alpha build includes an updated Airplanes Part Builder and the first blocks and items. In addition, we now have enhanced language support.",
-	"0.0.1" : "First version, only for ALPHA testing."
+	"airplanes_a0.9.jar" : "Added full functionality for combustion engine and solar panel, some new item textures",
+	"airplanes_a0.8.jar" : "New items, new stuff, new textures, start of energy",
+	"airplanes_a0.7.1.jar" : "Some bugfixes and new blocks",
+	"airplanes_a0.7.jar" : "New items (suitcase, cpus, a display and circuit boards) and blocks",
+	"airplanes_a0.6.jar" : "Added gears: wooden, stone, iron, golden and diamond gear",
+	"airplanes_a0.5.jar" : "Added Combustion Engine, a new Block to produce energy.",
+	"airplanes_a0.4.jar" : "First processing blocks. Also includes a new crafting item / block, the Coil.",
+	"airplanes_a0.3.jar" : "Block expansions and basic crafting elements",
+	"airplanes_a0.0.2.jar" : "This pre-alpha build includes an updated Airplanes Part Builder and the first blocks and items. In addition, we now have enhanced language support.",
+	"airplanes_a0.0.1.jar" : "First version, only for ALPHA testing."
   }
 }
