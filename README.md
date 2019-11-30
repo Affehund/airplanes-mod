@@ -1,6 +1,7 @@
 [![Curse Forge Project](http://cf.way2muchnoise.eu/versions/315652.svg)](https://minecraft.curseforge.com/projects/airplanes-mod)
 [![Download](http://cf.way2muchnoise.eu/full_315652_downloads.svg)](https://minecraft.curseforge.com/projects/airplanes-mod/files)
 [![Discord](https://img.shields.io/discord/371298569354739716?label=Discord)](https://discord.gg/B5h584D)
+[![Lines of Code](https://tokei.rs/b1/github/affehund/airplanes-mod?category=code)](https://github.com/affehund/airplanes-mod)
 [![Wiki](http://img.shields.io/badge/Wiki--success.svg)](https://github.com/Affehund/airplanes-mod/wiki)
 
 
