@@ -1,7 +1,7 @@
-[![Curse Forge Project](http://cf.way2muchnoise.eu/versions/315652.svg)](https://minecraft.curseforge.com/projects/airplanes-mod)
+[![Curse Forge Project](http://cf.way2muchnoise.eu/versions/315652.svg)](https://bit.ly/airplanesmod)
 [![Download](http://cf.way2muchnoise.eu/full_315652_downloads.svg)](https://minecraft.curseforge.com/projects/airplanes-mod/files)
-[![Discord](https://img.shields.io/discord/371298569354739716?label=Discord)](https://discord.gg/B5h584D)
-[![Lines of Code](https://tokei.rs/b1/github/affehund/airplanes-mod?category=code)](https://github.com/affehund/airplanes-mod)
+[![Discord](https://img.shields.io/discord/371298569354739716?label=Discord)](https://bit.ly/airplanesdc)
+[![Lines of Code](https://tokei.rs/b1/github/affehund/airplanes-mod?category=code)](https://bit.ly/airplanesgh)
 [![Wiki](http://img.shields.io/badge/Wiki--success.svg)](https://github.com/Affehund/airplanes-mod/wiki)
 
 
@@ -13,34 +13,12 @@ If you miss a plane or want to suggest one, submit it to our Issue Tracker (it w
 
 
 ## Curseforge Download
-You can download the mod [here](https://minecraft.curseforge.com/projects/airplanes-mod)
+You can download the mod [here](https://bit.ly/airplanesmod)
 
 ## Documention
 A Documention for the Airplanes Mod is available on our [Wiki](https://github.com/Affehund/airplanes-mod/wiki)
 
 ## Discord
-Here is the Link to our [Discord Server](https://discord.gg/B5h584D)
-
-## Status airplanes_a0.8.jar
-Features:
-- Materials (copper ingot, steel rod, diamond gear ...)
-- Tools (airplanes wrench, airplanes hammer ...)
-- Suitcase
-- Tech items (silicon, display ...)
-- Many blocks (coils, ores ...)
-- Machines (Combustion Engine, Energy Storage Block, Machine Block ...)
-- Many Crafting Recipes
-- OreDictionary
-- Advancements 
-
-Planed Features:
-- Working and flyable planes
-- Multiblocks
-- Wiki
-- Structures
-- Villagers
-- Other vehicles
-- Compability between other mods (jei, crafttweaker, buildcraft, ...)
-- And much more
+Here is the Link to our [Discord Server](https://bit.ly/airplanesdc)
 
 Be free to submit your suggestions and ideas in our Discord or on the Issue Tracker!
