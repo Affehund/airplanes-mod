@@ -1,0 +1,13 @@
+{
+	 "variants": 
+    {
+		"burning=false,facing=north": { "model": "airplanes:metallurgical_oven" },
+        "burning=false,facing=east": { "model": "airplanes:metallurgical_oven", "y": 90 },
+        "burning=false,facing=south": { "model": "airplanes:metallurgical_oven", "y": 180 },
+        "burning=false,facing=west": { "model": "airplanes:metallurgical_oven", "y": 270 },
+        "burning=true,facing=north": { "model": "airplanes:metallurgical_oven" },
+        "burning=true,facing=east": { "model": "airplanes:metallurgical_oven", "y": 90 },
+        "burning=true,facing=south": { "model": "airplanes:metallurgical_oven", "y": 180 },
+        "burning=true,facing=west": { "model": "airplanes:metallurgical_oven", "y":270  }
+	}
+}

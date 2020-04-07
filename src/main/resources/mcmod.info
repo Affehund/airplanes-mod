@@ -7,10 +7,9 @@
   "mcversion": "${mcversion}", 
   "authorList": ["Affehund", "Jkl213", "and many others"],
   "updateJson": "https://github.com/Affehund/airplanes-mod/blob/master/update.json",
-  "updateUrl" : "https://github.com/Affehund/airplanes-mod/blob/master/update.json", 
   "url": "https://minecraft.curseforge.com/projects/airplanes-mod",
   "logoFile": "logo.png",
-  "credits": "Airplanes Mod Dev Team 2019",
+  "credits": "Airplanes Mod Dev Team 2020",
   "dependencies": [
 	 "mod_MinecraftForge"
 		]

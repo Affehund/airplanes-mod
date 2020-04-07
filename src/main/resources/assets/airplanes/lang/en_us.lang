@@ -3,29 +3,24 @@
 //Advancements
 advancements.combustion.title=ENERGY PLS!1!!!!1!
 advancements.combustion.description=Get a combustion engine
-
 advancements.diamond_gear.title=Finally! All good things are 5
 advancements.diamond_gear.description=Make a diamond gear
-
 advancements.energy_storage.title=To where with the energy?
 advancements.energy_storage.description=Craft a energy storage cell
-
 advancements.fuel.title=Fuel? Check!
 advancements.fuel.description=Make some fuel
-
 advancements.golden_gear.title=Gear Upgrade 3
 advancements.golden_gear.description=Craft a golden gear
-
 advancements.iron_gear.title=All good things are 3
 advancements.iron_gear.description=Craft a iron gear
 advancements.machines.title=Starting with engineering
-advancements.machines.description=Craft a machine block
+advancements.machines.description=Craft a machine casing
 advancements.plate.title=That is the hammer!
 advancements.plate.description=Craft a hammer to get plates
 advancements.rod.title=I've got no rods...
 advancements.rod.description=Craft one rod, no matter which
 advancements.root.title=Welcome to the AIRPLANES MOD
-advancements.root.description=Make a crafting table
+advancements.root.description=Get the Airplanes Mod book
 advancements.silicon.title=What do computers need?
 advancements.silicon.description=Smelt raw silicon to get silicon
 advancements.solar_panel.title=Renewable resources
@@ -46,7 +41,7 @@ tile.copper_block.name=Copper Block
 tile.copper_coil.name=Copper Coil
 tile.copper_ore.name=Copper Ore
 tile.gold_coil.name=Gold Coil
-tile.machine_block.name=Machine Block
+tile.machine_block.name=Machine Casing
 tile.steel_block.name=Steel Block
 tile.tin_block.name=Tin Block
 tile.tin_ore.name=Tin Ore
@@ -57,18 +52,24 @@ tile.computer_t3.name=Tier 3 Computer
 
 tile.electronics_assembler_block.name=Electronics Assembler Block
 tile.energy_storage_block.name=Energy Storage Block
-tile.machine_block.name=Machine Block
+tile.machine_casing.name=Machine Casing
+tile.metallurgical_oven.name=Metallurgical Oven
 tile.combustion_engine.name=Combustion Engine
 tile.solar_panel.name=Solar Panel
 
 tile.airplanes_builder.name=Airplanes Builder
 tile.combustion_engine.name=Combustion Engine
 
+tile.fluid_tank.name=Fluid Tank
+
 tile.oil.name=Oil
 
 //Containers
 container.combustion_engine=Combustion Engine
 container.energy_storage_block=Energy Storage
+container.metallurgical_oven=Metallurgical Oven
+container.fluid_tank=Fluid Tank
+
 
 //Creative Tab
 itemGroup.AirplanesItems=Airplanes - Items and Blocks
@@ -126,18 +127,22 @@ item.raw_silicon.name=Raw Silicon
 tile.name.oil=Oil
 
 //Tooltips
-airplanes.tooltips_book1=Look up things you don't understand
-airplanes.tooltips_book2=Or just look in our wiki
-airplanes.tooltips_book_normal1=Author: Affehund
-airplanes.tooltips_book_normal2=Hold Shift for more information
-airplanes.tooltips_hammer1=With the hammer you can make plates
-airplanes.tooltips_hammer2=Recipe for plates: hammer + ingot (aluminum, copper, iron or steel)
-airplanes.tooltips_hammer_normal=Hold Shift for more information
-airplanes.tooltips_suitcase1=With the suitcase you can store your items on a long journey
-airplanes.tooltips_suitcase2=The inventory is a big as a normal chest
-airplanes.tooltips_suitcase_normal=Hold Shift for more information
-airplanes.tooltips_wrench1=With the wrench you will be able to destroy airplanes easily
-airplanes.tooltips_wrench2=!WIP!
-airplanes.tooltips_wrench_normal=Hold Shift for more information
+airplanes.tooltips.hold_shift=Hold Shift for more information
+airplanes.tooltips.hammer1=With the hammer you can make plates
+airplanes.tooltips.hammer2=Recipe for plates: hammer + ingot (aluminum, copper, iron or steel)
+airplanes.tooltips.wrench1=With the wrench you will be able to destroy airplanes easily
+airplanes.tooltips.wrench2=Not working at the moment!
 
+//JEI
+airplanes.jei.hammer=Information about the hammer
+airplanes.jei.combustion_engine=Information about the combustion engine
+airplanes.gui.jei.combustion.burntime=Time
+airplanes.gui.jei.combustion.energy=Energy
 
+airplanes.jei.container.combustion_engine=Combustion Engine Fuel
+
+airplanes.message.tank=@aFluid: %s
+airplanes.message.energy=@aEnergy: %d 
+
+//Gui Messages
+airplanes.gui.none.name=No Fluid

@@ -1,7 +1,7 @@
 {
     "display": {
         "icon": {
-            "item": "airplanes:machine_block"
+            "item": "airplanes:machine_casing"
         },
         "title": {
             "translate": "advancements.machines.title"
@@ -17,7 +17,7 @@
    		 		"conditions":{
    		 			"items":[
    		 				{
-   		 				"item":"airplanes:machine_block"
+   		 				"item":"airplanes:machine_casing"
    		 				}	
    		 		]
    		 	}

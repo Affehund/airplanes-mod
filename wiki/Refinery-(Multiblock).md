@@ -1,1 +1,0 @@
-The Refinery is used to refine oil into petroleoum, which can be fed to a [Combustion Engine](https://github.com/Affehund/airplanesmod/wiki/Combustion-Engine). WIP for now!

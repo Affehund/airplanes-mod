@@ -1,0 +1,30 @@
+{
+	"type": "mainPage",
+	"bookName": "Airplanes Mod Guide",
+	"edition": "1st",
+	"color": "2B82FF",
+	"text": "Welcome to the airplanes mod! Go and have fun!",
+	"categoryTitle": "Book Categories",
+	"categories": [
+		{
+			"name": "Recipes",
+			"icon": "minecraft:crafting_table",
+			"id": "chapters/recipes"
+		},
+		{
+			"name": "Machines",
+			"icon": "airplanes:combustion_engine",
+			"id": "chapters/machines"
+		},
+		{
+			"name": "Airplanes",
+			"icon": "airplanes:airplane_item",
+			"id": "chapters/airplanes"
+		},
+		{
+			"name": "Multiblock",
+			"icon": "airplanes:machine_casing",
+			"id": "chapters/multiblocks"
+		}
+	]
+}

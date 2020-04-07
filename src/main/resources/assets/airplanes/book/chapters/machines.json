@@ -1,0 +1,10 @@
+{
+	"type": "pages",
+	"pages": [
+		{
+			"type": "textPage",
+			"title": "Machines",
+			"text": "There are several machines in the airplanes mod. Some are used to produce energy, some need energy and craft items with it."
+		}
+	]
+}

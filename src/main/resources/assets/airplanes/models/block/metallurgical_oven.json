@@ -1,0 +1,12 @@
+{
+    "parent": "block/orientable",
+	"textures": {
+        "particle": "airplanes:blocks/metallurgical_oven_side",
+        "up": "airplanes:blocks/metallurgical_oven_top",
+        "down": "airplanes:blocks/metallurgical_oven_side",
+        "north": "airplanes:blocks/metallurgical_oven_front_off",
+        "east": "airplanes:blocks/metallurgical_oven_side",
+        "south": "airplanes:blocks/metallurgical_oven_side",
+        "west": "airplanes:blocks/metallurgical_oven_side"
+    }
+}

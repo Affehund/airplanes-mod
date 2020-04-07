@@ -1,0 +1,10 @@
+{
+	"type": "pages",
+	"pages": [
+		{
+			"type": "textPage",
+			"title": "Multiblocks",
+			"text": "Multiblock structures are used to..."
+		}
+	]
+}

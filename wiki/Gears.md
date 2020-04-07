@@ -1,1 +1,0 @@
-Gears are used to land a plane. They are crafted in an Airplanes Builder. They are needed for any type of plane to fly.

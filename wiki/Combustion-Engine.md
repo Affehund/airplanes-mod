@@ -1,1 +1,0 @@
-The Combustion Engine is used to generate medium amounts of energy. It takes oil (currently not Buildcraft-compatible), coal or coke. 

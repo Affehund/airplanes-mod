@@ -9,52 +9,77 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 
+/**
+ * @author Affehund
+ * 
+ *         MIT License Copyright (c) 2020 Affehund Dev Team
+ * 
+ *         Permission is hereby granted, free of charge, to any person obtaining
+ *         a copy of this software and associated documentation files (the
+ *         "Software"), to deal in the Software without restriction, including
+ *         without limitation the rights to use, copy, modify, merge, publish,
+ *         distribute, sublicense, and/or sell copies of the Software, and to
+ *         permit persons to whom the Software is furnished to do so, subject to
+ *         the following conditions:
+ * 
+ *         The above copyright notice and this permission notice shall be
+ *         included in all copies or substantial portions of the Software.
+ * 
+ *         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ *         EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ *         MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *         NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+ *         BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ *         ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ *         CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *         SOFTWARE.
+ */
 public class PacketSyncEnergy implements IMessage
 {
 	private int energy;
-    private int progress;
+	private int progress;
 
-    @Override
-    public void fromBytes(ByteBuf buf)
-    {
-        energy = buf.readInt();
-        progress = buf.readByte();
-    }
+	@Override
+	public void fromBytes(ByteBuf buf)
+	{
+		energy = buf.readInt();
+		progress = buf.readByte();
+	}
 
-    @Override
-    public void toBytes(ByteBuf buf)
-    {
-        buf.writeInt(energy);
-        buf.writeByte(progress);
-    }
+	@Override
+	public void toBytes(ByteBuf buf)
+	{
+		buf.writeInt(energy);
+		buf.writeByte(progress);
+	}
 
-    public PacketSyncEnergy()
-    {
-    	
-    }
+	public PacketSyncEnergy()
+	{
 
-    public PacketSyncEnergy(int energy, int progress)
-    {
-        this.energy = energy;
-        this.progress = progress;
-    }
+	}
 
-    public static class Handler implements IMessageHandler<PacketSyncEnergy, IMessage>
-    {
-        @Override
-        public IMessage onMessage(PacketSyncEnergy message, MessageContext ctx)
-        {
-            AirplanesMod.proxy.addScheduledTaskClient(() -> handle(message, ctx));
-            return null;
-        }
-        
-        private void handle(PacketSyncEnergy message, MessageContext ctx)
-        {
-            EntityPlayer player = AirplanesMod.proxy.getClientPlayer();
-            if (player.openContainer instanceof IMachineStateContainer)
-            {
-               ((IMachineStateContainer) player.openContainer).sync(message.energy, message.progress);
-            }
-        }
-    }
+	public PacketSyncEnergy(int energy, int progress)
+	{
+		this.energy = energy;
+		this.progress = progress;
+	}
+
+	public static class Handler implements IMessageHandler<PacketSyncEnergy, IMessage>
+	{
+		@Override
+		public IMessage onMessage(PacketSyncEnergy message, MessageContext ctx)
+		{
+			AirplanesMod.proxy.addScheduledTaskClient(() -> handle(message, ctx));
+			return null;
+		}
+
+		private void handle(PacketSyncEnergy message, MessageContext ctx)
+		{
+			EntityPlayer player = AirplanesMod.proxy.getClientPlayer();
+			if (player.openContainer instanceof IMachineStateContainer)
+			{
+				((IMachineStateContainer) player.openContainer).sync(message.energy, message.progress);
+			}
+		}
+	}
 }

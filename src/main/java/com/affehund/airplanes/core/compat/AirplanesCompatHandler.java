@@ -1,0 +1,59 @@
+package com.affehund.airplanes.core.compat;
+
+import com.affehund.airplanes.AirplanesMod;
+import com.affehund.airplanes.core.compat.top.TOPCompat;
+
+import net.minecraftforge.fml.common.Loader;
+
+/**
+ * @author Affehund
+ * 
+ *         MIT License Copyright (c) 2020 Affehund Dev Team
+ * 
+ *         Permission is hereby granted, free of charge, to any person obtaining
+ *         a copy of this software and associated documentation files (the
+ *         "Software"), to deal in the Software without restriction, including
+ *         without limitation the rights to use, copy, modify, merge, publish,
+ *         distribute, sublicense, and/or sell copies of the Software, and to
+ *         permit persons to whom the Software is furnished to do so, subject to
+ *         the following conditions:
+ * 
+ *         The above copyright notice and this permission notice shall be
+ *         included in all copies or substantial portions of the Software.
+ * 
+ *         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ *         EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ *         MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *         NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+ *         BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ *         ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ *         CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *         SOFTWARE.
+ */
+public class AirplanesCompatHandler
+{
+	public static void registerCompats()
+	{
+		if (Loader.isModLoaded("crafttweaker"))
+		{
+			AirplanesMod.log.info("Registered CraftTweaker");
+			CTCompat.init();
+		}
+		
+		if (Loader.isModLoaded("gamestages"))
+		{
+			AirplanesMod.log.info("Registered Game Stages");
+		}
+		
+		if (Loader.isModLoaded("jei"))
+		{
+			AirplanesMod.log.info("Registered Just Enough Items");
+		}
+		
+		if (Loader.isModLoaded("theoneprobe"))
+		{
+			TOPCompat.register();
+			AirplanesMod.log.info("Registered The One Probe");
+		}
+	}
+}

@@ -1,1 +1,0 @@
-The Airplanes Builder is used to assemble big airplanes. You need to supply a construction plan and all parts to it.

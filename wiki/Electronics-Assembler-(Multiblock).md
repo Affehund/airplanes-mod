@@ -1,1 +1,0 @@
-The EAM is used to create bigger electronics, such as [Computers](https://github.com/Affehund/airplanesmod/wiki/Computers).

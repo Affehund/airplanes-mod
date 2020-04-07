@@ -1,0 +1,130 @@
+//translation es-es
+//translated by palomox
+
+//Advancements
+advancements.combustion.title=ENERGÍA POR FAVOR!!!!!!!!!!
+advancements.combustion.description=Consigue un motor de combustión
+advancements.diamond_gear.title=¡Por fin! Las mejores cosas son 5
+advancements.diamond_gear.description=Fabrica un engranaje de diamante
+advancements.energy_storage.title=Y.. ¿Donde meto la energía?
+advancements.energy_storage.description=Fabrica una célula de almacenamiento
+advancements.fuel.title=¿Combustible? ¡Mira!
+advancements.fuel.description=Haz algo de combustible
+advancements.golden_gear.title=Mejora de los engranajes número 3
+advancements.golden_gear.description=Fabrica un engranaje de oro
+advancements.iron_gear.title=Las mejores cosas son 3
+advancements.iron_gear.description=Fabrica un engranaje de hierro
+advancements.machines.title=Empezando con la ingeniería 
+advancements.machines.description=Fabrica un bloque de maquinaria
+advancements.plate.title=Y, ¡esto es el martillo!
+advancements.plate.description=Fabrica un martillo para conseguir placas
+advancements.rod.title=No tengo barras...
+advancements.rod.description=Fabrica cualquier tipo de barra
+advancements.root.title=Bienvenido al mod de los aviones
+advancements.root.description=Obtén el libro de Aviones
+advancements.silicon.title=¿Que necesitan los ordenadores?
+advancements.silicon.description=Funde silicona en bruto para hacer silicona.
+advancements.solar_panel.title=Energías renovables
+advancements.solar_panel.description=Fabrica un panel solar
+advancements.steel.title=¿Cómo has robado ese acero?
+advancements.steel.description=Funde hierro para hacer acero
+advancements.stone_gear.title=Mejora 1
+advancements.stone_gear.description=Mejora el engranaje de madera para hacer uno de piedra
+advancements.wooden_gear.title=El primer engranaje
+advancements.wooden_gear.description=Fabrica un engranaje de madera, para hacer mas engranajes.
+
+//Blocks
+tile.aluminum_block.name=Bloque de Aluminio
+tile.aluminum_coil.name=Bobina de Aluminio
+tile.asphalt_block.name=Bloque de Asfalto
+tile.bauxite_ore.name=Mena de Bauxita
+tile.copper_block.name=Bloque de Cobre
+tile.copper_coil.name=Bobina de Cobre
+tile.copper_ore.name=Mena de Cobre
+tile.gold_coil.name=Bobina de Oro
+tile.machine_block.name=Bloque de Maquinaria
+tile.steel_block.name=Bloque de Acero
+tile.tin_block.name=Bloque de Estaño
+tile.tin_ore.name=Mena de Estaño
+
+tile.computer_t1.name=Ordenador Tier 1
+tile.computer_t2.name=Ordenador Tier 2
+tile.computer_t3.name=Ordenador Tier 3
+
+tile.electronics_assembler_block.name=Bloque de fabricación de objetos electrónicos
+tile.energy_storage_block.name=Bloque de Almacenamiento de Energía
+tile.machine_block.name=Bloque de Maquinaria
+tile.combustion_engine.name=Motor de Combustión
+tile.solar_panel.name=Panel Solar
+
+tile.airplanes_builder.name=Constructor de Aviones
+tile.combustion_engine.name=Motor de Combustión
+
+tile.oil.name=Petróleo
+
+//Containers 
+container.combustion_engine=Motor de Combustión
+container.energy_storage_block=Almacén de Energía
+
+//Creative Tab
+itemGroup.AirplanesItems=Aviones - Objetos y Bloques
+itemGroup.AirplanesVehicles=Aviones - Vehículos
+
+//Entities
+entity.boeing737.name=Boeing 737
+entity.Villager.pilot=Piloto
+
+//Items
+item.aluminum_ingot.name=Lingote de Aluminio
+item.aluminum_plate.name=Placa de Aluminio
+item.aluminum_rod.name=Barra de Aluminio
+item.copper_ingot.name=Lingote de Cobre
+item.copper_nugget.name=Pepita de Cobre
+item.copper_plate.name=Placa de Cobre
+item.copper_rod.name=Barra de Cobre
+item.diamond_gear.name=Engranaje de Diamante
+
+item.golden_gear.name=Engranaje de Oro
+item.iron_gear.name=Engranaje de Hierro
+item.iron_plate.name=Placa de Hierro
+item.iron_rod.name=Barra de Hierro
+item.steel_ingot.name=Lingote de Acero 
+item.steel_plate.name=Placa de Acero
+item.steel_rod.name=Barra de Acero
+item.stone_gear.name=Engranaje de Piedra
+item.tin_ingot.name=Lingote de Estaño
+item.tin_nugget.name=Pepita de Estaño
+item.wooden_gear.name=Engranaje de Madera
+
+item.display.name=Visualizador
+
+item.diamond_circuit_board.name=Diamond Circuit Board
+item.golden_circuit_board.name=Golden Circuit Board
+item.iron_circuit_board.name=Iron Circuit Board
+
+item.diamond_cpu.name=Diamond CPU
+item.golden_cpu.name=Golden CPU
+item.iron_cpu.name=Iron CPU
+
+//Others
+container.suitcase=Maleta
+fluid.oil=Petróleo
+
+item.airplane_item.name=El objeto de los aviones
+item.book_of_airplanes.name=El gran libro de los Aviones
+item.fuel.name=Combustible
+item.hammer.name=Martillo del mod de Aviones
+item.suitcase.name=Suitcase
+item.wrench.name=Llave del mod de Aviones
+item.silicon.name=Silicona
+item.raw_silicon.name=Silicio
+
+tile.name.oil=Petróleo
+
+//Tooltips
+airplanes.tooltips.hold_shift=Pulsa Shift para más información
+
+airplanes.tooltips.hammer1=Con el martillo puedes hacer placas
+airplanes.tooltips.hammer2=Receta para hacer placas: martillo + lingote (de aluminio, cobre, hierro o acero)
+airplanes.tooltips.wrench1=Con la llave inglesa puedes quitar aviones fácilmente
+airplanes.tooltips.wrench2=¡WIP!

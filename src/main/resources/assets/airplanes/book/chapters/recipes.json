@@ -1,0 +1,46 @@
+{
+	"type": "pages",
+	"pages": [
+		{
+			"type": "textPage",
+			"title": "Crafting Recipes",
+			"text": "Crafting Recipes"
+		},
+		{
+			"type": "recipePage",
+			"item": "minecraft:iron_block",
+			"description": "Crafting",
+			"recipeType": "CRAFTING"
+		},
+		{
+			"type": "recipePage",
+			"item": "airplanes:copper_block",
+			"description": "COPPER_BLOCK",
+			"recipeType": "CRAFTING"
+		},
+		{
+			"type": "recipePage",
+			"item": "airplanes:iron_plate",
+			"description": "IRON_PLATE",
+			"recipeType": "CRAFTING"
+		},
+		{
+			"type": "recipePage",
+			"item": "minecraft:bread",
+			"description": "BREAD",
+			"recipeType": "CRAFTING"
+		},
+		{
+			"type": "recipePage",
+			"item": "airplanes:combustion_engine",
+			"description": "IRON_PLATE",
+			"recipeType": "CRAFTING"
+		},
+		{
+			"type": "recipePage",
+			"item": "airplanes:silicon",
+			"description": "Furnace SILICON",
+			"recipeType": "SMELTING"
+		}
+	]
+}

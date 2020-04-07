@@ -14,13 +14,13 @@ advancements.golden_gear.description=Fertige ein goldenes Zahnrad her
 advancements.iron_gear.title=Alle guten Dinge sind 3
 advancements.iron_gear.description=Stelle ein Eisenzahnrad her
 advancements.machines.title=Technikbeginn
-advancements.machines.description=Baue einen Maschinenblock
+advancements.machines.description=Baue einen Maschinengeh�use
 advancements.plate.title=Das ist der HAMMER!
 advancements.plate.description=Mache einen Hammer um Platten herzustellen
 advancements.rod.title=I've got no rods, I've got no rods!
 advancements.rod.description=Bastle eine Stange, egal welche
 advancements.root.title=Willkommen bei der Airplanes Mod
-advancements.root.description=Baue eine Werkbank
+advancements.root.description=Erhalte das Airplanes Mod Buch
 advancements.silicon.title=Was brauchen Computer?
 advancements.silicon.description=Schmelze Rohes Silikon um Silikon zu erhalten
 advancements.solar_panel.title=Erneuerbare Ressourcen
@@ -41,7 +41,7 @@ tile.copper_block.name=Kupferblock
 tile.copper_coil.name=Kupferspule
 tile.copper_ore.name=Kupfererz
 tile.gold_coil.name=Goldspule
-tile.machine_block.name=Maschinenblock
+tile.machine_casing.name=Maschinengeh�use
 tile.steel_block.name=Stahlblock
 tile.tin_block.name=Zinnblock
 tile.tin_ore.name=Zinnerz
@@ -54,14 +54,19 @@ tile.airplanes_builder.name=Flugzeug Werkbank
 tile.combustion_engine.name=Verbrennungsmotor
 tile.electronics_assembler_block.name=Elektronikmontageblock
 tile.energy_storage_block.name=Akku Block
-tile.machine_block.name=Maschinenblock
+tile.machine_casing.name=Maschinengeh�use
+tile.metallurgical_oven.name=Metallurgischer Ofen
 tile.solar_panel.name=Sonnenkollektor
+
+tile.fluid_tank.name=Fl�ssigkeiten Tank
 
 tile.oil.name=Öl
 
 //Containers
 container.combustion_engine=Verbrennungsmotor
-container.energy_storage_block=Forge Energie Akku
+container.energy_storage_block=Energie Akku
+container.metallurgical_oven=Metallurgical Oven
+container.fluid_tank=Fl�ssigkeiten Tank
 
 //Creative Tab
 itemGroup.AirplanesItems=Airplanes - Gegenstände und Blöcke
@@ -117,24 +122,23 @@ item.wrench.name=Flugzeug Schraubschlüssel
 tile.name.oil=Öl
 
 //Tooltips
-airplanes.tooltips_book1=Schaue Sachen, die du nicht verstehst in diesem Buch nach
-airplanes.tooltips_book2=Oder schaue in unser Wiki
-airplanes.tooltips_book_normal1=Autor: Affehund
-airplanes.tooltips_book_normal2=Umschalttaste gedrückt halten für mehr Informationen
-airplanes.tooltips_hammer1=Mit dem Hammer kann man Platten machen
-airplanes.tooltips_hammer2=Rezept für Platten: Hammer + Barren (Aluminium, Kupfer, Eisen oder Stahl)
-airplanes.tooltips_hammer_normal=Umschalttaste gedrückt halten für mehr Informationen
-airplanes.tooltips_suitcase1=Mit dem Koffer kannst du deine Items unterwegs lagern
-airplanes.tooltips_suitcase2=Das Inventar ist so groß wie eine Kiste
-airplanes.tooltips_suitcase_normal=Umschalttaste gedrückt halten für mehr Informationen
-airplanes.tooltips_wrench1=Mit dem Schraubschlüssel wird man einfach Flugzeuge zerstören können
-airplanes.tooltips_wrench2=!Noch nicht funktionstüchtig!
-airplanes.tooltips_wrench_normal=Umschalttaste gedrückt halten für mehr Informationen
+airplanes.tooltips.hold_shift=Umschalttaste gedrückt halten für mehr Informationen
 
+airplanes.tooltips.hammer1=Mit dem Hammer kann man Platten machen
+airplanes.tooltips.hammer2=Rezept für Platten: Hammer + Barren (Aluminium, Kupfer, Eisen oder Stahl)
+airplanes.tooltips.wrench1=Mit dem Schraubschlüssel wird man einfach Flugzeuge zerstören können
+airplanes.tooltips.wrench2=Noch nicht funktionstüchtig!
 
+//JEI
+airplanes.jei.hammer=Informationen �ber den Hammer
+airplanes.jei.combustion_engine=Informationen �ber den Verbrennungsmotor
+airplanes.gui.jei.combustion.burntime=Zeit
+airplanes.gui.jei.combustion.energy=Energie
+airplanes.jei.container.combustion_engine=Verbrennungsmotor Brennmaterial
 
+airplanes.message.tank=@aFl�ssigkeit: %s
+airplanes.message.energy=@aEnergy: %d 
 
-
-
+airplanes.gui.none.name=No Fluid
 
 

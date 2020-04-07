@@ -8,33 +8,32 @@
     "key": {
     	"S": {
             "item": "minecraft:stone",
-        	"data": 0
+            "data": 0
         	},
          "C": [
       		{
         	"item": "airplanes:aluminum_coil",
-        	"data": 0
+            "data": 0
       		},
       		{
          	"item": "airplanes:copper_coil",
-        	"data": 0
+            "data": 0
       		},
       		{
          	"item": "airplanes:gold_coil",
-        	"data": 0
+            "data": 0
       		}
     	],
         "F": {
             "item": "minecraft:furnace",
-        	"data": 0
+            "data": 0
         	},
         "M": {
-            "item": "airplanes:machine_block",
-        	"data": 0
+            "item": "airplanes:machine_casing",
+            "data": 0
         	}		
     },
     "result": {
-        "item": "airplanes:combustion_engine",
-        "data": 0
+        "item": "airplanes:combustion_engine"
     }
 }

@@ -10,11 +10,11 @@ buildscript {
 }
 
 apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: 'maven-publish'
+apply plugin: "java"
 
-
-
-version = "0.9"
-group = "com.affehund.airplanesmod" 
+version = "1.12.2-1.0.0"
+group = "com.affehund.airplanes" 
 archivesBaseName = "airplanes"
 
 sourceCompatibility = targetCompatibility = '1.8'
@@ -23,24 +23,40 @@ compileJava {
 }
 
 minecraft {
-    version = "1.12.2-14.23.5.2838"
+    version = "1.12.2-14.23.5.2847"
     runDir = "run"
 
     mappings = "snapshot_20171003"
 }
 
 repositories {
-  maven {
+	maven {
     // location of the maven that hosts JEI files
     name = "Progwml6 maven"
     url = "http://dvs1.progwml6.com/files/maven"
   }
-  maven {
+	maven {
     // location of a maven mirror for JEI files, as a fallback
     name = "ModMaven"
     url = "modmaven.k-4u.nl"
   }
-
+  
+	maven {
+        // CraftTweaker
+        name 'jared maven'
+        url "https://maven.blamejared.com/"
+    }
+	
+	maven {
+        // Gamestages
+        url 'https://maven.mcmoddev.com'
+    }
+	
+	maven {
+		// TheOneProbe
+        name "tterrag"
+        url "http://maven.tterrag.com/"
+    }
 }
 
 
@@ -50,9 +66,22 @@ configurations {
 }
   
 dependencies {
-  deobfProvided "mezz.jei:jei_${mc_version}:${jei_version}:api"
-  runtime "mezz.jei:jei_${mc_version}:${jei_version}" 
-  shade files('lib/discord-rpc-1.6.0-shaded.jar')
+
+	def mc_version = "1.12"
+    def jei_mc_version = "1.12.2"
+    def jei_version = "4.15.0.291"
+	def crafttweakerVersion="4.1.8.6"
+	def gameStageVersion="2.0.91"
+	
+	deobfCompile "mezz.jei:jei_${jei_mc_version}:${jei_version}"
+    deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-${crafttweakerVersion}"
+    deobfCompile("net.darkhax.gamestages:GameStages-1.12.2:${gameStageVersion}") {
+        exclude module: "crafttweaker"
+    }
+	
+	deobfCompile "mcjty.theoneprobe:TheOneProbe-1.12:1.12-1.4.28-17"
+	
+	compile "com.googlecode.json-simple:json-simple:1.1.1"
 }
 
 jar {
