@@ -1,0 +1,22 @@
+### **Blocks**
+All the blocks in our mod:
+
+* [Airplanes Builder Block](https://github.com/Affehund/airplanesmod/wiki/Airplanes-Builder-Block)
+* [Aluminum Block](https://github.com/Affehund/airplanesmod/wiki/Aluminum-Block)
+* [Aluminum Coil](https://github.com/Affehund/airplanesmod/wiki/Aluminum-Coil) 
+* [Asphalt Block](https://github.com/Affehund/airplanesmod/wiki/Asphalt-Block)
+* [Bauxite Ore](https://github.com/Affehund/airplanesmod/wiki/Bauxite-Ore) 
+* [Combustion Engine](https://github.com/Affehund/airplanesmod/wiki/Combustion-Engine) 
+* [Computer (Tier 1-3)](https://github.com/Affehund/airplanesmod/wiki/Computers)
+* [Copper Block](https://github.com/Affehund/airplanesmod/wiki/Copper-Block)
+* [Copper Coil](https://github.com/Affehund/airplanesmod/wiki/Copper-Coil)
+* [Copper Ore](https://github.com/Affehund/airplanesmod/wiki/Copper-Ore)
+* [Electronics Assembler Block](https://github.com/Affehund/airplanesmod/wiki/Electronics-Assembler-Block) 
+* [Energy Storage Block](https://github.com/Affehund/airplanesmod/wiki/Energy-Storage-Block) 
+* [Gold Coil](https://github.com/Affehund/airplanesmod/wiki/Gold-Coil)
+* [Heater Block](https://github.com/Affehund/airplanesmod/wiki/Heater-Block)
+* [Machine Block](https://github.com/Affehund/airplanesmod/wiki/Machine-Block) 
+* [Radiator Block](https://github.com/Affehund/airplanesmod/wiki/Radiator-Block)
+* [Steel Block](https://github.com/Affehund/airplanesmod/wiki/Steel-Block)
+* [Tin Block](https://github.com/Affehund/airplanesmod/wiki/Tin-Block)
+* [Tin Ore](https://github.com/Affehund/airplanesmod/wiki/Tin-Ore)
