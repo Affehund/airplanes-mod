@@ -7,7 +7,7 @@
       <body>
         <div id="page-container">
           <div id="content-wrap">
-            <h1>Airplanes Mod</h1>
+            <h1 onClick="parent.location='index.html'">Airplanes Mod</h1>
             <p>Mod Features</p>
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
             <p>
@@ -25,7 +25,7 @@
           <footer id="footer"> Copyright &copy; Airplanes Mod Dev Team <script>document.write(new Date().getFullYear());</script> </footer>
         </div>
 
-        <div id="mySidenav" class="sidenav">
+        <div id="webSidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a href="index.html">Main Page</a>
           <a href="features.html">Features</a>
@@ -35,15 +35,17 @@
         </div>
 
       <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-          document.getElementById("page-container").style.marginLeft = "250px";
-        }
+      function openNav() 
+      {
+        document.getElementById("webSidenav").style.width = "250px";
+        document.getElementById("page-container").style.marginLeft = "250px";
+      }
 
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-          document.getElementById("page-container").style.marginLeft= "0";
-        }
+      function closeNav() 
+      {
+        document.getElementById("webSidenav").style.width = "0";
+        document.getElementById("page-container").style.marginLeft= "0";
+      }
       </script> 
     </body>
 </html> 
