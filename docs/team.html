@@ -4,13 +4,13 @@
       <link rel="stylesheet" href="css/style.css">
       <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-      <body>
 
+      <body>
+        <h1 onClick="parent.location='index.html'">Airplanes Mod</h1>
+        <h2>Our Team</h2>
         <div id="page-container">
           <div id="content-wrap">
-            <h1 onClick="parent.location='index.html'">Airplanes Mod</h1>
-            <p>Our Team</p>
-            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+            <span onclick="openNav()">&#9776; </span>
 
             <ul>
               <li>Affehund (Initiator, Main Coder and Debugger)
@@ -28,24 +28,27 @@
 
       <div id="webSidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">Main Page</a>
-        <a href="features.html">Features</a>
-        <a href="team.html">Our Team</a>
-        <a href="http://bit.ly/airplanesdc">Discord Server</a>
-        <a href="http://bit.ly/airplanesmod">Download</a>
+        <div id="effectbutton">
+          <a href="index.html">Main Page</a>
+          <a href="features.html">Features</a>
+          <a href="team.html">Our Team</a>
+          <a href="http://bit.ly/airplanesdc">Discord Server</a>
+          <a href="http://bit.ly/airplanesmod">Download</a>
+          <a href="javascript:alert('Light mode is not supported, because it is ugly!\n');">Toggle light mode</a>
+        </div>
       </div>
 
       <script>
       function openNav() 
       {
         document.getElementById("webSidenav").style.width = "250px";
-        document.getElementById("page-container").style.marginLeft = "250px";
+        document.getElementById("content-wrap").style.marginLeft = "250px";
       }
 
       function closeNav() 
       {
         document.getElementById("webSidenav").style.width = "0";
-        document.getElementById("page-container").style.marginLeft= "0";
+        document.getElementById("content-wrap").style.marginLeft= "0";
       }
       </script>
     </body>

@@ -5,6 +5,7 @@ html
     	display: table;
 }
 
+
 @font-face 
 {
   font-family: 'Fjalla One';
@@ -14,12 +15,13 @@ html
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/*h1*/
 @font-face 
 {
-  font-family: 'Lilita One';
+  font-family: 'Oswald';
   font-style: normal;
   font-weight: 400;
-  src: local('Lilita One'), local('LilitaOne'), url(https://fonts.gstatic.com/s/lilitaone/v7/i7dPIFZ9Zz-WBtRtedDbYEF8RQ.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/oswald/v31/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiZQ.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -33,31 +35,36 @@ body
   color: #d8d8d8;
 }
 
-/*test animation*/
-/*
-div {
-  position: relative;
-  animation-name: divAnimation;
-  animation-duration: 0.5s;  
-  animation-fill-mode: both;
-}
-
-@keyframes divAnimation 
-{
-  from {top: -10000px;}
-  to {top: 0px;}
-}*/
-
 h1 
 {
-  font-family: Lilita One;
-  color: #8595C4
-  
+  text-align: center;
+  font-family: Oswald;
+  color: #8595C4;
 }
 
 h1:hover 
 {
   color: #8990a4;
+}
+
+h2 
+{
+  color: #d8d8d8;
+  text-align: center;
+  font-family: Oswald;
+  line-height:50%;
+}
+
+span
+{
+  line-height: 10%;
+  font-size:30px;
+  cursor:pointer;
+}
+
+span:hover
+{
+  font-size: 33px;
 }
 
 p a
@@ -91,7 +98,7 @@ img
 {
 	transition: margin-left .5s;
   padding: 20px;
-	padding-bottom: 2.5rem;    /* Footer height */
+	padding-bottom: 40px;    /* Footer height */
 }
 
 #footer 
@@ -103,7 +110,7 @@ img
 	position: fixed;
   bottom: 0;
   width: 100%;
-  height: 2rem; 
+  height: 40px; 
 }
 
 /* The side navigation menu */
@@ -136,6 +143,7 @@ img
 .sidenav a:hover 
 {
   color: #f1f1f1;
+  font-size: 27px;
 }
 
 /* Position and style the close button (top right corner) */
@@ -153,4 +161,32 @@ img
 {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+#effectbutton a
+{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #d8d8d8;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+#effectbutton a:hover
+{
+  color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay: 0.15s;
+}
+
+#effectbutton a span
+{
+  position: absolute;
+  display: block;
 }

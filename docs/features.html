@@ -4,12 +4,13 @@
       <link rel="stylesheet" href="css/style.css">
       <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
+
       <body>
         <div id="page-container">
+          <h1 onClick="parent.location='index.html'">Airplanes Mod</h1>
+          <h2>Mod Features</h2>
           <div id="content-wrap">
-            <h1 onClick="parent.location='index.html'">Airplanes Mod</h1>
-            <p>Mod Features</p>
-            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+            <span onclick="openNav()">&#9776; </span>
             <p>
               <ul>
                 <li> Flying planes (PLANNED) </li>
@@ -18,32 +19,34 @@
                 <li> Energy System </li>
               </ul>	
             </p>
-            <p text-align="center";>
-            Roadmap for our project: Click <b> <a href="https://trello.com/b/HlsM801n/airplane-mod"> here </b> </a></p>
+            <p text-align="center";> Roadmap for our project: Click <b> <a href="https://trello.com/b/HlsM801n/airplane-mod"> here </a> </b> </p>
           </div>
         </div>
         <footer id="footer"> Copyright &copy; Airplanes Mod Dev Team <script>document.write(new Date().getFullYear());</script> </footer>
 
         <div id="webSidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="index.html">Main Page</a>
-          <a href="features.html">Features</a>
-          <a href="team.html">Our Team</a>
-          <a href="http://bit.ly/airplanesdc">Discord Server</a>
-          <a href="http://bit.ly/airplanesmod">Download</a>
+          <div id="effectbutton">
+            <a href="index.html">Main Page</a>
+            <a href="features.html">Features</a>
+            <a href="team.html">Our Team</a>
+            <a href="http://bit.ly/airplanesdc">Discord Server</a>
+            <a href="http://bit.ly/airplanesmod">Download</a>
+            <a href="javascript:alert('Light mode is not supported, because it is ugly!\n');">Toggle light mode</a>
+          </div>
         </div>
 
       <script>
       function openNav() 
       {
         document.getElementById("webSidenav").style.width = "250px";
-        document.getElementById("page-container").style.marginLeft = "250px";
+        document.getElementById("content-wrap").style.marginLeft = "250px";
       }
 
       function closeNav() 
       {
         document.getElementById("webSidenav").style.width = "0";
-        document.getElementById("page-container").style.marginLeft= "0";
+        document.getElementById("content-wrap").style.marginLeft= "0";
       }
       </script> 
     </body>
