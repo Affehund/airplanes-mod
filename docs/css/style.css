@@ -55,16 +55,23 @@ h2
   line-height:50%;
 }
 
+#openNavButton
+{
+  padding: 20px;
+}
+
 span
 {
   line-height: 10%;
   font-size:30px;
   cursor:pointer;
+  color: #d8d8d8;
 }
 
 span:hover
 {
   font-size: 33px;
+  color: #9b9b9b;
 }
 
 p a
@@ -75,7 +82,7 @@ p a
 
 p a:hover
 {
-	font-size: 25px;
+	color: #9b9b9b;
 }
 
 img
