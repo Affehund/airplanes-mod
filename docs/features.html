@@ -1,95 +1,49 @@
-<html>
-<head>
-<link rel="stylesheet" href="style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <link rel="stylesheet" href="css/style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+      <body>
+        <div id="page-container">
+          <div id="content-wrap">
+            <h1>Airplanes Mod</h1>
+            <p>Mod Features</p>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+            <p>
+              <ul>
+                <li> Flying planes (PLANNED) </li>
+                <li> Machines for plane parts </li>
+                <li> OreDict integration </li>
+                <li> Energy System </li>
+              </ul>	
+            </p>
+            <p text-align="center";>
+            Roadmap for our project: Click <b> <a href="https://trello.com/b/HlsM801n/airplane-mod"> here </b> </a></p>
+          </div>
+          
+          <footer id="footer"> Copyright &copy; Airplanes Mod Dev Team <script>document.write(new Date().getFullYear());</script> </footer>
+        </div>
 
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html">Main Page</a>
+          <a href="features.html">Features</a>
+          <a href="team.html">Our Team</a>
+          <a href="http://bit.ly/airplanesdc">Discord Server</a>
+          <a href="http://bit.ly/airplanesmod">Download</a>
+        </div>
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #545454;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("page-container").style.marginLeft = "250px";
+        }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
-</head>
-<body>
-
-<div id="main">
-  <h1>Airplanes Mod</h1>
-  <p>Mod Features</p>
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-  <p>
-		<ul>
-			<li> Flying planes (PLANNED) </li>
-			<li> Machines for plane parts </li>
-			<li> OreDict integration </li>
-		</ul>	
-	</p>
-	<p align="center">
-	Roadmap for our project: Click <a href="https://trello.com/b/HlsM801n/airplane-mod"> here </a>
-</div>
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="index.html">Main Page</a>
-  <a href="features.html">Features</a>
-  <a href="team.html">Our Team</a>
-  <a href="http://bit.ly/airplanesdc">Discord Server</a>
-  <a href="http://bit.ly/airplanesmod">Download</a>
-</div>
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-</script>
-   
-</body>
-
-<h5> &copy Airplanes Mod Team 2020 </h5>
-
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("page-container").style.marginLeft= "0";
+        }
+      </script> 
+    </body>
 </html> 
