@@ -9,9 +9,11 @@
     </head>
       <body>
         <div id="page-container">
+          
         <h1 onClick="parent.location='index.html'">Airplanes Mod</h1>
+        
         <h2>Welcome to the Airplanes Mod!</h2>
-        <span id = "openNavButton" onclick="openNav()" onclick="closeNav()" >&#9776; </span>
+        <span id = "openNavButton" onclick="openNav()" onclick="closeNav()" >&#9776;</span>
           <div id="content-wrap">
             <p>The Airplanes Mod provides you with a rich set of planes that you know from your life - such as the A380, the A320 or the V-22. In addition, the Airplanes Mod has a set of tools, crafting benches and new ores. If you miss a plane or want to suggest one, submit it to our Issue Tracker (it will not count as an issue).
             <p>This site is currently WIP! Stay tuned for future updates!</p>
@@ -24,14 +26,16 @@
 
               
         <div id="webSidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <div id="effectbutton">
-            <a href="index.html">Main Page</a>
-            <a href="features.html">Features</a>
-            <a href="team.html">Our Team</a>
-            <a href="http://bit.ly/airplanesdc">Discord Server</a>
-            <a href="http://bit.ly/airplanesmod">Download</a>
-            <a href="javascript:alert('Light mode is not supported, because it is ugly!\n');">Toggle light mode</a>
+          <div id="hoverEffect">
+            <a href="javascript:void(0)" id="closebutton" onclick="closeNav()"> &times; </a>
+            <div id="effectbutton">
+              <a href="index.html">Main Page</a>
+              <a href="features.html">Features</a>
+              <a href="team.html">Our Team</a>
+              <a href="http://bit.ly/airplanesdc">Discord Server</a>
+              <a href="http://bit.ly/airplanesmod">Download</a>
+              <a href="javascript:alert('Light mode is not supported, because it is ugly!\n');">Toggle light mode</a>
+            </div>
           </div>
         </div>
 
@@ -45,12 +49,7 @@
       function closeNav() 
       {
         document.getElementById("webSidenav").style.width = "0";
-        document.getElementById("content-wrap").style.marginLeft= "0";
-      }
-
-      function lightMode() 
-      {
-        alert("Light mode isn't supported, because it's ugly!")
+        document.getElementById("content-wrap").style.marginLeft= "40px";
       }
     </script>
 
