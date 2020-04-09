@@ -203,9 +203,9 @@ img
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) 
 {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 55%;}
-  .body a {font-size: 55%}
+  #webSideNav {padding-top: 15px;}
+  webSideNav {font-size: 55%;}
+  body {font-size: 55%}
   h1 {font-size: 55%}
   h2 {font-size: 55%}
 }
