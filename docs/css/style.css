@@ -41,24 +41,30 @@ Used for h1 and h2
 /*body*/
 body
 {
-  background: linear-gradient(to left, rgb(41, 26, 179), rgb(133, 17, 117)), linear-gradient(to bottom, rgb(41, 26, 179), rgb(133, 17, 117));;
+  background: linear-gradient(to left, rgb(40, 25, 180), rgb(130, 20, 120));
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Fjalla One';
   font-size: 20px;
   color: #d8d8d8;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
 }
 
 /*headers*/
 h1 
 {
+  font-size:2.5em;
+  padding: 10px;
   text-align: center;
   font-family: Oswald;
   color: #8595C4;
+  
 }
 
 h2 
 {
+  font-size:1.5em;
   color: #d8d8d8;
   text-align: center;
   font-family: Oswald;
@@ -68,18 +74,36 @@ h2
 #openNavButton
 {
   position: absolute;
+  display: inline-block;
   padding: 10px;
   margin: 10px;
-  top: 24px
+  top: 0px;
 }
 
 #openNavButton:hover
 {
-  display: block;
+  animation: shake 0.5s; 
+  animation-iteration-count: infinite;
+  display: inline-block;
   color: #255784;
   background: #2196f3;
   box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
   transition-delay: 0.15s;
+}
+
+@keyframes shake 
+{
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 span
@@ -91,7 +115,6 @@ span
 
 span:hover
 {
-  font-size: 33px;
   color: #9b9b9b;
 }
 
@@ -115,15 +138,18 @@ img
   filter: grayscale(30%);
 }
 
-#page-container 
+#pageContainer 
 {
 	position: relative;
   min-height: 100hv;
 }
 
-#content-wrap 
+#contentWrap 
 {
-  transition: margin-left .5s;
+  background: linear-gradient(to left, rgb(40, 25, 160), rgb(140, 20, 140));
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: margin-left 1.2s;
   margin: 40px;
   padding: 40px;
   padding-bottom: 50px;    /* Footer height */
@@ -131,6 +157,7 @@ img
 
 #footer 
 {
+  animation: slideIn 1s;
   text-align: center;
   align-self: center;
   background-color: #333;
@@ -142,25 +169,38 @@ img
   line-height: 50px;
 }
 
-/* The side navigation menu */
-#webSidenav 
+@keyframes slideIn
 {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
+  from 
+  {
+    height: 0px;
+  }
+  to 
+  {
+    height: 50px;
+  }
+}
+
+/* The side navigation menu */
+#webSideNav 
+{
+  height: 100%; 
+  width: 0;
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0;
   left: 0;
-  background-color: #222; /* Black*/
+  background-color: #222;
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  padding-top: 60px;
+  transition: 1.2s; 
 }
 
 
 /*close button*/
-#closebutton
+#closeNavButton
 {
+  display: inline-block;
   text-decoration: none;
   top: 0;
   display: block;
@@ -168,44 +208,74 @@ img
   height: 36px;
   font-size: 36px;
   position: absolute;
-  padding: 10px;
-  margin: auto;
+  padding: 5px 5px 10px 10px;
+  margin: 5px 5px 15px 10px;
   overflow: hidden;
   text-align: center;
-  transition: 0.2s;
+  transition: 1.2s;
 }
 
-#effectbutton a
+#effectButton a
 {
   position: relative;
   display: inline-block;
-  padding: 10px 10px 10px 10px;
-  margin: 10px 10px 10px 10px;
+  padding: 10px;
+  margin: 15px;
   color: #d8d8d8;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 24px;
   overflow: hidden;
-  transition: 0.2s;
+  transition: 1.2s;
 }
 
 /*hover effect*/
 #hoverEffect a:hover
 {
-  display: block;
+  padding: 10px;
+  margin: 15px;
+  display: inline-block;
   color: #255784;
   background: #2196f3;
   box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
-  transition-delay: 0.15s;
+  transition-delay: 0.1s;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) 
+
+/* On smaller screens change the style (smaller font size line height) */
+@media screen and (max-width: 900px) 
 {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 55%;}
-  .body a {font-size: 55%}
-  h1 {font-size: 55%}
-  h2 {font-size: 55%}
+  #effectButton a {font-size: 80%}
+  body {font-size: 80%;}
+  h1 {font-size: 80%;}
+  h2 {font-size: 80%;}
+  #footer {height: 40px; line-height: 40px;}
+}
+
+@media screen and (max-width: 400px) 
+{
+  #effectButton a {font-size: 60%;}
+  body {font-size: 60%;}
+  h1 {font-size: 60%;}
+  h2 {font-size: 60%;}
+  #footer {height: 30px; line-height: 30px;}
+}
+
+@media screen and (max-height: 400px) 
+{
+  #effectButton a {font-size: 80%}
+  body {font-size: 80%;}
+  h1 {font-size: 80%;}
+  h2 {font-size: 80%;}
+  #footer {height: 40px; line-height: 40px;}
+}
+
+@media screen and (max-height: 100px) 
+{
+  #effectButton a {font-size: 60%;}
+  body {font-size: 60%;}
+  h1 {font-size: 60%;}
+  h2 {font-size: 60%;}
+  #footer {height: 30px; line-height: 30px;}
 }

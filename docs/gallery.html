@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <link rel="stylesheet" href="css/style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+      <body>
+        <div id="pageContainer">
+          <h1 onClick="parent.location='index.html'">Airplanes Mod</h1>
+          <h2>Gallery</h2>
+          <span id = "openNavButton" onclick="openNav()" onclick="closeNav()" >&#9776; </span>
+          <div id="contentWrap">
+            <img src="images/airplanes_mod_banner_blue.png" alt="Airplanes Mod Banner">
+          </div>
+        </div>
+        <footer id="footer"> Copyright &copy; Airplanes Mod Dev Team <script>document.write(new Date().getFullYear());</script> </footer>
+
+        <div id="webSideNav" class="sidenav">
+          <div id="hoverEffect">
+            <a href="javascript:void(0)" id="closeNavButton" onclick="closeNav()">&times;</a>
+            <div id="effectButton">
+              <a href="index.html">Main Page</a>
+              <a href="features.html">Features</a>
+              <a href="team.html">Our Team</a>
+              <a href="gallery.html">Gallery</a>
+              <a href="http://bit.ly/airplanesdc">Discord Server</a>
+              <a href="http://bit.ly/airplanesmod">Download</a>
+              <a href="javascript:alert('Light mode is not supported, because it is ugly!\n');">Toggle light mode</a>
+            </div>
+          </div>
+        </div>
+
+      <script>
+      function openNav() 
+      {
+        document.getElementById("webSideNav").style.width = "250px";
+        document.getElementById("contentWrap").style.marginLeft = "250px";
+      }
+
+      function closeNav() 
+      {
+        document.getElementById("webSideNav").style.width = "0";
+        document.getElementById("contentWrap").style.marginLeft= "40px";
+      }
+      </script> 
+    </body>
+</html> 

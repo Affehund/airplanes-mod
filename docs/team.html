@@ -6,11 +6,11 @@
     </head>
 
       <body>
-        <div id="page-container">
+        <div id="pageContainer">
         <h1 onClick="parent.location='index.html'">Airplanes Mod</h1>
         <h2>Our Team</h2>
         <span id = "openNavButton" onclick="openNav()" onclick="closeNav()" >&#9776; </span>
-          <div id="content-wrap">
+          <div id="contentWrap">
             <p>Team members</p> 
             <ul>
               <li>Affehund (Initiator, Main Coder and Debugger)
@@ -27,13 +27,14 @@
       </div>
       <footer id="footer"> Copyright &copy; Airplanes Mod Dev Team <script>document.write(new Date().getFullYear());</script> </footer>
 
-      <div id="webSidenav" class="sidenav">
+      <div id="webSideNav" class="sidenav">
         <div id="hoverEffect">
-          <a href="javascript:void(0)" id="closebutton" onclick="closeNav()">&times;</a>
-          <div id="effectbutton">
+          <a href="javascript:void(0)" id="closeNavButton" onclick="closeNav()">&times;</a>
+          <div id="effectButton">
             <a href="index.html">Main Page</a>
             <a href="features.html">Features</a>
             <a href="team.html">Our Team</a>
+            <a href="gallery.html">Gallery</a>
             <a href="http://bit.ly/airplanesdc">Discord Server</a>
             <a href="http://bit.ly/airplanesmod">Download</a>
             <a href="javascript:alert('Light mode is not supported, because it is ugly!\n');">Toggle light mode</a>
@@ -44,14 +45,14 @@
     <script>
     function openNav() 
     {
-      document.getElementById("webSidenav").style.width = "250px";
-      document.getElementById("content-wrap").style.marginLeft = "250px";
+      document.getElementById("webSideNav").style.width = "250px";
+      document.getElementById("contentWrap").style.marginLeft = "250px";
     }
 
     function closeNav() 
     {
-      document.getElementById("webSidenav").style.width = "0";
-      document.getElementById("content-wrap").style.marginLeft= "40px";
+      document.getElementById("webSideNav").style.width = "0";
+      document.getElementById("contentWrap").style.marginLeft= "40px";
     }
       </script>
     </body>
