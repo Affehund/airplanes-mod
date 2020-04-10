@@ -80,35 +80,6 @@ h2
   font-family: Oswald;
 }
 
-/*open nav button*/
-#openNavButton
-{
-  position: fixed;
-  display: inline-block;
-  padding: 10px;
-  margin: 10px;
-  top: 0px;
-  -moz-transform: scale(1, 1);
-  -webkit-transform: scale(1, 1);
-  -o-transform: scale(1, 1);
-  -ms-transform: scale(1, 1);
-  transform: scale(1, 1);
-}
-
-#openNavButton:hover
-{
-  display: inline-block;
-  color: #255784;
-  background: #2196f3;
-  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
-  transition-delay: 0.15s;
-  -moz-transform: scale(-1, 1);
-  -webkit-transform: scale(-1, 1);
-  -o-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
-  transform: scale(-1, 1);
-}
-
 span
 {
   font-size:30px;
@@ -190,9 +161,35 @@ p a:hover
   transition: 1.2s; 
 }
 
+/*open nav button*/
+#openNavButton
+{
+  position: absolute;
+  text-decoration: none;
+  text-align: center;
+  left: 10px;
+  top: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 36px;
+  padding: 0;
+  margin: 0;
+  transition: 1.2s;
+}
+
+#openNavButton:hover
+{
+  display: inline-block;
+  color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay: 0.15s;
+}
+
 /*close button*/
 #closeNavButton
 {
+  color: #d8d8d8;
   position: absolute;
   text-decoration: none;
   text-align: center;
@@ -222,26 +219,87 @@ p a:hover
   transition: 1.2s;
 }
 
-@keyframes opacityAnimation
-{
-  from 
-  {
-    opacity: 0;
-  }
-  to 
-  {
-    opacity: 1;
-  }
-}
-
-/*hover effect*/
+/* hover effect */
 #hoverEffect a:hover
 {
   display: inline-block;
   color: #255784;
   background: #2196f3;
   box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
-  transition-delay: 0.1s;
+  transition-delay: 0.15s;
+}
+
+
+
+
+/* gallery properties*/
+.wrapper 
+{
+	position: relative;
+	max-width: 50%;
+	width: 100%;
+	padding: 0 auto;
+	margin: 0 auto;
+}
+
+.shadow 
+{
+	width: 100%;
+	height: 168px;
+	position: relative;
+	margin-top: -120px;
+	background: transparent url(../images/shadow.png) no-repeat bottom center;
+	background-size: 100% 100%; 
+	z-index: -1;
+}
+
+.slider 
+{
+	margin: 10px auto;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+  list-style-type: none;
+  list-style: none;
+	padding: 0;
+}
+
+.slider img 
+{
+	max-width: 100%;
+  display: block;
+  padding-bottom: 20px;
+  z-index: +1;
+}
+
+.description h3 
+{
+  position: relative;
+  left: 3%;
+  top: -17vh;
+  z-index: 1;
+  opacity: 10%;
+  width: 50%
+}
+
+.description h3:hover 
+{
+  opacity: 90%;
+  -webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+  transition: all 0.2s;
+  border-left: 10px solid #d8d8d8;
+  background: #3b3c3d;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+}
+
+.description h3 a 
+{
+	color: #4a3c27;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+  z-index: 1;
 }
 
 
@@ -249,8 +307,8 @@ p a:hover
 /* f.ex. iPhone 5 */
 @media screen and (min-width: 320px) 
 {
-  #openNavButton {font-size: 24px; padding: 6px; margin: 6px; width: 30px; height: 30px; top: 0px;}
-  #closeNavButton {font-size: 24px; padding: 6px; margin: 6px; width: 30px; height: 30px; top: 0px;}
+  #openNavButton {font-size: 24px; width: 30px; height: 30px;}
+  #closeNavButton {font-size: 24px; width: 30px; height: 30px;}
   body {font-size: 14px;}
   h1 {font-size: 1.6rem;}
   h2 {font-size: 1.3rem;}
@@ -261,8 +319,8 @@ p a:hover
 /* f.ex. iPhone 6/7/8/X */
 @media screen and (min-width: 375px) 
 {
-  #openNavButton {font-size: 24px; padding: 6px; margin: 6px; width: 30px; height: 30px; top: 0px;}
-  #closeNavButton {font-size: 24px; padding: 6px; margin: 6px; width: 30px; height: 30px; top: 0px;}
+  #openNavButton {font-size: 24px; width: 30px; height: 30px;}
+  #closeNavButton {font-size: 24px; width: 30px; height: 30px;}
   body {font-size: 16px;}
   h1 {font-size: 1.8rem;}
   h2 {font-size: 1.5rem;}
@@ -273,8 +331,8 @@ p a:hover
 /* f.ex. iPhone 6/7/8 Plus */
 @media screen and (min-width: 414px) 
 {
-  #openNavButton {font-size: 28px; padding: 8px; margin: 8px; width: 36px; height: 36px; top: 0px;}
-  #closeNavButton {font-size: 28px; padding: 8px; margin: 8px; width: 36px; height: 36px; top: 0px;}
+  #openNavButton {font-size: 28px; width: 32px; height: 32px;}
+  #closeNavButton {font-size: 28px; width: 32px; height: 32px;}
   body {font-size: 16px;}
   h1 {font-size: 2rem;}
   h2 {font-size: 2.8rem;}
@@ -285,8 +343,8 @@ p a:hover
 /* f.ex. iPad*/
 @media screen and (min-width: 768px) 
 {
-  #openNavButton {font-size: 40px; padding: 10px; margin: 10px; width: 45px; height: 45px; top: 0px;}
-  #closeNavButton {font-size: 40px; padding: 10px; margin: 10px; width: 45px; height: 45px; top: 0px;}
+  #openNavButton {font-size: 40px; width: 48px; height: 48px;}
+  #closeNavButton {font-size: 40px; width: 48px; height: 48px;}
   body {font-size: 22px}
   h1 {font-size: 3rem;}
   h2 {font-size: 2.5rem;}
@@ -297,8 +355,8 @@ p a:hover
 /* f.ex. iPad pro*/
 @media screen and (min-width: 1024px) 
 {
-  #openNavButton {font-size: 46px; padding: 10px; margin: 10px; width: 50px; height: 50px; top: 0px;}
-  #closeNavButton {font-size: 46px; padding: 10px; margin: 10px; width: 50px; height: 50px; top: 0px;}
+  #openNavButton {font-size: 44px; width: 50px; height: 50px;}
+  #closeNavButton {font-size: 44px; width: 50px; height: 30px;}
   body {font-size: 28px}
   h1 {font-size: 3.3rem;}
   h2 {font-size: 2.8rem;}
@@ -310,8 +368,8 @@ p a:hover
 /* f.ex. hd display*/
 @media screen and (min-width: 1080px) 
 {
-  #openNavButton {font-size: 50px; padding: 10px; margin: 10px; width: 50px; height: 50px; top: 0px;}
-  #closeNavButton {font-size: 50px; padding: 10px; margin: 10px; width: 50px; height: 50px; top: 0px;}
+  #openNavButton {font-size: 50px; width: 60px; height: 60px;}
+  #closeNavButton {font-size: 50px; width: 60px; height: 60px;}
   body {font-size: 32px}
   h1 {font-size: 3.4rem;}
   h2 {font-size: 3rem;}
@@ -323,8 +381,8 @@ p a:hover
 /* f.ex. full hd display*/
 @media screen and (min-width: 1920px) 
 {
-  #openNavButton {font-size: 50px; padding: 10px; margin: 10px; width: 50px; height: 50px; top: 0px;}
-  #closeNavButton {font-size: 50px; padding: 10px; margin: 10px; width: 50px; height: 50px; top: 0px;}
+  #openNavButton {font-size: 50px; width: 60px; height: 60px;}
+  #closeNavButton {font-size: 50px; width: 60px; height: 60px;}
   body {font-size: 36px}
   h1 {font-size: 3.8rem;}
   h2 {font-size: 3.5rem;}
@@ -334,23 +392,3 @@ p a:hover
 }
 
 
-
-
-.wrapper {
-	position: relative;
-	max-width: 840px;
-	width: 100%;
-	padding: 0 50px;
-	margin: 0 auto;
-}
-
-.shadow {
-	width: 100%;
-	height: 168px;
-	position: relative;
-	margin-top: -110px;
-	background: transparent url(../images/shadow.png) no-repeat bottom center;
-	background-size: 100% 100%; /* stretches it */
-	z-index: -1;
-	display: none;
-}

@@ -1,18 +1,40 @@
 <!DOCTYPE html>
   <html>
     <head>
+      <title>Airplanes Mod - Gallery</title>
+      <meta charset="UTF-8" />
+      <meta name="keywords" content="airplanes, mod, minecraft, website, gallery"/>
+      <link rel="shortcut icon" type="image/png" href="images/favicon.png">
       <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" type="text/css" href="css/slicebox.css" />
-      <link rel="stylesheet" type="text/css" href="css/custom.css" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
     </head>
 
       <body>
         <div id="pageContainer">
           <h1 onClick="parent.location='index.html'">Airplanes Mod</h1>
           <h2>Gallery</h2>
-          <span id = "openNavButton" onclick="openNav()" onclick="closeNav()" >&#9992;</span>  
+          <span id = "openNavButton" onclick="openNav()" onclick="closeNav()" >&#9992;</span>
+          <p> </p>
+          <div class="wrapper">
+            <ul id="slider" class="slider">
+
+              <img src="images/airplanes_mod_banner_blue.png" alt="airplanes_mod_banner_blue.png"/>
+                <div id="shadow" class="shadow"></div>
+                <div class="description">
+                  <h3>Airplanes Mod Banner</h3>
+                </div>
+              </img>
+
+              <img src="images/airplane.png" alt="airplane.png"/>
+                <div id="shadow" class="shadow"></div>
+                <div class="description">
+                  <h3>An airplane</h3>
+                </div>
+              </img>
+
+            </ul>
+          </div>
+
         </div>
         <footer id="footer"> Copyright &copy; Airplanes Mod Dev Team <script>document.write(new Date().getFullYear());</script> </footer>
         <div id="webSideNav" class="sidenav">
@@ -34,83 +56,15 @@
       function openNav() 
       {
         document.getElementById("webSideNav").style.width = "250px";
-        document.getElementById("contentWrap").style.marginLeft = "250px";
+        /*document.getElementById("contentWrap").style.marginLeft = "250px";*/
       }
 
       function closeNav() 
       {
         document.getElementById("webSideNav").style.width = "0";
-        document.getElementById("contentWrap").style.marginLeft= "40px";
+        /*document.getElementById("contentWrap").style.marginLeft= "40px";*/
       }
       </script> 
-      <!-- images must be 700x420px and in jpg format -->
-      <div class="container">
-        <div class="wrapper">
-          
-          <ul id="sb-slider" class="sb-slider">
-            <!-- 
-            <li>
-              </a><img src="images/airplane.jpg" alt="airplane.jpg"/></a>
-              <div class="sb-description">
-                <h3>Airplane</h3>
-              </div>
-            </li>
-            <li>
-              <img src="images/airplanes_mod_banner_blue.jpg" alt="airplanes_mod_banner_blue.jpg"/></a>
-              <div class="sb-description">
-                <h3>Airplanes Mod Banner</h3>
-              </div>
-            </li>
-            <li>
-              <img src="images/3.jpg" alt="image3.jpg"/></a>
-              <div class="sb-description">
-                <h3>Brave Astronaut</h3>
-              </div>
-            </li>
-            -->
-            <li>
-            </a><img src="images/airplane.jpg" alt="airplane.jpg"/></a>
-            <div class="sb-description">
-              <h3>Airplane</h3>
-            </div>
-          </li>
-          </ul>
 
-          <div id="shadow" class="shadow"></div>
-        </div>
-      </div>
-      
-     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-      <script type="text/javascript" src="js/jquery.slicebox.js"></script>
-      <script type="text/javascript">
-        $(function() {
-          var Page = (function() {
-            var $navArrows = $( '#nav-arrows' ).hide(),
-              $shadow = $( '#shadow' ).hide(),
-              slicebox = $( '#sb-slider' ).slicebox( {
-                onReady : function() {
-                  $navArrows.show();
-                  $shadow.show();
-                }
-              } ),
-              init = function() {
-                initEvents();
-              },
-              initEvents = function() {
-                // add navigation events
-                $navArrows.children( ':first' ).on( 'click', function() {
-                  slicebox.next();
-                  return false;
-                } );
-                $navArrows.children( ':last' ).on( 'click', function() {
-                  slicebox.previous();
-                  return false;
-                } );
-              };
-              return { init : init };
-          })();
-          Page.init();
-        });
-      </script>
     </body>
 </html> 
