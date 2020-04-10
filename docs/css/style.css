@@ -111,7 +111,7 @@ p a:hover
 
 #contentWrap 
 {
-  background: linear-gradient(to right, rgb(62, 47, 148), rgb(45, 120, 160));
+  background: linear-gradient(to right, rgb(52, 35, 153), rgb(45, 120, 160));
   background-size: cover;
   background-repeat: no-repeat;
   transition: margin-left 1.2s;
@@ -164,7 +164,7 @@ p a:hover
 /*open nav button*/
 #openNavButton
 {
-  position: absolute;
+  position: fixed;
   text-decoration: none;
   text-align: center;
   left: 10px;
@@ -174,7 +174,7 @@ p a:hover
   font-size: 36px;
   padding: 0;
   margin: 0;
-  transition: 1.2s;
+  transition: 0.3s;
 }
 
 #openNavButton:hover
@@ -200,7 +200,7 @@ p a:hover
   font-size: 42px;
   padding: 0;
   margin: 0;
-  transition: 1.2s;
+  transition: 0.3s;
 }
 
 #effectButton a
@@ -216,7 +216,7 @@ p a:hover
   text-decoration: none;
   font-size: 20px;
   overflow: hidden;
-  transition: 1.2s;
+  transition: 0.3s;
 }
 
 /* hover effect */
@@ -285,11 +285,11 @@ p a:hover
 .description h3:hover 
 {
   opacity: 90%;
-  -webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	-o-transition: all 0.2s;
-	-ms-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.15s;
+	-moz-transition: all 0.15s;
+	-o-transition: all 0.15s;
+	-ms-transition: all 0.15s;
+  transition: all 0.15s;
   border-left: 10px solid #d8d8d8;
   background: #3b3c3d;
   box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
