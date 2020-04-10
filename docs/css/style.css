@@ -132,18 +132,6 @@ p a:hover
 	color: #9b9b9b;
 }
 
-/*
-img
-{
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-  filter: grayscale(20%);
-  filter: blur(50%);
-}
-*/
-
 #pageContainer 
 {
 	position: relative;
@@ -257,42 +245,94 @@ img
 }
 
 
-/* On smaller screens change the style (smaller font size line height) */
-@media screen and (max-width: 900px) 
+/* On smaller screens change the style (smaller font size, line height, buttons, width...) */
+/* f.ex. iPhone 5 */
+@media screen and (min-width: 320px) 
 {
-  #effectButton a {font-size: 80%}
-  body {font-size: 80%;}
-  h1 {font-size: 80%;}
-  h2 {font-size: 80%;}
-  #footer {height: 40px; line-height: 40px;}
+  #openNavButton {font-size: 24px; padding: 6px; margin: 6px; width: 30px; height: 30px; top: 0px;}
+  #closeNavButton {font-size: 24px; padding: 6px; margin: 6px; width: 30px; height: 30px; top: 0px;}
+  body {font-size: 14px;}
+  h1 {font-size: 1.6rem;}
+  h2 {font-size: 1.3rem;}
+  #footer {height: 25px; line-height: 25px; font-size: 12px}
+  #effectButton a {font-size: 12px; width: 130px;}
 }
 
-@media screen and (max-width: 400px) 
+/* f.ex. iPhone 6/7/8/X */
+@media screen and (min-width: 375px) 
 {
-  #effectButton a {font-size: 60%;}
-  body {font-size: 60%;}
-  h1 {font-size: 60%;}
-  h2 {font-size: 60%;}
-  #footer {height: 30px; line-height: 30px;}
+  #openNavButton {font-size: 24px; padding: 6px; margin: 6px; width: 30px; height: 30px; top: 0px;}
+  #closeNavButton {font-size: 24px; padding: 6px; margin: 6px; width: 30px; height: 30px; top: 0px;}
+  body {font-size: 16px;}
+  h1 {font-size: 1.8rem;}
+  h2 {font-size: 1.5rem;}
+  #footer {height: 30px; line-height: 30px; font-size: 14px}
+  #effectButton a {font-size: 16px; width: 140px;}
 }
 
-@media screen and (max-height: 400px) 
+/* f.ex. iPhone 6/7/8 Plus */
+@media screen and (min-width: 414px) 
 {
-  #effectButton a {font-size: 80%}
-  body {font-size: 80%;}
-  h1 {font-size: 80%;}
-  h2 {font-size: 80%;}
-  #footer {height: 40px; line-height: 40px;}
+  #openNavButton {font-size: 28px; padding: 8px; margin: 8px; width: 36px; height: 36px; top: 0px;}
+  #closeNavButton {font-size: 28px; padding: 8px; margin: 8px; width: 36px; height: 36px; top: 0px;}
+  body {font-size: 16px;}
+  h1 {font-size: 2rem;}
+  h2 {font-size: 2.8rem;}
+  #footer {height: 35px; line-height: 35px; font-size: 15px}
+  #effectButton a {font-size: 16px; width: 140px;}
 }
 
-@media screen and (max-height: 100px) 
+/* f.ex. iPad*/
+@media screen and (min-width: 768px) 
 {
-  #effectButton a {font-size: 60%;}
-  body {font-size: 60%;}
-  h1 {font-size: 60%;}
-  h2 {font-size: 60%;}
-  #footer {height: 30px; line-height: 30px;}
+  #openNavButton {font-size: 40px; padding: 10px; margin: 10px; width: 45px; height: 45px; top: 0px;}
+  #closeNavButton {font-size: 40px; padding: 10px; margin: 10px; width: 45px; height: 45px; top: 0px;}
+  body {font-size: 22px}
+  h1 {font-size: 3rem;}
+  h2 {font-size: 2.5rem;}
+  #footer {height: 50px; line-height: 50px; font-size: 20px}
+  #effectButton a {font-size: 22px; width: 200px;}
 }
+
+/* f.ex. iPad pro*/
+@media screen and (min-width: 1024px) 
+{
+  #openNavButton {font-size: 46px; padding: 10px; margin: 10px; width: 50px; height: 50px; top: 0px;}
+  #closeNavButton {font-size: 46px; padding: 10px; margin: 10px; width: 50px; height: 50px; top: 0px;}
+  body {font-size: 28px}
+  h1 {font-size: 3.3rem;}
+  h2 {font-size: 2.8rem;}
+  #footer {height: 60px; line-height: 60px; font-size: 24px}
+  #effectButton a {font-size: 24px; width: 220px;}
+  #webSideNav {padding-top: 80px;}
+}
+
+/* f.ex. hd display*/
+@media screen and (min-width: 1080px) 
+{
+  #openNavButton {font-size: 50px; padding: 10px; margin: 10px; width: 50px; height: 50px; top: 0px;}
+  #closeNavButton {font-size: 50px; padding: 10px; margin: 10px; width: 50px; height: 50px; top: 0px;}
+  body {font-size: 32px}
+  h1 {font-size: 3.4rem;}
+  h2 {font-size: 3rem;}
+  #footer {height: 65px; line-height: 65px; font-size: 24px}
+  #effectButton a {font-size: 24px; width: 220px;}
+  #webSideNav {padding-top: 80px;}
+}
+
+/* f.ex. full hd display*/
+@media screen and (min-width: 1920px) 
+{
+  #openNavButton {font-size: 50px; padding: 10px; margin: 10px; width: 50px; height: 50px; top: 0px;}
+  #closeNavButton {font-size: 50px; padding: 10px; margin: 10px; width: 50px; height: 50px; top: 0px;}
+  body {font-size: 36px}
+  h1 {font-size: 3.8rem;}
+  h2 {font-size: 3.5rem;}
+  #footer {height: 70px; line-height: 70px; font-size: 28px}
+  #effectButton a {font-size: 30px; width: 220px;}
+  #webSideNav {padding-top: 100px;}
+}
+
 
 
 
@@ -302,4 +342,15 @@ img
 	width: 100%;
 	padding: 0 50px;
 	margin: 0 auto;
+}
+
+.shadow {
+	width: 100%;
+	height: 168px;
+	position: relative;
+	margin-top: -110px;
+	background: transparent url(../images/shadow.png) no-repeat bottom center;
+	background-size: 100% 100%; /* stretches it */
+	z-index: -1;
+	display: none;
 }
