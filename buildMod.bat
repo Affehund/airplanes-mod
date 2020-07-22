@@ -1,2 +1,2 @@
-gradlew build
+call gradlew build
 PAUSE

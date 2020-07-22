@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\main",
+    "\\src\\main\\java",
+    "\\src\\main\\java\\com",
+    "\\src\\main\\java\\com\\affehund",
+    "\\src\\main\\java\\com\\affehund\\airplanes",
+    "\\src\\main\\java\\com\\affehund\\airplanes\\client",
+    "\\src\\main\\java\\com\\affehund\\airplanes\\client\\render",
+    "\\src\\main\\java\\com\\affehund\\airplanes\\client\\rendering"
+  ],
+  "SelectedNode": "\\src\\main\\java\\com\\affehund\\airplanes\\client\\render\\RenderBoeing737.java",
+  "PreviewInSolutionExplorer": false
+}
