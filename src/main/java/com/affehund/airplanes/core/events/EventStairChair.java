@@ -48,7 +48,7 @@ public class EventStairChair
 	final static boolean enabled = false;
 
 	@SubscribeEvent
-	public static void onInteractWithBlock(PlayerInteractEvent.RightClickBlock event)
+	public static void onInteractWithBlock(PlayerInteractEvent.RightClickItem event)
 	{
 		if (enabled)
 		{

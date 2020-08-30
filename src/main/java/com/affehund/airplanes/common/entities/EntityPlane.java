@@ -30,14 +30,6 @@ import net.minecraft.world.World;
  */
 public class EntityPlane extends Entity
 {
-    public float prevBodyRotationX;
-    public float prevBodyRotationY;
-    public float prevBodyRotationZ;
-
-    public float bodyRotationX;
-    public float bodyRotationY;
-    public float bodyRotationZ;
-
 	public EntityPlane(World worldIn) 
 	{
 		super(worldIn);

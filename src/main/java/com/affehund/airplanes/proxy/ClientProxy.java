@@ -5,7 +5,9 @@ import com.affehund.airplanes.client.gui.book.GuiBookOfAirplanes;
 import com.affehund.airplanes.client.gui.book.pages.BookLoader;
 import com.affehund.airplanes.client.render.RenderBoeing737;
 import com.affehund.airplanes.client.render.RenderCessna172;
+import com.affehund.airplanes.client.render.RenderTrain;
 import com.affehund.airplanes.client.tesr.TESRFluidTank;
+import com.affehund.airplanes.client.trender.OBJLoader;
 import com.affehund.airplanes.common.entities.EntityBoeing737;
 import com.affehund.airplanes.common.entities.EntityCessna172;
 import com.affehund.airplanes.common.tileentities.TileEntityFluidTank;
@@ -24,6 +26,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -106,17 +109,15 @@ public class ClientProxy extends CommonProxy
 
 	public static void registerEntityRenders()
 	{
+		com.affehund.airplanes.client.trender.OBJHandler.INSTANCE = new OBJLoader();
+
 		AirplanesMod.log.info("Registered entity renders");
 		RenderingRegistry.registerEntityRenderingHandler(EntityBoeing737.class, RenderBoeing737::new);
 
 		RenderingRegistry.registerEntityRenderingHandler(EntityCessna172.class, RenderCessna172::new);
-//		{
-//			@Override
-//			public Render<? super EntityCessna172> createRenderFor(RenderManager manager)
-//			{
-//				return new RenderCessna172(manager);
-//			}
-//		});
+		
+		MinecraftForge.EVENT_BUS.register(new RenderTrain());
+		
 	}
 	
 	public static void registerTESR()
@@ -124,9 +125,6 @@ public class ClientProxy extends CommonProxy
 		AirplanesMod.log.info("Registered tile entity special renderer");
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityFluidTank.class, new TESRFluidTank());
 	}
-	
-	
-	
 
 	public static void openBookGui()
 	{
